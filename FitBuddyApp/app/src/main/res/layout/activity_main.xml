@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="112dp"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/image_fitlife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_logo"
+                android:layout_marginTop="11dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/fitlife" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/image_fitlife"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/image_fitcalc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/fit" />
+
+                <ImageView
+                    android:id="@+id/image_exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/image_fitcalc"
+                    android:background="@drawable/excrsz" />
+
+                <ImageView
+                    android:id="@+id/image_pre_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/image_fitcalc"
+                    android:layout_marginRight="56dp"
+                    android:layout_marginTop="94dp"
+                    android:background="@drawable/pre_work" />
+
+                <ImageView
+                    android:id="@+id/image_PreProg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/image_fitcalc"
+                    android:background="@drawable/pre_prog" />
+
+                <ImageView
+                    android:id="@+id/image_My_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/image_fitcalc"
+                    android:layout_below="@+id/image_fitcalc"
+                    android:layout_marginTop="68dp"
+                    android:background="@drawable/my_work" />
+
+                <ImageView
+                    android:id="@+id/image_MY_PROB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/image_fitcalc"
+                    android:layout_alignTop="@+id/image_pre_work"
+                    android:layout_marginLeft="54dp"
+                    android:background="@drawable/my_prob" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

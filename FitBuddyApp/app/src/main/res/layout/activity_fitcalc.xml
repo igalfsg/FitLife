@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bac_image" >
+
+                <LinearLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                        android:id="@+id/relative_fat"
+                        android:layout_width="0dp"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/menu_maxrep"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:text="1 Rep Max"
+                            android:onClick="imageClick"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#FFFFFF" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_BMI"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/menu_BMI"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/header_text_bc"
+                            android:gravity="center"
+                            android:onClick="imageClick"
+                            android:text="BMI"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_cal"
+                        android:layout_width="0dp"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/menu_hr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:onClick="imageClick"
+                            android:gravity="center"
+                            android:text="HR Zone"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#FFFFFF" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/titile_forfit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/logo_icon"
+                    android:text="Fitness Calculator"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <!-- <ImageView
+                    android:id="@+id/icnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView9"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/white_arw" /> -->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relativeLayout1"
+                android:background="@drawable/bc" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="BMI"
+                    android:textColor="#FFFFFF"
+                    android:textSize="45sp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/calcu" />
+
+                <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="weight"
+                    android:ems="10"
+                    android:id="@+id/Weightfitcalc"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/text_box"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="60dp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:paddingLeft="160dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@+id/imageView1"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <RadioButton android:id="@+id/radio_kg_fit"
+
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="kg"
+                        android:checked="true"
+                        android:textColor="#FFFFFF"
+                        android:buttonTint="#FFFFFF"
+                        android:onClick="onRadioButtonClickw"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_alignRight="@+id/Weightfitcalc"
+                        android:layout_alignEnd="@+id/Weightfitcalc" />
+
+                    <RadioButton android:id="@+id/radio_lbs_fit"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="lbs"
+                        android:buttonTint="#FFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:onClick="onRadioButtonClickw"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_toRightOf="@+id/Weightfitcalc"
+                        android:layout_toEndOf="@+id/Weightfitcalc"
+                        />
+                </RadioGroup>
+                <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="height"
+                    android:ems="10"
+                    android:layout_marginTop="65dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:background="@drawable/text_box"
+                    android:id="@+id/heightfitcalc"
+                    android:layout_below="@+id/Weightfitcalc"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="60dp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:paddingLeft="160dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Weightfitcalc"
+                    android:textColor="#FFFFFF"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioGroup2"
+                    android:paddingTop="60dp">
+
+
+                    <RadioButton android:id="@+id/radio_cm_fit"
+
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:onClick="onRadioButtonClickw"
+                        android:checked="true"
+                        android:buttonTint="#FFFFFF"
+                        android:textColor="#FFFFFF"
+                        android:layout_below="@+id/radio_kg_fit"
+                        android:layout_alignRight="@+id/heightfitcalc"
+                        android:layout_alignEnd="@+id/heightfitcalc" />
+
+                    <RadioButton android:id="@+id/radio_inch_fit"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#FFFFFF"
+                        android:text="inches"
+                        android:textColor="#FFFFFF"
+                        android:onClick="onRadioButtonClickw"
+                        android:layout_below="@+id/radio_lbs_fit"
+                        android:layout_toRightOf="@+id/heightfitcalc"
+                        android:layout_toEndOf="@+id/heightfitcalc"
+                        />
+                </RadioGroup>
+
+
+                <ImageView
+                    android:id="@+id/calculate_bmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/heightfitcalc"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="imageClick"
+                    android:layout_marginTop="62dp"
+                    android:src="@drawable/calculate" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:src="@drawable/border" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageView3" >
+
+                <TextView
+                    android:id="@+id/textView_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:drawableBottom="@drawable/result_undrline"
+                    android:gravity="center"
+                    android:text="RESULT"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/bmi_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_result"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="Enter Information"
+                    android:textColor="#ff6501"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
