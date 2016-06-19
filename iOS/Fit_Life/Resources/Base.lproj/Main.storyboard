@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,40 +15,465 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-Du-uUu">
-                                <rect key="frame" x="93" y="204" width="415" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-Du-uUu">
+                                <rect key="frame" x="39" y="159" width="254" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGT-QA-60K">
-                                <rect key="frame" x="93" y="274" width="415" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGT-QA-60K">
+                                <rect key="frame" x="39" y="215" width="254" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INE-kT-h7J">
-                                <rect key="frame" x="274" y="333" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-BJ-iUr">
-                                <rect key="frame" x="240" y="377" width="107" height="30"/>
-                                <state key="normal" title="Create Account"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fit_k1_.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPk-Je-PCi">
-                                <rect key="frame" x="173" y="37" width="254" height="135"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fit_k1_.png" translatesAutoresizingMaskIntoConstraints="NO" id="iPk-Je-PCi">
+                                <rect key="frame" x="85" y="41" width="162" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="IJm-e1-yzH"/>
+                                    <constraint firstAttribute="width" constant="162" id="JiJ-DN-1X6"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="5YK-fa-VFe">
+                                <rect key="frame" x="107" y="258" width="107" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INE-kT-h7J">
+                                        <rect key="frame" x="35" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-BJ-iUr">
+                                        <rect key="frame" x="0.0" y="39" width="107" height="30"/>
+                                        <state key="normal" title="Create Account"/>
+                                        <connections>
+                                            <segue destination="IHk-wZ-uLI" kind="show" id="abF-3u-HpK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eDa-Du-uUu" firstAttribute="top" secondItem="iPk-Je-PCi" secondAttribute="bottom" constant="10" id="3gB-Zy-G9O"/>
+                            <constraint firstItem="eDa-Du-uUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6NU-8o-bLO"/>
+                            <constraint firstItem="zGT-QA-60K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Orx-vp-lWM"/>
+                            <constraint firstItem="5YK-fa-VFe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4e-Am-HeZ"/>
+                            <constraint firstItem="iPk-Je-PCi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="iyT-Jz-Acs"/>
+                            <constraint firstItem="zGT-QA-60K" firstAttribute="top" secondItem="eDa-Du-uUu" secondAttribute="bottom" constant="26" id="tCY-0s-JIn"/>
+                            <constraint firstItem="iPk-Je-PCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w1v-VC-JsX"/>
+                            <constraint firstItem="5YK-fa-VFe" firstAttribute="top" secondItem="zGT-QA-60K" secondAttribute="bottom" constant="11" id="z3N-4g-kpl"/>
+                        </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pass" destination="zGT-QA-60K" id="kGe-ja-xe3"/>
+                        <outlet property="username" destination="eDa-Du-uUu" id="Ob3-eB-chD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301" y="376"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="H1R-hh-3xV">
+            <objects>
+                <viewController id="IHk-wZ-uLI" customClass="RegisterViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rSg-I6-HFe"/>
+                        <viewControllerLayoutGuide type="bottom" id="k52-8C-Viv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z6D-v0-RId">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="swg-in-hln">
+                                <rect key="frame" x="10" y="64" width="308" height="266"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-m8-ll0">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="qVR-gg-rF2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fb-Eh-aB3">
+                                        <rect key="frame" x="0.0" y="49" width="285" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="ndo-w1-DuX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOQ-YW-c9P">
+                                        <rect key="frame" x="0.0" y="98" width="285" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="cZX-5f-Jdm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birth date mm/dd/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Dv-YZ-H62">
+                                        <rect key="frame" x="0.0" y="147" width="285" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="rFY-PK-fiK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
+                                        <rect key="frame" x="0.0" y="196" width="285" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="135" id="neU-LX-gkO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-YJ-PBR" customClass="DLRadioButton">
+                                                <rect key="frame" x="135" y="0.0" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="mBi-WJ-NM1"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Kg">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944281901242" green="0.39258732100996468" blue="0.060478946594881101" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logSelectedButton:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="mAJ-J3-rvQ"/>
+                                                    <outletCollection property="otherButtons" destination="fpQ-tu-lbP" id="6cd-qk-I1P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpQ-tu-lbP" customClass="DLRadioButton">
+                                                <rect key="frame" x="210" y="0.0" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="455-Cc-kYV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="zDT-BT-eBl"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="lbs">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="logSelectedButton:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="cPe-B3-mWr"/>
+                                                    <outletCollection property="otherButtons" destination="s0R-YJ-PBR" id="1Q1-Zf-7aR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="285" id="Nhe-8j-C4K"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
+                                        <rect key="frame" x="0.0" y="245" width="180" height="21"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elz-vK-Mzv" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="Hhy-aM-deX"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Male">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="maleorfemale:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="cBt-jC-yie"/>
+                                                    <outletCollection property="otherButtons" destination="XVL-kz-ayd" id="W7P-mx-LZU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVL-kz-ayd" customClass="DLRadioButton">
+                                                <rect key="frame" x="75" y="0.0" width="105" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="105" id="JPi-Bx-EPv"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Female">
+                                                            <attributes>
+                                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="maleorfemale:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="yAv-bz-KJ0"/>
+                                                    <outletCollection property="otherButtons" destination="elz-vK-Mzv" id="tNk-qV-YVj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="kSC-5C-hDZ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="INTERESTS" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-ow-cqZ">
+                                <rect key="frame" x="0.0" y="369" width="320" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9776616372518101" green="0.98831379372985062" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="auS-9b-uJz">
+                                <rect key="frame" x="7" y="411" width="314" height="78"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="D8f-fh-aZI"/>
+                                                </constraints>
+                                                <state key="normal" title="Weight Loss">
+                                                    <color key="titleColor" red="0.0550556282722513" green="0.0550556282722513" blue="0.0550556282722513" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="tfU-8m-xzD"/>
+                                                    <outletCollection property="otherButtons" destination="6X3-r2-F1K" id="1iz-VI-XuJ"/>
+                                                    <outletCollection property="otherButtons" destination="uAf-Xt-yw4" id="P5K-Df-hfB"/>
+                                                    <outletCollection property="otherButtons" destination="Th4-f9-Quf" id="kLp-WI-LDa"/>
+                                                    <outletCollection property="otherButtons" destination="Vhg-bO-24r" id="mIo-XL-RuE"/>
+                                                    <outletCollection property="otherButtons" destination="QsP-8S-6Wn" id="MJK-aw-VGi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="28" width="120" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="xfi-Bi-N7s"/>
+                                                </constraints>
+                                                <state key="normal" title="Cardio">
+                                                    <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="nQl-uW-hJk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="56" width="120" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="7p2-CU-pF9"/>
+                                                </constraints>
+                                                <state key="normal" title="Sports">
+                                                    <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="SEi-LC-YC1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rTv-qw-UVE" secondAttribute="trailing" id="8vg-Fl-A3b"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vhg-bO-24r" secondAttribute="trailing" id="Azt-Jd-E0r"/>
+                                            <constraint firstItem="Vhg-bO-24r" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="Nvd-SZ-09u"/>
+                                            <constraint firstItem="rTv-qw-UVE" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="dfO-id-0Pd"/>
+                                            <constraint firstAttribute="trailing" secondItem="QsP-8S-6Wn" secondAttribute="trailing" id="fnv-mD-g3U"/>
+                                            <constraint firstItem="QsP-8S-6Wn" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="qhe-HZ-thG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
+                                        <rect key="frame" x="136" y="0.0" width="178" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="22"/>
+                                                <state key="normal" title="Strength Training">
+                                                    <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="80w-i8-xbi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="28" width="178" height="22"/>
+                                                <state key="normal" title="Group Training">
+                                                    <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="NRT-pt-MzY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="56" width="178" height="22"/>
+                                                <state key="normal" title="Body Building">
+                                                    <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="lnO-Zm-CrU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uAf-Xt-yw4" firstAttribute="leading" secondItem="0R6-xy-Dw3" secondAttribute="leading" id="DLr-iO-RtA"/>
+                                            <constraint firstItem="6X3-r2-F1K" firstAttribute="leading" secondItem="0R6-xy-Dw3" secondAttribute="leading" id="Gqj-T6-9vs"/>
+                                            <constraint firstAttribute="trailing" secondItem="6X3-r2-F1K" secondAttribute="trailing" id="GrE-fc-kP7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Th4-f9-Quf" secondAttribute="trailing" id="QGG-8Q-gtl"/>
+                                            <constraint firstAttribute="trailing" secondItem="uAf-Xt-yw4" secondAttribute="trailing" id="Vk8-x3-huq"/>
+                                            <constraint firstItem="Th4-f9-Quf" firstAttribute="leading" secondItem="0R6-xy-Dw3" secondAttribute="leading" id="X3I-J6-IGn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQw-Tf-2lW">
+                                <rect key="frame" x="122" y="506" width="57" height="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vba-jd-DVH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.9776616373" green="0.98831379370000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Create Account" id="8xI-tj-zrs">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="xea-ze-opg">
+                                            <color key="tintColor" red="0.9776616373" green="0.98831379370000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="KMg-a7-xOo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="swg-in-hln" firstAttribute="top" secondItem="rSg-I6-HFe" secondAttribute="bottom" constant="10" id="3eU-fr-HDJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="auS-9b-uJz" secondAttribute="trailing" constant="-13" id="CCr-2I-yjQ"/>
+                            <constraint firstItem="EQw-Tf-2lW" firstAttribute="centerX" secondItem="z6D-v0-RId" secondAttribute="centerX" id="VQk-iE-Xvy"/>
+                            <constraint firstItem="auS-9b-uJz" firstAttribute="leading" secondItem="z6D-v0-RId" secondAttribute="leadingMargin" constant="-13" id="XX2-zh-fnm"/>
+                            <constraint firstItem="swg-in-hln" firstAttribute="leading" secondItem="z6D-v0-RId" secondAttribute="leadingMargin" constant="-10" id="YVB-Rr-TCv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="swg-in-hln" secondAttribute="trailing" constant="-10" id="bUl-7T-J9b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g6s-ow-cqZ" secondAttribute="trailing" constant="-8" id="cAL-5s-e0v"/>
+                            <constraint firstItem="auS-9b-uJz" firstAttribute="top" secondItem="g6s-ow-cqZ" secondAttribute="bottom" constant="10" id="fSf-rh-NVW"/>
+                            <constraint firstItem="g6s-ow-cqZ" firstAttribute="leading" secondItem="z6D-v0-RId" secondAttribute="leadingMargin" constant="-8" id="gkp-5z-cOq"/>
+                            <constraint firstItem="k52-8C-Viv" firstAttribute="top" secondItem="EQw-Tf-2lW" secondAttribute="bottom" constant="32" id="pMD-hk-JdD"/>
+                            <constraint firstItem="EQw-Tf-2lW" firstAttribute="top" secondItem="auS-9b-uJz" secondAttribute="bottom" constant="17" id="qgy-Ke-iNC"/>
+                            <constraint firstItem="g6s-ow-cqZ" firstAttribute="top" secondItem="swg-in-hln" secondAttribute="bottom" constant="5" id="rmR-A3-se3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="BirthdateTextField" destination="3Dv-YZ-H62" id="zNb-c0-MHP"/>
+                        <outlet property="EmailTextField" destination="5fb-Eh-aB3" id="mco-9f-wo4"/>
+                        <outlet property="PasswordTextField" destination="LOQ-YW-c9P" id="JeI-9w-Xko"/>
+                        <outlet property="WeightTextField" destination="FY9-PB-WKd" id="kk3-qq-PdI"/>
+                        <outlet property="interest_button" destination="rTv-qw-UVE" id="c5F-wM-U9f"/>
+                        <outlet property="kgBtn" destination="s0R-YJ-PBR" id="ZyG-LF-KgV"/>
+                        <outlet property="usernameTextField" destination="Tb7-m8-ll0" id="jLJ-NE-HKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJz-WE-RXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tKO-9M-7Je">
+            <objects>
+                <viewController id="5Sp-m6-pq8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yjG-n8-xl4"/>
+                        <viewControllerLayoutGuide type="bottom" id="CyE-jh-lpu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MpE-2W-vPK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ud-Rs-NFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="1039"/>
+        </scene>
     </scenes>
     <resources>
         <image name="fit_k1_.png" width="576" height="360"/>
     </resources>
+    <color key="tintColor" red="1" green="0.32402596862447575" blue="0.25919835532175473" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -1,0 +1,12 @@
+PODS:
+  - DLRadioButton (1.4.8)
+
+DEPENDENCIES:
+  - DLRadioButton (~> 1.4)
+
+SPEC CHECKSUMS:
+  DLRadioButton: 8fe4865b3ea8a5236e1d114dd283dd0884d3dc46
+
+PODFILE CHECKSUM: f602ac8563b8b8d262b9b24c936bee70b80fa5d9
+
+COCOAPODS: 1.0.1
