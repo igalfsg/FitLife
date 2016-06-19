@@ -21,6 +21,35 @@ class ViewController: UIViewController,UITextFieldDelegate {
         username.delegate = self
     }
 
+    @IBAction func login_pressed(sender: AnyObject) {
+        let usern = username.text ?? ""
+        let password = pass.text ?? ""
+        
+        if usern.isEmpty  {
+            let errorAlert = UIAlertController (title: "Oops!", message: "Username is empty", preferredStyle: UIAlertControllerStyle.Alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
+            self.presentViewController(errorAlert, animated: true, completion: nil);
+        }
+        else if password.isEmpty {
+            let errorAlert = UIAlertController (title: "Oops!", message: "Password is empty", preferredStyle: UIAlertControllerStyle.Alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
+            self.presentViewController(errorAlert, animated: true, completion: nil);
+        }
+        else{
+            PFUser.logInWithUsernameInBackground(usern, password: password, block: {
+                (user: PFUser?, error: NSError?) -> Void in
+                if user != nil{
+                    self.performSegueWithIdentifier("login_success", sender: self)
+                }
+                else{
+                    
+                    let errorAlert = UIAlertController (title: "Oops!", message: String(format: "%@ ", error!.userInfo), preferredStyle: UIAlertControllerStyle.Alert)
+                    errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
+                    self.presentViewController(errorAlert, animated: true, completion: nil);
+                }
+            })
+        }//end else
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
