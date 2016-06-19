@@ -19,8 +19,22 @@ class ViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         pass.delegate = self
         username.delegate = self
+        let currentUser = PFUser.currentUser()
+        print(currentUser);
+        if currentUser != nil {
+            self.performSegueWithIdentifier("login_success", sender: self)
+            print("why im i here")
+        }
     }
-
+    override func viewWillAppear(animated: Bool) {
+        let currentUser = PFUser.currentUser()
+        print(currentUser);
+        if currentUser != nil {
+            self.performSegueWithIdentifier("login_success", sender: self)
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+    }
     @IBAction func login_pressed(sender: AnyObject) {
         let usern = username.text ?? ""
         let password = pass.text ?? ""
