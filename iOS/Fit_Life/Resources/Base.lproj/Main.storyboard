@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wMY-nU-sYX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -79,6 +79,40 @@
             </objects>
             <point key="canvasLocation" x="301" y="376"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="piC-9g-YWZ">
+            <objects>
+                <viewController id="wMY-nU-sYX" customClass="SplashViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fYS-h9-DmR"/>
+                        <viewControllerLayoutGuide type="bottom" id="XeM-zS-gAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9YS-sd-e4g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-Wa-nh9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DGp-Wa-nh9" secondAttribute="trailing" constant="-20" id="3R6-l3-jaA"/>
+                            <constraint firstItem="DGp-Wa-nh9" firstAttribute="top" secondItem="9YS-sd-e4g" secondAttribute="topMargin" id="8MW-0s-SAn"/>
+                            <constraint firstItem="DGp-Wa-nh9" firstAttribute="leading" secondItem="9YS-sd-e4g" secondAttribute="leadingMargin" constant="-20" id="YFn-Tb-Akk"/>
+                            <constraint firstItem="XeM-zS-gAq" firstAttribute="top" secondItem="DGp-Wa-nh9" secondAttribute="bottom" id="hrW-b4-Sy6"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="AsY-Bc-bdw" kind="show" identifier="go_main" id="2mg-Dr-FQU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="go_login" id="eXD-AI-N6J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpE-rN-eqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="1041"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="H1R-hh-3xV">
             <objects>
@@ -126,10 +160,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
                                         <rect key="frame" x="0.0" y="196" width="285" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="135" id="neU-LX-gkO"/>
@@ -137,7 +171,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
                                                 <rect key="frame" x="135" y="0.0" width="74" height="30"/>
                                                 <state key="normal" title="Kg">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,7 +181,7 @@
                                                     <outletCollection property="otherButtons" destination="faT-Kc-tp6" id="1x5-rc-KiM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
                                                 <rect key="frame" x="209" y="0.0" width="76" height="30"/>
                                                 <state key="normal" title="lbs">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,10 +195,10 @@
                                             <constraint firstAttribute="width" constant="285" id="Nhe-8j-C4K"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
                                         <rect key="frame" x="0.0" y="245" width="180" height="22"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="Oek-UA-z7Z"/>
@@ -177,7 +211,7 @@
                                                     <outletCollection property="otherButtons" destination="qPb-5l-hAm" id="RMp-1h-mBr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
                                                 <rect key="frame" x="75" y="0.0" width="105" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="TGk-fi-r1k"/>
@@ -203,10 +237,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="auS-9b-uJz">
                                 <rect key="frame" x="7" y="411" width="314" height="78"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="78"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="D8f-fh-aZI"/>
@@ -229,7 +263,7 @@
                                                     <outletCollection property="otherButtons" destination="QsP-8S-6Wn" id="MJK-aw-VGi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="28" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="xfi-Bi-N7s"/>
@@ -247,7 +281,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="nQl-uW-hJk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="56" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="7p2-CU-pF9"/>
@@ -275,10 +309,10 @@
                                             <constraint firstItem="QsP-8S-6Wn" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="qhe-HZ-thG"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
                                         <rect key="frame" x="136" y="0.0" width="178" height="78"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="22"/>
                                                 <state key="normal" title="Strength Training">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,7 +327,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="80w-i8-xbi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="28" width="178" height="22"/>
                                                 <state key="normal" title="Group Training">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -308,7 +342,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="NRT-pt-MzY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="56" width="178" height="22"/>
                                                 <state key="normal" title="Body Building">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -503,7 +537,7 @@
         <!--Workouts-->
         <scene sceneID="QCq-zg-P6S">
             <objects>
-                <viewController id="el7-2U-oAi" sceneMemberID="viewController">
+                <viewController id="el7-2U-oAi" customClass="Workout_types_ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tiw-Gd-fzo"/>
                         <viewControllerLayoutGuide type="bottom" id="MkO-dH-jXN"/>
@@ -511,11 +545,73 @@
                     <view key="view" contentMode="scaleToFill" id="adB-RK-5wT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-2X-hdc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Exercise Type" id="Mtl-i7-hna"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XYc-Ae-urA">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" id="3CS-hG-yQQ" customClass="TypeTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3CS-hG-yQQ" id="ea7-Ng-MlD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHD-9h-x0Z">
+                                                    <rect key="frame" x="20" y="22" width="264" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjH-7d-rzB">
+                                                    <rect key="frame" x="20" y="22" width="264" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-DA-Bv9">
+                                                    <rect key="frame" x="50" y="0.0" width="240" height="35"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fit_k1_.png" translatesAutoresizingMaskIntoConstraints="NO" id="DSW-gz-Mep">
+                                                    <rect key="frame" x="50" y="0.0" width="240" height="35"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagecell" destination="ea7-Ng-MlD" id="jpl-WZ-3gP"/>
+                                            <outlet property="typelable" destination="SjH-7d-rzB" id="3oS-Hc-2GX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="el7-2U-oAi" id="qRe-c7-VgC"/>
+                                    <outlet property="delegate" destination="el7-2U-oAi" id="Fqz-KG-aca"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYc-Ae-urA" firstAttribute="top" secondItem="T3g-2X-hdc" secondAttribute="bottom" id="6im-la-UQQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T3g-2X-hdc" secondAttribute="trailing" constant="-20" id="LSJ-2P-c8Q"/>
+                            <constraint firstItem="XYc-Ae-urA" firstAttribute="leading" secondItem="adB-RK-5wT" secondAttribute="leadingMargin" constant="-20" id="N0h-An-pQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XYc-Ae-urA" secondAttribute="trailing" constant="-20" id="VXR-em-NHl"/>
+                            <constraint firstItem="T3g-2X-hdc" firstAttribute="leading" secondItem="adB-RK-5wT" secondAttribute="leadingMargin" constant="-20" id="tya-dN-eEg"/>
+                            <constraint firstItem="T3g-2X-hdc" firstAttribute="top" secondItem="adB-RK-5wT" secondAttribute="topMargin" id="yCy-6V-tfu"/>
+                            <constraint firstItem="MkO-dH-jXN" firstAttribute="top" secondItem="XYc-Ae-urA" secondAttribute="bottom" id="zK8-f1-zzo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workouts" image="check.png" id="7fS-eh-pa0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="workouts_tableview" destination="XYc-Ae-urA" id="gDb-Xb-RvZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDr-zj-7iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -525,10 +621,12 @@
     <resources>
         <image name="check.png" width="31" height="31"/>
         <image name="fit_k1_.png" width="576" height="360"/>
+        <image name="main_bg.png" width="720" height="1280"/>
         <image name="rd.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g3U-Mr-s1k"/>
+        <segue reference="eXD-AI-N6J"/>
+        <segue reference="G83-fW-Geq"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.32402596862447575" blue="0.25919835532175473" alpha="1" colorSpace="calibratedRGB"/>
 </document>
