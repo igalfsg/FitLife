@@ -10,7 +10,11 @@ import UIKit
 
 class TypeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imagecell: UIView!
+    
+    //@IBOutlet weak var imagecell: UIImageView!
+    
+    @IBOutlet weak var imagecell: UIImageView!
+    //@IBOutlet weak var typecelltext: UILabel!
     @IBOutlet weak var typelable: UILabel!
     
     override func awakeFromNib() {

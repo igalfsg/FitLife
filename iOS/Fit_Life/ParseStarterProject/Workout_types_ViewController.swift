@@ -59,9 +59,10 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
     }
     
     //populatin each cell
-    func cellForRowAtIndexPath( indexPath: NSIndexPath) -> UITableViewCell?{
-        let mycell: TypeTableViewCell = workouts_tableview.dequeueReusableCellWithIdentifier("workoutCell") as! TypeTableViewCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let mycell =  self.workouts_tableview.dequeueReusableCellWithIdentifier("workoutCell", forIndexPath: indexPath) as! TypeTableViewCell
         mycell.typelable.text = "test"
+        mycell.imagecell.image = UIImage(named: "check.png")
         return mycell
     }
     /*
