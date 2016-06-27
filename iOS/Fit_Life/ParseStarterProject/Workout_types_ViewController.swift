@@ -82,19 +82,20 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
         print(img_name[indexPath.row])
         return mycell
     }
-    /*
+    
+    
+    //on click event
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        
+        //open storyboard Search_List_control
+        let viewController: Search_list_blue_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Search_List_control") as! Search_list_blue_ViewController
+        viewController.type = wko_Type[indexPath.row]
+        viewController.thing = 3
+        self.presentViewController(viewController, animated: true, completion: nil)
+    
     }
-*/
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
