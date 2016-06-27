@@ -35,6 +35,7 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
                     self.img_name.append(object["img_name"] as! String)
                 }
                 print(self.wko_Type)
+                self.workouts_tableview.reloadData()
             }
             else{
                 //get it from the server
@@ -49,6 +50,7 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
                             self.wko_Type.append(object["name"] as! String)
                             self.img_name.append(object["img_name"] as! String)
                         }
+                        self.workouts_tableview.reloadData()
                         //print(self.wko_Type)
                     }
                     else{
@@ -69,14 +71,15 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
     //number of rows on the table
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
         print(self.wko_Type.count)
-        return 7 //self.wko_Type.count
+        return self.wko_Type.count
     }
     
     //populatin each cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let mycell =  self.workouts_tableview.dequeueReusableCellWithIdentifier("workoutCell", forIndexPath: indexPath) as! TypeTableViewCell
         mycell.typelable.text = wko_Type[indexPath.row]
-        mycell.imagecell.image = UIImage(named: "check.png")
+        mycell.imagecell.image = UIImage(named: img_name[indexPath.row] + ".jpg")
+        print(img_name[indexPath.row])
         return mycell
     }
     /*
