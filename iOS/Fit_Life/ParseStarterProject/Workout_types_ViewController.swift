@@ -29,12 +29,13 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
+                
                 for object in objects!{
                     //print(object);
                     self.wko_Type.append(object["name"] as! String)
                     self.img_name.append(object["img_name"] as! String)
                 }
-                print(self.wko_Type)
+                //print(self.wko_Type)
                 self.workouts_tableview.reloadData()
             }
             else{
@@ -56,12 +57,12 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
                     else{
                         
                     }
-                }
-            }
-        }
+                }//end second query
+            }//end else
+        }//end first query
         
         
-    }
+    }//end view did load
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,7 +71,7 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
     
     //number of rows on the table
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
-        print(self.wko_Type.count)
+
         return self.wko_Type.count
     }
     
@@ -79,7 +80,6 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
         let mycell =  self.workouts_tableview.dequeueReusableCellWithIdentifier("workoutCell", forIndexPath: indexPath) as! TypeTableViewCell
         mycell.typelable.text = wko_Type[indexPath.row]
         mycell.imagecell.image = UIImage(named: img_name[indexPath.row] + ".jpg")
-        print(img_name[indexPath.row])
         return mycell
     }
     

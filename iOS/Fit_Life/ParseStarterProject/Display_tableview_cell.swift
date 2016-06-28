@@ -1,18 +1,17 @@
 //
-//  TypeTableViewCell.swift
+//  Display_tableview_cell.swift
 //  ParseStarterProject-Swift
 //
-//  Created by Igal on 6/20/16.
+//  Created by Igal on 6/27/16.
 //  Copyright © 2016 Parse. All rights reserved.
 //
 
 import UIKit
 
-class TypeTableViewCell: UITableViewCell {
+class Display_tableview_cell: UITableViewCell {
 
-    
-    @IBOutlet weak var imagecell: UIImageView!
-    @IBOutlet weak var typelable: UILabel!
+    @IBOutlet weak var name_lbl: UILabel!
+    @IBOutlet weak var circular_image: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
