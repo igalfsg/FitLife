@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject/Search_list_blue_ViewController.swift"
-            timestampString = "488764535.560518"
+            timestampString = "488769560.516247"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "Back_b(_:)"
             landmarkType = "5">
          </BreakpointContent>
