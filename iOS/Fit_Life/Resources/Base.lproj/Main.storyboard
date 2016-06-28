@@ -495,7 +495,7 @@
         <!--Exercises-->
         <scene sceneID="eLv-ku-3N4">
             <objects>
-                <viewController id="ani-Os-Wgj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Exercise_type" id="ani-Os-Wgj" customClass="Exercise_Type_ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Of-2c-jQG"/>
                         <viewControllerLayoutGuide type="bottom" id="i2L-am-La8"/>
@@ -503,11 +503,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ue3-bz-mwL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8NB-Tf-JEf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Excercise Type" id="49D-hE-s1a"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-rP-5D5">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exercise_cell_type" rowHeight="107" id="r9c-ww-eLJ" customClass="extercise_type_cell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r9c-ww-eLJ" id="3To-V9-JIa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="223-9s-LM2">
+                                                    <rect key="frame" x="8" y="8" width="304" height="98"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxn-gy-EzL">
+                                                    <rect key="frame" x="139" y="77" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_lbl" destination="223-9s-LM2" id="aJe-Pa-xTV"/>
+                                            <outlet property="type_lbl" destination="xxn-gy-EzL" id="wYZ-pj-eL0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ani-Os-Wgj" id="mn4-uZ-SPr"/>
+                                    <outlet property="delegate" destination="ani-Os-Wgj" id="hwo-cm-w5t"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SDh-rP-5D5" firstAttribute="leading" secondItem="Ue3-bz-mwL" secondAttribute="leadingMargin" constant="-20" id="ZOT-R2-4zk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SDh-rP-5D5" secondAttribute="trailing" constant="-20" id="nww-Bn-Dhn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exercises" image="check.png" id="Oh5-bS-k2r"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Exercise_tableView" destination="SDh-rP-5D5" id="EhO-Ri-MFA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHH-pN-zkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +564,7 @@
         <!--Programs-->
         <scene sceneID="T7F-5U-G4t">
             <objects>
-                <viewController id="F3w-gi-eaa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Program_type" id="F3w-gi-eaa" customClass="Program_types_ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="33H-d5-Ik2"/>
                         <viewControllerLayoutGuide type="bottom" id="K46-aM-okp"/>
@@ -524,11 +572,61 @@
                     <view key="view" contentMode="scaleToFill" id="EfX-YM-1pC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhF-8j-6eQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Select Your Goal" id="mFJ-rG-OVx"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bE1-48-umQ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Program_Type" rowHeight="108" id="RbE-7j-oId" customClass="Program_type_cell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RbE-7j-oId" id="33p-vJ-ETP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IS9-PC-6oe">
+                                                    <rect key="frame" x="63" y="-3" width="207" height="110"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3x-cT-eq3">
+                                                    <rect key="frame" x="134" y="78" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img_type" destination="IS9-PC-6oe" id="thw-RB-Cu5"/>
+                                            <outlet property="type_lbl" destination="Q3x-cT-eq3" id="gAU-0Q-yg5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="F3w-gi-eaa" id="AnJ-Ai-9Nc"/>
+                                    <outlet property="delegate" destination="F3w-gi-eaa" id="HHT-d6-USH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bE1-48-umQ" firstAttribute="top" secondItem="zhF-8j-6eQ" secondAttribute="bottom" id="7Ry-T7-wqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bE1-48-umQ" secondAttribute="trailing" constant="-20" id="BOx-ah-hhW"/>
+                            <constraint firstItem="K46-aM-okp" firstAttribute="top" secondItem="bE1-48-umQ" secondAttribute="bottom" id="IiH-3N-IaT"/>
+                            <constraint firstItem="bE1-48-umQ" firstAttribute="leading" secondItem="EfX-YM-1pC" secondAttribute="leadingMargin" constant="-20" id="fxp-ee-Ove"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Programs" image="check.png" id="cFl-Gf-CJ2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="Program_tableView" destination="bE1-48-umQ" id="UpU-OH-NNX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYY-bW-ZNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

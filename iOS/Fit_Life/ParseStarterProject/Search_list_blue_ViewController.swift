@@ -156,10 +156,13 @@ class Search_list_blue_ViewController: UIViewController {
     //back button
     @IBAction func Back_b(sender: AnyObject) {
         if thing == 1{//exercise
-            
+            let viewController: Exercise_Type_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Exercise_type") as! Exercise_Type_ViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
+
         }
         else if thing == 2{//pre programs
-            
+            let viewController: Program_types_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Program_type") as! Program_types_ViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
         }
         else if thing == 3{//pre workouts
             let viewController: Workout_types_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Workout_type") as! Workout_types_ViewController
