@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import QuartzCore
 
 class Search_list_blue_ViewController: UIViewController {
 
@@ -32,10 +33,39 @@ class Search_list_blue_ViewController: UIViewController {
         
         
         if thing == 1{//exercises
-            
+            let queryWorkoutTypes = PFQuery(className: "Exercises")
+            //queryWorkoutTypes.fromLocalDatastore()
+            if type == "All Exercises"{
+                queryWorkoutTypes.whereKeyExists("img_name")
+                queryWorkoutTypes.whereKey("img_name", notEqualTo: "")
+                queryWorkoutTypes.whereKey("Type", notEqualTo: "Prog")
+                //queryWorkoutTypes.whereNotEqualTo("Type", "Prog");
+            }
+            else{
+                queryWorkoutTypes.whereKey("Type", equalTo: type!);
+            }
+            queryWorkoutTypes.limit = 1000
+            queryWorkoutTypes.orderByAscending("name")
+            queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    var count = 0
+                    for object in objects!{
+                        
+                        self.wko_Type.append(object["name"] as! String)
+                        self.img_name.append(self.wko_Type[count].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil))
+                        count += 1
+                    }
+                    //print(self.wko_Type)
+                    self.disp_tableView.reloadData()
+                }
+                else{
+                    
+                }//end else
+            }//end first query
         }
         else if thing == 2{//programs
-            let queryWorkoutTypes = PFQuery(className: "Workouts")
+            let queryWorkoutTypes = PFQuery(className: "Programs")
             //queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: type!);
             queryWorkoutTypes.orderByAscending("name")
@@ -43,17 +73,66 @@ class Search_list_blue_ViewController: UIViewController {
                 (objects: [PFObject]?, error: NSError?) -> Void in
                 if error == nil {
                     for object in objects!{
-                        var count = 0
+                    
                         self.wko_Type.append(object["name"] as! String)
-                        self.img_name.append(self.wko_Type[count].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil))
-                        count += 1
                         
                     }
-                    
                     self.disp_tableView.reloadData()
                 }
                 else{
-                    
+                    let queryWorkoutTypes = PFQuery(className: "Programs")
+                    //queryWorkoutTypes.fromLocalDatastore()
+                    queryWorkoutTypes.whereKey("type", equalTo: self.type!);
+                    queryWorkoutTypes.orderByAscending("name")
+                    queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                        (objects: [PFObject]?, error: NSError?) -> Void in
+                        if error == nil {
+                            for object in objects!{
+                                
+                                self.wko_Type.append(object["name"] as! String)
+                                
+                            }
+                            self.disp_tableView.reloadData()
+                        }
+                        else{
+                            
+                        }//end else
+                    }//end second query
+                }//end else
+            }//end first query
+            let queryWorkoutTypes1 = PFQuery(className: "Programs")
+            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes1.whereKey("extra", equalTo: type!);
+            queryWorkoutTypes1.orderByAscending("name")
+            queryWorkoutTypes1.findObjectsInBackgroundWithBlock{
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    for object in objects!{
+                        
+                        self.wko_Type.append(object["name"] as! String)
+                        
+                    }
+                    self.disp_tableView.reloadData()
+                }
+                else{
+                    let queryWorkoutTypes = PFQuery(className: "Programs")
+                    //queryWorkoutTypes.fromLocalDatastore()
+                    queryWorkoutTypes.whereKey("extra", equalTo: self.type!);
+                    queryWorkoutTypes.orderByAscending("name")
+                    queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                        (objects: [PFObject]?, error: NSError?) -> Void in
+                        if error == nil {
+                            for object in objects!{
+                                
+                                self.wko_Type.append(object["name"] as! String)
+                                
+                            }
+                            self.disp_tableView.reloadData()
+                        }
+                        else{
+                            
+                        }//end else
+                    }//end second query
                 }//end else
             }//end first query
         }//end if
@@ -72,6 +151,7 @@ class Search_list_blue_ViewController: UIViewController {
                         
                         
                     }
+                    
                     
                     self.disp_tableView.reloadData()
                 }
@@ -115,6 +195,23 @@ class Search_list_blue_ViewController: UIViewController {
             return filtered_stuff.count
         }
         return self.wko_Type.count
+    }
+    
+    
+    func maskRoundedImage(image: UIImage, radius: Float) -> UIImage {
+        let imageView: UIImageView = UIImageView(image: image)
+        var layer: CALayer = CALayer()
+        layer = imageView.layer
+        
+        layer.masksToBounds = true
+        layer.cornerRadius = CGFloat(radius)
+        
+        UIGraphicsBeginImageContext(imageView.bounds.size)
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return roundedImage
     }
     
     //populatin each cell
@@ -168,3 +265,5 @@ extension Search_list_blue_ViewController: UISearchResultsUpdating {
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
+
+
