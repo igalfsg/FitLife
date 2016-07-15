@@ -60,7 +60,33 @@ class Search_list_blue_ViewController: UIViewController {
                     self.disp_tableView.reloadData()
                 }
                 else{
-                    
+                    let queryWorkoutTypes = PFQuery(className: "Exercises")
+                    //queryWorkoutTypes.fromLocalDatastore()
+                    if self.type == "All Exercises"{
+                        queryWorkoutTypes.whereKeyExists("img_name")
+                        queryWorkoutTypes.whereKey("img_name", notEqualTo: "")
+                        queryWorkoutTypes.whereKey("Type", notEqualTo: "Prog")
+                        //queryWorkoutTypes.whereNotEqualTo("Type", "Prog");
+                    }
+                    else{
+                        queryWorkoutTypes.whereKey("Type", equalTo: self.type!);
+                    }
+                    queryWorkoutTypes.limit = 1000
+                    queryWorkoutTypes.orderByAscending("name")
+                    queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                        (objects: [PFObject]?, error: NSError?) -> Void in
+                        if error == nil {
+                            var count = 0
+                            for object in objects!{
+                                
+                                self.wko_Type.append(object["name"] as! String)
+                                self.img_name.append(self.wko_Type[count].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil))
+                                count += 1
+                            }
+                            //print(self.wko_Type)
+                            self.disp_tableView.reloadData()
+                        }
+                    }//end second query
                 }//end else
             }//end first query
         }
@@ -175,14 +201,36 @@ class Search_list_blue_ViewController: UIViewController {
                 }//end else
             }//end first query
         }//end if
+            /*
         else if thing == 6{
             navbar.topItem!.title = "Select up to 10 Exercies"
-        }
-        else {
+            let queryWorkoutTypes = PFQuery(className: "Exercises")
+            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.whereKeyExists("img_name")
+            queryWorkoutTypes.limit = 1000
+            queryWorkoutTypes.orderByAscending("name")
+            queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    var count = 0
+                    for object in objects!{
+                        //display exercises
+                        self.wko_Type.append(object["name"] as! String)
+                        self.img_name.append(self.wko_Type[count].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil))
+                        count += 1
+                    }
+                    //print(self.wko_Type)
+                    self.disp_tableView.reloadData()
+                }
+                else{
+                    
+                }//end else
+            }//end first query
             
-        }
-        // Do any additional setup after loading the view.
-    }
+        }//end else if thing == 6
+        */
+        
+    } //end view did load
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -198,22 +246,7 @@ class Search_list_blue_ViewController: UIViewController {
     }
     
     
-    func maskRoundedImage(image: UIImage, radius: Float) -> UIImage {
-        let imageView: UIImageView = UIImageView(image: image)
-        var layer: CALayer = CALayer()
-        layer = imageView.layer
-        
-        layer.masksToBounds = true
-        layer.cornerRadius = CGFloat(radius)
-        
-        UIGraphicsBeginImageContext(imageView.bounds.size)
-        layer.renderInContext(UIGraphicsGetCurrentContext()!)
-        let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return roundedImage
-    }
-    
+
     //populatin each cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let mycell =  self.disp_tableView.dequeueReusableCellWithIdentifier("disp_cell", forIndexPath: indexPath) as! Display_tableview_cell

@@ -160,10 +160,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
                                         <rect key="frame" x="0.0" y="196" width="285" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="135" id="neU-LX-gkO"/>
@@ -171,7 +171,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
                                                 <rect key="frame" x="135" y="0.0" width="74" height="30"/>
                                                 <state key="normal" title="Kg">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,7 +181,7 @@
                                                     <outletCollection property="otherButtons" destination="faT-Kc-tp6" id="1x5-rc-KiM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
                                                 <rect key="frame" x="209" y="0.0" width="76" height="30"/>
                                                 <state key="normal" title="lbs">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,10 +195,10 @@
                                             <constraint firstAttribute="width" constant="285" id="Nhe-8j-C4K"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
                                         <rect key="frame" x="0.0" y="245" width="180" height="22"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="Oek-UA-z7Z"/>
@@ -211,7 +211,7 @@
                                                     <outletCollection property="otherButtons" destination="qPb-5l-hAm" id="RMp-1h-mBr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
                                                 <rect key="frame" x="75" y="0.0" width="105" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="TGk-fi-r1k"/>
@@ -237,10 +237,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="auS-9b-uJz">
                                 <rect key="frame" x="7" y="411" width="314" height="78"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="78"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="D8f-fh-aZI"/>
@@ -263,7 +263,7 @@
                                                     <outletCollection property="otherButtons" destination="QsP-8S-6Wn" id="MJK-aw-VGi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="28" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="xfi-Bi-N7s"/>
@@ -281,7 +281,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="nQl-uW-hJk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="56" width="120" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="7p2-CU-pF9"/>
@@ -309,10 +309,10 @@
                                             <constraint firstItem="QsP-8S-6Wn" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="qhe-HZ-thG"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
                                         <rect key="frame" x="136" y="0.0" width="178" height="78"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="22"/>
                                                 <state key="normal" title="Strength Training">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -327,7 +327,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="80w-i8-xbi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="28" width="178" height="22"/>
                                                 <state key="normal" title="Group Training">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -342,7 +342,7 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="NRT-pt-MzY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="56" width="178" height="22"/>
                                                 <state key="normal" title="Body Building">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,7 +432,7 @@
         <!--Favorites-->
         <scene sceneID="B4Y-aA-vgq">
             <objects>
-                <viewController id="VmN-hc-xgj" sceneMemberID="viewController">
+                <viewController id="VmN-hc-xgj" customClass="Favorites_ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nLd-2i-KBr"/>
                         <viewControllerLayoutGuide type="bottom" id="Phz-rW-pgJ"/>
@@ -440,6 +440,64 @@
                     <view key="view" contentMode="scaleToFill" id="BPB-kD-1Gd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmN-5c-86O">
+                                <rect key="frame" x="159" y="44" width="161" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.52437839303349687" blue="0.4128618315274698" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Programs"/>
+                                <connections>
+                                    <action selector="Proframs_btn:" destination="VmN-hc-xgj" eventType="touchUpInside" id="9pF-AO-e0S"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4I-N5-8z4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Favorites" id="rB1-U9-2t0"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yoI-6A-Jnw">
+                                <rect key="frame" x="0.0" y="84" width="320" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="Rw4-fT-Hdf" customClass="FavoritesCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rw4-fT-Hdf" id="BlO-GN-kIH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIY-td-GjY">
+                                                    <rect key="frame" x="19" y="16" width="40" height="33"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwc-dt-BiU">
+                                                    <rect key="frame" x="77" y="22" width="152" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="BlO-GN-kIH" id="ZrT-Kq-aPF"/>
+                                            <outlet property="img_fav" destination="NIY-td-GjY" id="TyV-yy-CTk"/>
+                                            <outlet property="name_fav" destination="xwc-dt-BiU" id="mpA-bG-b2v"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VmN-hc-xgj" id="EGU-LR-4Sa"/>
+                                    <outlet property="delegate" destination="VmN-hc-xgj" id="9kT-Rq-oUa"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-qk-5LB">
+                                <rect key="frame" x="0.0" y="44" width="162" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.09014658938569553" blue="0.77696110401042295" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Workouts"/>
+                                <connections>
+                                    <action selector="Wokouts_btn:" destination="VmN-hc-xgj" eventType="touchUpInside" id="O29-04-sgt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" image="check.png" id="XDe-6i-xig"/>
@@ -632,6 +690,165 @@
             </objects>
             <point key="canvasLocation" x="1903" y="1101"/>
         </scene>
+        <!--ListofWKOS View Controller-->
+        <scene sceneID="pe1-xy-gYD">
+            <objects>
+                <viewController id="gTu-YA-KP9" customClass="ListofWKOSViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l03-3x-JLv"/>
+                        <viewControllerLayoutGuide type="bottom" id="HpN-n5-XxU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sfr-ga-GS4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUX-Mw-M9e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="list of wkos" id="wsG-re-tmQ"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YND-cq-8Nh">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="gA6-HO-XA2" customClass="listofWKOSTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gA6-HO-XA2" id="e5y-dS-n2c">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhI-Rz-mzR">
+                                                    <rect key="frame" x="8" y="15" width="54" height="46"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v7-uC-nHO">
+                                                    <rect key="frame" x="84" y="27" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name_lbl" destination="3v7-uC-nHO" id="k0F-3w-p9C"/>
+                                            <outlet property="pic" destination="qhI-Rz-mzR" id="sfr-Tt-NeP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gTu-YA-KP9" id="CLI-hG-rJh"/>
+                                    <outlet property="delegate" destination="gTu-YA-KP9" id="hXx-H3-gZf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ai-fQ-lvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="1763"/>
+        </scene>
+        <!--Wko exercises View Controller-->
+        <scene sceneID="Cav-h8-V20">
+            <objects>
+                <viewController id="vbM-F4-eVm" customClass="Wko_exercises_ViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RyX-YV-zzR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y5S-ll-SZ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HGW-Iu-ATY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPR-4e-6n5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="list of exercises" id="dQy-fS-Uyf"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLU-AM-NMa">
+                                <rect key="frame" x="111" y="530" width="101" height="30"/>
+                                <state key="normal" title="change weight"/>
+                                <connections>
+                                    <action selector="change_weight_btn:" destination="vbM-F4-eVm" eventType="touchUpInside" id="hoF-78-wJY"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-0u-sW3">
+                                <rect key="frame" x="0.0" y="44" width="320" height="478"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="rQQ-Xp-EKq" customClass="WKO_exerciseTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="106"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQQ-Xp-EKq" id="iBv-2C-62n">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqG-at-MQd">
+                                                    <rect key="frame" x="141" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAT-7Y-Gbk">
+                                                    <rect key="frame" x="141" y="37" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uG-0e-fZL">
+                                                    <rect key="frame" x="141" y="58" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKX-pE-twA">
+                                                    <rect key="frame" x="82" y="37" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEB-N5-vgX">
+                                                    <rect key="frame" x="8" y="15" width="66" height="64"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-RX-oZm" customClass="DLRadioButton">
+                                                    <rect key="frame" x="226" y="33" width="68" height="30"/>
+                                                    <state key="normal" title="Done">
+                                                        <color key="titleColor" red="1" green="0.32402596859999999" blue="0.25919835530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                            <color key="value" red="1" green="0.32402596859999999" blue="0.25919835530000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name_lbl" destination="hKX-pE-twA" id="DD4-Av-urw"/>
+                                            <outlet property="pic" destination="bEB-N5-vgX" id="zpH-3x-fwo"/>
+                                            <outlet property="reps_lbl" destination="CqG-at-MQd" id="IZE-Y8-LmK"/>
+                                            <outlet property="sets_lbl" destination="ZAT-7Y-Gbk" id="g9G-eB-KMl"/>
+                                            <outlet property="weight_lbl" destination="8uG-0e-fZL" id="TnP-9H-In5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="change_weight_btn" destination="tLU-AM-NMa" id="b9e-fa-OUp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6n-pv-LNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="2458"/>
+        </scene>
         <!--Workouts-->
         <scene sceneID="QCq-zg-P6S">
             <objects>
@@ -798,7 +1015,7 @@
         <image name="rd.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g3U-Mr-s1k"/>
+        <segue reference="G83-fW-Geq"/>
         <segue reference="KMg-a7-xOo"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.32402596862447575" blue="0.25919835532175473" alpha="1" colorSpace="calibratedRGB"/>
