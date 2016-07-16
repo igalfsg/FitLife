@@ -25,6 +25,7 @@ class Search_list_blue_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navbar.topItem!.title = type
+        //search stuff
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
@@ -273,6 +274,39 @@ class Search_list_blue_ViewController: UIViewController {
         
         
         return mycell
+    }
+    
+    
+    //on click event
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        //open storyboard 
+        if thing == 1 {
+            let viewController: Search_list_blue_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Search_List_control") as! Search_list_blue_ViewController
+            viewController.type = wko_Type[indexPath.row]
+            viewController.thing = 1
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+        else if thing == 2 {
+        let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController
+            if searchController.active && searchController.searchBar.text != "" {
+                viewController.program = filtered_stuff[indexPath.row]
+            }
+            else{
+                viewController.program = wko_Type[indexPath.row]
+            }
+        self.presentViewController(viewController, animated: true, completion: nil)
+        }
+        else if thing == 3 {
+            let viewController: Search_list_blue_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Search_List_control") as! Search_list_blue_ViewController
+            viewController.type = wko_Type[indexPath.row]
+            viewController.thing = 1
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+        
+        
+        
     }
 
     //search

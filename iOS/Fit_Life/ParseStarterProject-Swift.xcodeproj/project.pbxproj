@@ -14,6 +14,7 @@
 		4D40AEB01D3872B5003F7297 /* listofWKOSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */; };
 		4D40AEB21D3872C8003F7297 /* WKO_exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */; };
 		4D49E9011D1380FC009BD5F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */; };
+		4D5A0BB31D3ABB77004DE93A /* day1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5A0BB21D3ABB77004DE93A /* day1.jpg */; };
 		4D718C1C1D21E56F00929D99 /* Display_tableview_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */; };
 		4D718C1E1D21F8F200929D99 /* extercise_type_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1D1D21F8F200929D99 /* extercise_type_cell.swift */; };
 		4D718C201D21F99200929D99 /* Exercise_Type_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */; };
@@ -587,6 +588,7 @@
 		4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listofWKOSTableViewCell.swift; sourceTree = "<group>"; };
 		4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKO_exerciseTableViewCell.swift; sourceTree = "<group>"; };
 		4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4D5A0BB21D3ABB77004DE93A /* day1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day1.jpg; sourceTree = "<group>"; };
 		4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display_tableview_cell.swift; sourceTree = "<group>"; };
 		4D718C1D1D21F8F200929D99 /* extercise_type_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extercise_type_cell.swift; sourceTree = "<group>"; };
 		4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise_Type_ViewController.swift; sourceTree = "<group>"; };
@@ -1177,6 +1179,7 @@
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D5A0BB21D3ABB77004DE93A /* day1.jpg */,
 				4DEEF9161D20A311005426A6 /* ab_runners1.jpg */,
 				4DEEF9171D20A311005426A6 /* ab_runners2.jpg */,
 				4DEEF9181D20A311005426A6 /* ab_wheel_rollout.jpg */,
@@ -2095,6 +2098,7 @@
 				4DEEF7351D20A310005426A6 /* barbell_calf_raise1.jpg in Resources */,
 				4DEEF7CE1D20A310005426A6 /* figurehead1.jpg in Resources */,
 				4DEEF83F1D20A310005426A6 /* my_prob.png in Resources */,
+				4D5A0BB31D3ABB77004DE93A /* day1.jpg in Resources */,
 				4DEEF7831D20A310005426A6 /* chk_un.png in Resources */,
 				4DEEF7701D20A310005426A6 /* cable_rotator_cuff_internal_rotation1.jpg in Resources */,
 				4DEEF75D1D20A310005426A6 /* btn_add_wko.png in Resources */,

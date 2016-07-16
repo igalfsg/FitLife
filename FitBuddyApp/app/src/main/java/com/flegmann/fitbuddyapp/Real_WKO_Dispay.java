@@ -269,19 +269,4 @@ public class Real_WKO_Dispay extends Activity {
             return itemView;
         }
     }
-/*
-    private void registerClickCallback() {
-        ListView list = (ListView) findViewById((R.id.real_listview));
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Ejercisio clickedwko = workout_exercises.get(position);
-                String selected = clickedwko.getName();
-                Intent goworkout = new Intent(Real_WKO_Dispay.this, Exercises_Details.class);
-                goworkout.putExtra("name", selected);
-                startActivity(goworkout);
-            }
-        });
-    }*/
-
 }
