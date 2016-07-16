@@ -24,6 +24,7 @@ class Wko_exercises_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navbar.topItem!.title = workout //set title
+        
         let queryWorkoutTypes = PFQuery(className: "Workouts")
         //queryWorkoutTypes.fromLocalDatastore()
         queryWorkoutTypes.whereKey("name", equalTo: workout!);
@@ -41,19 +42,24 @@ class Wko_exercises_ViewController: UIViewController {
                     if exname == "Cycling" || exname == "Elliptical" || exname == "Jump Rope" || exname == "Running" || exname == "Rowing" || exname == "Swimming" {
                         
                         self.sets.append("intensity: " + String(object!["set" + String(i)] as! Int))
-                        self.reps.append("length min: " + String(object!["reps" + String(i)] as! Int))
-                        self.weights.append("")
+                        self.reps.append("length min: " + String(object!["rep" + String(i)] as! Int))
+                        self.weights.append(" ")
                         
                     }//end if cardio
                     else if exname == "Super set" {
                         self.sets.append("intensity: " + String(object!["set" + String(i)] as! Int))
-                        self.reps.append("")
-                        self.weights.append("")
+                        self.reps.append(" ")
+                        self.weights.append(" ")
                     }
                     else {
                         if object!["set" + String(i)] as! Int == 93 {
                             self.sets.append("Super Set")
-                            self.reps.append("Reps: " + String(object!["reps" + String(i)] as! Int))
+                            self.reps.append("Reps: " + String(object!["rep" + String(i)] as! Int))
+                            self.weights.append("Weight: 0")
+                        }
+                        else {
+                            self.sets.append("Sets: " + String(object!["set" + String(i)] as! Int))
+                            self.reps.append("Reps: " + String(object!["rep" + String(i)] as! Int))
                             self.weights.append("Weight: 0")
                         }
                     }
@@ -113,7 +119,15 @@ class Wko_exercises_ViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let mycell =  self.exercise_table.dequeueReusableCellWithIdentifier("WKO_exercise_list", forIndexPath: indexPath) as! WKO_exerciseTableViewCell
         mycell.name_lbl.text = exercises[indexPath.row]
-        mycell.pic.image = UIImage(named: "day1.jpg") //imgarr[indexPath.row] + ".jpg")
+        mycell.pic.image = UIImage(named: self.exercises[indexPath.row].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil) + ".jpg")
+        if UIImage(named: self.exercises[indexPath.row].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil) + ".jpg") == nil{
+            mycell.pic.image = UIImage(named:"logo_icon.png")
+        }
+        
+        mycell.reps_lbl.text = reps[indexPath.row]
+        mycell.sets_lbl.text = sets[indexPath.row]
+        mycell.weight_lbl.text = weights[indexPath.row]
+        mycell.done_btn.multipleSelectionEnabled = true
         return mycell
     }
     
@@ -133,14 +147,16 @@ class Wko_exercises_ViewController: UIViewController {
     //butons
     
 
-    @IBAction func change_weight_btn(sender: AnyObject) {
-        //change weight button was pressed
-        
-        
+    
+    //back button
+    @IBAction func back_Btn(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    
-   
+   //chane weight button pressed
+    @IBAction func Change_btn(sender: AnyObject) {
+        
+    }
     
     
     @IBAction func favorite_btn(sender: AnyObject) {

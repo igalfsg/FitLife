@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DLRadioButton
 
 class WKO_exerciseTableViewCell: UITableViewCell {
 
@@ -15,6 +16,7 @@ class WKO_exerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var reps_lbl: UILabel!
     @IBOutlet weak var sets_lbl: UILabel!
     @IBOutlet weak var weight_lbl: UILabel!
+    @IBOutlet weak var done_btn: DLRadioButton!
     
     
     override func awakeFromNib() {
