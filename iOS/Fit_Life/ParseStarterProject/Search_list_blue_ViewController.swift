@@ -282,13 +282,10 @@ class Search_list_blue_ViewController: UIViewController {
         
         
         //open storyboard 
-        if thing == 1 {
-            let viewController: Search_list_blue_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Search_List_control") as! Search_list_blue_ViewController
-            viewController.type = wko_Type[indexPath.row]
-            viewController.thing = 1
-            self.presentViewController(viewController, animated: true, completion: nil)
+        if thing == 1 {//exercise
+            
         }
-        else if thing == 2 {
+        else if thing == 2 {//programs
         let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.program = filtered_stuff[indexPath.row]
@@ -298,10 +295,15 @@ class Search_list_blue_ViewController: UIViewController {
             }
         self.presentViewController(viewController, animated: true, completion: nil)
         }
-        else if thing == 3 {
-            let viewController: Search_list_blue_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Search_List_control") as! Search_list_blue_ViewController
-            viewController.type = wko_Type[indexPath.row]
-            viewController.thing = 1
+        else if thing == 3 {//wkos
+            //open storyboard
+            let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
+            if searchController.active && searchController.searchBar.text != "" {
+                viewController.workout = filtered_stuff[indexPath.row]
+            }
+            else{
+                viewController.workout = wko_Type[indexPath.row]
+            }
             self.presentViewController(viewController, animated: true, completion: nil)
         }
         

@@ -13,6 +13,7 @@ class FavoritesCell: UITableViewCell {
     
  
     @IBOutlet weak var img_fav: UIImageView!
+    
     @IBOutlet weak var name_fav: UILabel!
     
     override func awakeFromNib() {
