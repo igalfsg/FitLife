@@ -20,6 +20,7 @@ class Wko_exercises_ViewController: UIViewController {
     var sets = [String]()
     var reps = [String]()
     var weights = [String]()
+    var pesos = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,23 +45,27 @@ class Wko_exercises_ViewController: UIViewController {
                         self.sets.append("intensity: " + String(object!["set" + String(i)] as! Int))
                         self.reps.append("length min: " + String(object!["rep" + String(i)] as! Int))
                         self.weights.append(" ")
+                        self.pesos.append(0)
                         
                     }//end if cardio
                     else if exname == "Super set" {
                         self.sets.append("intensity: " + String(object!["set" + String(i)] as! Int))
                         self.reps.append(" ")
                         self.weights.append(" ")
+                        self.pesos.append(0)
                     }
                     else {
                         if object!["set" + String(i)] as! Int == 93 {
                             self.sets.append("Super Set")
                             self.reps.append("Reps: " + String(object!["rep" + String(i)] as! Int))
                             self.weights.append("Weight: 0")
+                            self.pesos.append(0)
                         }
                         else {
                             self.sets.append("Sets: " + String(object!["set" + String(i)] as! Int))
                             self.reps.append("Reps: " + String(object!["rep" + String(i)] as! Int))
                             self.weights.append("Weight: 0")
+                            self.pesos.append(0)
                         }
                     }
                     
@@ -82,6 +87,7 @@ class Wko_exercises_ViewController: UIViewController {
                         while i < self.numberofexercises{
                             if self.weights[i] == "Weight: 0"{
                                 self.weights[i] = "Weight: " + String(object!["weight" + String(i)] as! Int)
+                                self.pesos[i] = object!["weight" + String(i)] as! Int
                             }
                             
                             i += 1
@@ -155,6 +161,12 @@ class Wko_exercises_ViewController: UIViewController {
     
    //chane weight button pressed
     @IBAction func Change_btn(sender: AnyObject) {
+        //self.dismissViewControllerAnimated(true, completion: {});
+        let viewController: ChangeWeightViewController = self.storyboard?.instantiateViewControllerWithIdentifier("changeweight") as! ChangeWeightViewController
+        viewController.workout = workout
+        viewController.weights = pesos
+        viewController.exercises = exercises
+        self.presentViewController(viewController, animated: true, completion: nil)
         
     }
     

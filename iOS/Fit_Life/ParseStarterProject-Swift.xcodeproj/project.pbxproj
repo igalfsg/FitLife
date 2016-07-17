@@ -13,6 +13,8 @@
 		4D40AEAE1D387288003F7297 /* ListofWKOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEAD1D387288003F7297 /* ListofWKOSViewController.swift */; };
 		4D40AEB01D3872B5003F7297 /* listofWKOSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */; };
 		4D40AEB21D3872C8003F7297 /* WKO_exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */; };
+		4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */; };
+		4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */; };
 		4D49E9011D1380FC009BD5F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */; };
 		4D5A0BB31D3ABB77004DE93A /* day1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5A0BB21D3ABB77004DE93A /* day1.jpg */; };
 		4D718C1C1D21E56F00929D99 /* Display_tableview_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */; };
@@ -587,6 +589,8 @@
 		4D40AEAD1D387288003F7297 /* ListofWKOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListofWKOSViewController.swift; sourceTree = "<group>"; };
 		4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listofWKOSTableViewCell.swift; sourceTree = "<group>"; };
 		4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKO_exerciseTableViewCell.swift; sourceTree = "<group>"; };
+		4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeWeightTableViewCell.swift; sourceTree = "<group>"; };
+		4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeWeightViewController.swift; sourceTree = "<group>"; };
 		4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4D5A0BB21D3ABB77004DE93A /* day1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day1.jpg; sourceTree = "<group>"; };
 		4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display_tableview_cell.swift; sourceTree = "<group>"; };
@@ -1762,6 +1766,7 @@
 				4D40AEA91D38638F003F7297 /* Favorites_ViewController.swift */,
 				4D40AEAB1D38714B003F7297 /* Wko_exercises_ViewController.swift */,
 				4D40AEAD1D387288003F7297 /* ListofWKOSViewController.swift */,
+				4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				4D75043C1D18C07C00A20AC5 /* TypeTableViewCell.swift */,
 				4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */,
@@ -1770,6 +1775,7 @@
 				4D40AEA71D386372003F7297 /* FavoritesCell.swift */,
 				4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */,
 				4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */,
+				4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -2470,6 +2476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */,
+				4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */,
 				4DEEF92B1D20AC5B005426A6 /* Search_list_blue_ViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				4D40AEAA1D38638F003F7297 /* Favorites_ViewController.swift in Sources */,
