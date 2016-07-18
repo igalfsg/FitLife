@@ -514,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDV-Pn-xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="28"/>
+            <point key="canvasLocation" x="1855" y="384"/>
         </scene>
         <!--Fitness Calculator-->
         <scene sceneID="tKO-9M-7Je">
@@ -527,7 +527,127 @@
                     <view key="view" contentMode="scaleToFill" id="MpE-2W-vPK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Om-QP-yRO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Fitness Calculator" id="Y5U-Xq-lJv"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-Ov-gvp">
+                                <rect key="frame" x="124" y="341" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3En-EX-Nc9">
+                                <rect key="frame" x="79" y="109" width="163" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVB-QF-TOn">
+                                <rect key="frame" x="0.0" y="44" width="103" height="44"/>
+                                <color key="backgroundColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1 Rep Max">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpM-4U-TtB">
+                                <rect key="frame" x="102" y="45" width="109" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.524378393" blue="0.4128618315" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="BMI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMw-Jn-k3P">
+                                <rect key="frame" x="211" y="45" width="109" height="43"/>
+                                <color key="backgroundColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="HR Zone">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5G-0Z-eyX">
+                                <rect key="frame" x="20" y="212" width="274" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUu-YS-XVv">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5J7-zS-meX"/>
+                                            <constraint firstAttribute="width" constant="120" id="emH-ir-34m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-0j-PVF" customClass="DLRadioButton">
+                                        <rect key="frame" x="120" y="0.0" width="77" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="TKQ-jz-1jQ"/>
+                                        </constraints>
+                                        <state key="normal" title="kg">
+                                            <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me1-eI-aLZ" customClass="DLRadioButton">
+                                        <rect key="frame" x="197" y="0.0" width="77" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="2WY-qU-FvV"/>
+                                        </constraints>
+                                        <state key="normal" title="lb">
+                                            <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-Mp-wdq">
+                                <rect key="frame" x="20" y="264" width="274" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bi3-q1-Sro">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="PKx-iH-fxc"/>
+                                            <constraint firstAttribute="width" constant="120" id="iap-N4-xY6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxY-SK-gb8" customClass="DLRadioButton">
+                                        <rect key="frame" x="120" y="0.0" width="77" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="rqN-Tr-gGa"/>
+                                        </constraints>
+                                        <state key="normal" title="cm">
+                                            <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTX-Fp-a73" customClass="DLRadioButton">
+                                        <rect key="frame" x="197" y="0.0" width="77" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="8Hm-Dq-EyY"/>
+                                        </constraints>
+                                        <state key="normal" title="inches">
+                                            <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Results" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbH-fa-Mho">
+                                <rect key="frame" x="20" y="378" width="274" height="164"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VbH-fa-Mho" firstAttribute="top" secondItem="9oX-Ov-gvp" secondAttribute="bottom" constant="7" id="8P4-Kd-3FM"/>
+                            <constraint firstItem="VMw-Jn-k3P" firstAttribute="leading" secondItem="RVB-QF-TOn" secondAttribute="trailing" constant="108" id="DTA-Kw-HXb"/>
+                            <constraint firstItem="d4R-Mp-wdq" firstAttribute="top" secondItem="o5G-0Z-eyX" secondAttribute="bottom" constant="22" id="Msz-8O-cmA"/>
+                            <constraint firstItem="VMw-Jn-k3P" firstAttribute="leading" secondItem="QpM-4U-TtB" secondAttribute="trailing" id="PxU-Go-rqP"/>
+                            <constraint firstItem="RVB-QF-TOn" firstAttribute="top" secondItem="0Om-QP-yRO" secondAttribute="bottom" id="RJF-Zq-G8R"/>
+                            <constraint firstItem="VMw-Jn-k3P" firstAttribute="top" secondItem="0Om-QP-yRO" secondAttribute="bottom" constant="1" id="Ukn-ev-4oZ"/>
+                            <constraint firstItem="3En-EX-Nc9" firstAttribute="top" secondItem="VMw-Jn-k3P" secondAttribute="bottom" constant="21" id="eXh-cd-3is"/>
+                            <constraint firstItem="9oX-Ov-gvp" firstAttribute="top" secondItem="d4R-Mp-wdq" secondAttribute="bottom" constant="47" id="fWF-zj-9Oe"/>
+                            <constraint firstItem="QpM-4U-TtB" firstAttribute="top" secondItem="0Om-QP-yRO" secondAttribute="bottom" constant="1" id="kyX-LZ-EOd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fitness Calculator" image="rd.png" id="ZCw-GJ-EUk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -535,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ud-Rs-NFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393" y="376"/>
+            <point key="canvasLocation" x="2339" y="376"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1VF-NG-VoL">
@@ -779,21 +899,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" id="eFD-9W-Biu">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IUP-9k-AUl">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="Back_b:" destination="4MU-rO-dq9" eventType="touchUpInside" id="YWL-Cw-Wed"/>
-                                </connections>
-                            </button>
-                            <connections>
-                                <action selector="Back_b:" destination="4MU-rO-dq9" id="gzS-Wp-Thn"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -803,7 +909,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ai-fQ-lvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="1763"/>
+            <point key="canvasLocation" x="1486" y="1740"/>
         </scene>
         <!--Wko exercises View Controller-->
         <scene sceneID="Cav-h8-V20">
@@ -853,13 +959,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uah-gf-mhY">
-                                <rect key="frame" x="107" y="530" width="106" height="30"/>
-                                <state key="normal" title="Change Weight"/>
-                                <connections>
-                                    <action selector="Change_btn:" destination="vbM-F4-eVm" eventType="touchUpInside" id="J7u-95-0Pp"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v6T-0u-sW3">
                                 <rect key="frame" x="0.0" y="86" width="320" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -898,19 +997,14 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEB-N5-vgX">
                                                     <rect key="frame" x="8" y="15" width="66" height="64"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-Fb-0iW" customClass="DLRadioButton">
-                                                    <rect key="frame" x="204" y="33" width="86" height="30"/>
-                                                    <state key="normal" title="Done">
-                                                        <color key="titleColor" red="0.92588944279999996" green="0.39258732099999999" blue="0.060478946589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconSquare" value="YES"/>
-                                                    </userDefinedRuntimeAttributes>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evc-y0-5In">
+                                                    <rect key="frame" x="207" y="37" width="106" height="30"/>
+                                                    <state key="normal" title="Change Weight"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="done_btn" destination="iOn-Fb-0iW" id="mg0-ME-N7L"/>
+                                            <outlet property="changeweight_btn" destination="evc-y0-5In" id="BVM-Ey-Jdc"/>
                                             <outlet property="name_lbl" destination="hKX-pE-twA" id="DD4-Av-urw"/>
                                             <outlet property="pic" destination="bEB-N5-vgX" id="zpH-3x-fwo"/>
                                             <outlet property="reps_lbl" destination="CqG-at-MQd" id="IZE-Y8-LmK"/>
@@ -927,13 +1021,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Uah-gf-mhY" firstAttribute="top" secondItem="v6T-0u-sW3" secondAttribute="bottom" constant="8" id="FNQ-Tr-m3W"/>
                             <constraint firstItem="vPR-4e-6n5" firstAttribute="top" secondItem="HGW-Iu-ATY" secondAttribute="topMargin" id="LxX-cO-Wpp"/>
                             <constraint firstItem="vPR-4e-6n5" firstAttribute="leading" secondItem="HGW-Iu-ATY" secondAttribute="leadingMargin" constant="-20" id="XOS-GP-ncM"/>
                             <constraint firstItem="gSx-6c-PLf" firstAttribute="top" secondItem="vPR-4e-6n5" secondAttribute="bottom" id="ZQc-wx-B0A"/>
                             <constraint firstItem="v6T-0u-sW3" firstAttribute="top" secondItem="gSx-6c-PLf" secondAttribute="bottom" constant="8" id="caK-mX-KIM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vPR-4e-6n5" secondAttribute="trailing" constant="-20" id="ci0-ig-iU3"/>
-                            <constraint firstItem="Y5S-ll-SZ7" firstAttribute="top" secondItem="Uah-gf-mhY" secondAttribute="bottom" constant="8" id="wDP-T7-BLh"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -945,98 +1037,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6n-pv-LNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2315" y="1714"/>
+            <point key="canvasLocation" x="1903" y="1740"/>
         </scene>
-        <!--Change Weight View Controller-->
-        <scene sceneID="VM1-L8-vlj">
+        <!--Exercise View Controller-->
+        <scene sceneID="5bT-uV-f88">
             <objects>
-                <viewController storyboardIdentifier="changeweight" id="IIG-7D-g1e" customClass="ChangeWeightViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exercise_detail" id="9sF-Bp-EDf" customClass="ExerciseViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hHO-B4-bTx"/>
-                        <viewControllerLayoutGuide type="bottom" id="K4F-1e-Cn1"/>
+                        <viewControllerLayoutGuide type="top" id="nF0-FS-lYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hvu-nP-fBd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fi7-9O-Wi5">
+                    <view key="view" contentMode="scaleToFill" id="oUc-sF-me7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ote-7T-hFV">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t19-cg-oQH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Change Weight" id="D2t-BJ-PeB">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="9gE-gD-SOT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5SL-Cw-uVn">
+                                    <navigationItem title="Exercises" id="JkA-ho-arQ">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="g2a-80-FIe">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1PP-yS-fpC">
                                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <action selector="back_btn:" destination="9sF-Bp-EDf" eventType="touchUpInside" id="KGt-vl-WPx"/>
+                                                </connections>
                                             </button>
                                             <connections>
-                                                <action selector="back_btn:" destination="IIG-7D-g1e" id="lc0-ZS-LAc"/>
+                                                <action selector="back_btn:" destination="9sF-Bp-EDf" id="LDD-rb-nEm"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-zI-FdI">
-                                <rect key="frame" x="0.0" y="44" width="320" height="478"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="table_weights" rowHeight="82" id="Nax-nV-ezo" customClass="changeWeightTableViewCell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="82"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nax-nV-ezo" id="AcQ-tF-Hjd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpU-FJ-bit">
-                                                    <rect key="frame" x="253" y="26" width="59" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abq-mE-xti">
-                                                    <rect key="frame" x="14" y="17" width="46" height="48"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6O-DI-nT6">
-                                                    <rect key="frame" x="74" y="30" width="133" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="img" destination="abq-mE-xti" id="hhI-52-L6y"/>
-                                            <outlet property="name_lbl" destination="L6O-DI-nT6" id="QYO-iU-Hv8"/>
-                                            <outlet property="weight_edittxt" destination="qpU-FJ-bit" id="Z95-i1-rO2"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BFO-VW-oTc">
+                                <rect key="frame" x="0.0" y="44" width="320" height="174"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-XB-BVj">
+                                <rect key="frame" x="282" y="530" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="IIG-7D-g1e" id="nFs-yy-mHH"/>
-                                    <outlet property="delegate" destination="IIG-7D-g1e" id="jfn-gJ-gxp"/>
-                                </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-yc-NAW">
-                                <rect key="frame" x="143" y="530" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save_pressed:" destination="IIG-7D-g1e" eventType="touchUpInside" id="bIa-L7-Yrl"/>
+                                    <action selector="play_btn:" destination="9sF-Bp-EDf" eventType="touchUpInside" id="gH9-nA-ncr"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-88-zdg">
+                                <rect key="frame" x="0.0" y="241" width="320" height="164"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uwW-yc-NAW" firstAttribute="top" secondItem="MfB-zI-FdI" secondAttribute="bottom" constant="8" id="RIi-He-T9s"/>
-                            <constraint firstItem="K4F-1e-Cn1" firstAttribute="top" secondItem="uwW-yc-NAW" secondAttribute="bottom" constant="8" id="enG-pk-v4h"/>
+                            <constraint firstItem="Hvu-nP-fBd" firstAttribute="top" secondItem="ayO-XB-BVj" secondAttribute="bottom" constant="8" id="6sa-ng-Stp"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="weight_table" destination="MfB-zI-FdI" id="RGk-Mm-Ivl"/>
+                        <outlet property="explanation" destination="hxz-88-zdg" id="sQV-p1-qOr"/>
+                        <outlet property="image_play" destination="BFO-VW-oTc" id="5gB-4A-79e"/>
+                        <outlet property="navbar" destination="t19-cg-oQH" id="qzG-qM-SwR"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p9V-gb-oIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ot-Lc-tuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="1690"/>
+            <point key="canvasLocation" x="2242" y="1101"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="QCq-zg-P6S">
@@ -1194,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWN-Ca-zr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="1740"/>
+            <point key="canvasLocation" x="1043" y="1740"/>
         </scene>
     </scenes>
     <resources>

@@ -283,7 +283,14 @@ class Search_list_blue_ViewController: UIViewController {
         
         //open storyboard 
         if thing == 1 {//exercise
-            
+            let viewController: ExerciseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("exercise_detail") as! ExerciseViewController
+            if searchController.active && searchController.searchBar.text != "" {
+                viewController.exercise = filtered_stuff[indexPath.row]
+            }
+            else{
+                viewController.exercise = wko_Type[indexPath.row]
+            }
+            self.presentViewController(viewController, animated: true, completion: nil)
         }
         else if thing == 2 {//programs
         let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController

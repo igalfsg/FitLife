@@ -16,8 +16,8 @@ class WKO_exerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var reps_lbl: UILabel!
     @IBOutlet weak var sets_lbl: UILabel!
     @IBOutlet weak var weight_lbl: UILabel!
-    @IBOutlet weak var done_btn: DLRadioButton!
     
+    @IBOutlet weak var changeweight_btn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

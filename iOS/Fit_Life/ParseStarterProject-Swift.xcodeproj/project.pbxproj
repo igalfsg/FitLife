@@ -15,6 +15,7 @@
 		4D40AEB21D3872C8003F7297 /* WKO_exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */; };
 		4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */; };
 		4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */; };
+		4D4529C71D3C4FDA00F8428B /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */; };
 		4D49E9011D1380FC009BD5F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */; };
 		4D5A0BB31D3ABB77004DE93A /* day1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5A0BB21D3ABB77004DE93A /* day1.jpg */; };
 		4D718C1C1D21E56F00929D99 /* Display_tableview_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */; };
@@ -79,17 +80,17 @@
 		4DEEF7351D20A310005426A6 /* barbell_calf_raise1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5211D20A30A005426A6 /* barbell_calf_raise1.jpg */; };
 		4DEEF7361D20A310005426A6 /* barbell_calf_raise2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5221D20A30A005426A6 /* barbell_calf_raise2.jpg */; };
 		4DEEF7371D20A310005426A6 /* barbell_glute_bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5231D20A30A005426A6 /* barbell_glute_bridge.jpg */; };
-		4DEEF7381D20A310005426A6 /* barbell_glute_bridge1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpeg */; };
+		4DEEF7381D20A310005426A6 /* barbell_glute_bridge1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpg */; };
 		4DEEF7391D20A310005426A6 /* barbell_glute_bridge2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5251D20A30A005426A6 /* barbell_glute_bridge2.jpg */; };
 		4DEEF73A1D20A310005426A6 /* barbell_hip_thrust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5261D20A30A005426A6 /* barbell_hip_thrust.jpg */; };
 		4DEEF73B1D20A310005426A6 /* barbell_hip_thrust1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5271D20A30A005426A6 /* barbell_hip_thrust1.jpg */; };
 		4DEEF73C1D20A310005426A6 /* barbell_hip_thrust2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5281D20A30A005426A6 /* barbell_hip_thrust2.jpg */; };
-		4DEEF73D1D20A310005426A6 /* barbell_rollout.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5291D20A30A005426A6 /* barbell_rollout.jpeg */; };
-		4DEEF73E1D20A310005426A6 /* barbell_rollout1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpeg */; };
-		4DEEF73F1D20A310005426A6 /* barbell_rollout2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpeg */; };
-		4DEEF7401D20A310005426A6 /* barbell_squat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52C1D20A30A005426A6 /* barbell_squat.jpeg */; };
-		4DEEF7411D20A310005426A6 /* barbell_squat1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpeg */; };
-		4DEEF7421D20A310005426A6 /* barbell_squat2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpeg */; };
+		4DEEF73D1D20A310005426A6 /* barbell_rollout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5291D20A30A005426A6 /* barbell_rollout.jpg */; };
+		4DEEF73E1D20A310005426A6 /* barbell_rollout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpg */; };
+		4DEEF73F1D20A310005426A6 /* barbell_rollout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpg */; };
+		4DEEF7401D20A310005426A6 /* barbell_squat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52C1D20A30A005426A6 /* barbell_squat.jpg */; };
+		4DEEF7411D20A310005426A6 /* barbell_squat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpg */; };
+		4DEEF7421D20A310005426A6 /* barbell_squat2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpg */; };
 		4DEEF7431D20A310005426A6 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52F1D20A30A005426A6 /* Base.lproj */; };
 		4DEEF7441D20A310005426A6 /* bc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5301D20A30A005426A6 /* bc.png */; };
 		4DEEF7451D20A310005426A6 /* beach_ready_abs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5311D20A30A005426A6 /* beach_ready_abs.jpg */; };
@@ -311,8 +312,8 @@
 		4DEEF81D1D20A310005426A6 /* leg_curls2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF6091D20A30C005426A6 /* leg_curls2.jpeg */; };
 		4DEEF81E1D20A310005426A6 /* leg_exercises.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60A1D20A30C005426A6 /* leg_exercises.jpg */; };
 		4DEEF81F1D20A310005426A6 /* leg_extension.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60B1D20A30C005426A6 /* leg_extension.jpg */; };
-		4DEEF8201D20A310005426A6 /* leg_extension1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60C1D20A30C005426A6 /* leg_extension1.jpeg */; };
-		4DEEF8211D20A310005426A6 /* leg_extension2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60D1D20A30C005426A6 /* leg_extension2.jpeg */; };
+		4DEEF8201D20A310005426A6 /* leg_extension1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60C1D20A30C005426A6 /* leg_extension1.jpg */; };
+		4DEEF8211D20A310005426A6 /* leg_extension2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60D1D20A30C005426A6 /* leg_extension2.jpg */; };
 		4DEEF8221D20A310005426A6 /* leg_press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60E1D20A30C005426A6 /* leg_press.jpg */; };
 		4DEEF8231D20A310005426A6 /* leg_press1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF60F1D20A30C005426A6 /* leg_press1.jpeg */; };
 		4DEEF8241D20A310005426A6 /* leg_press2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF6101D20A30C005426A6 /* leg_press2.jpeg */; };
@@ -591,6 +592,7 @@
 		4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKO_exerciseTableViewCell.swift; sourceTree = "<group>"; };
 		4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeWeightTableViewCell.swift; sourceTree = "<group>"; };
 		4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeWeightViewController.swift; sourceTree = "<group>"; };
+		4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4D5A0BB21D3ABB77004DE93A /* day1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = day1.jpg; sourceTree = "<group>"; };
 		4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display_tableview_cell.swift; sourceTree = "<group>"; };
@@ -656,17 +658,17 @@
 		4DEEF5211D20A30A005426A6 /* barbell_calf_raise1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_calf_raise1.jpg; sourceTree = "<group>"; };
 		4DEEF5221D20A30A005426A6 /* barbell_calf_raise2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_calf_raise2.jpg; sourceTree = "<group>"; };
 		4DEEF5231D20A30A005426A6 /* barbell_glute_bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_glute_bridge.jpg; sourceTree = "<group>"; };
-		4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_glute_bridge1.jpeg; sourceTree = "<group>"; };
+		4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_glute_bridge1.jpg; sourceTree = "<group>"; };
 		4DEEF5251D20A30A005426A6 /* barbell_glute_bridge2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_glute_bridge2.jpg; sourceTree = "<group>"; };
 		4DEEF5261D20A30A005426A6 /* barbell_hip_thrust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_hip_thrust.jpg; sourceTree = "<group>"; };
 		4DEEF5271D20A30A005426A6 /* barbell_hip_thrust1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_hip_thrust1.jpg; sourceTree = "<group>"; };
 		4DEEF5281D20A30A005426A6 /* barbell_hip_thrust2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_hip_thrust2.jpg; sourceTree = "<group>"; };
-		4DEEF5291D20A30A005426A6 /* barbell_rollout.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout.jpeg; sourceTree = "<group>"; };
-		4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout1.jpeg; sourceTree = "<group>"; };
-		4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout2.jpeg; sourceTree = "<group>"; };
-		4DEEF52C1D20A30A005426A6 /* barbell_squat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat.jpeg; sourceTree = "<group>"; };
-		4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat1.jpeg; sourceTree = "<group>"; };
-		4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat2.jpeg; sourceTree = "<group>"; };
+		4DEEF5291D20A30A005426A6 /* barbell_rollout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout.jpg; sourceTree = "<group>"; };
+		4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout1.jpg; sourceTree = "<group>"; };
+		4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_rollout2.jpg; sourceTree = "<group>"; };
+		4DEEF52C1D20A30A005426A6 /* barbell_squat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat.jpg; sourceTree = "<group>"; };
+		4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat1.jpg; sourceTree = "<group>"; };
+		4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = barbell_squat2.jpg; sourceTree = "<group>"; };
 		4DEEF52F1D20A30A005426A6 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		4DEEF5301D20A30A005426A6 /* bc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bc.png; sourceTree = "<group>"; };
 		4DEEF5311D20A30A005426A6 /* beach_ready_abs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach_ready_abs.jpg; sourceTree = "<group>"; };
@@ -888,8 +890,8 @@
 		4DEEF6091D20A30C005426A6 /* leg_curls2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_curls2.jpeg; sourceTree = "<group>"; };
 		4DEEF60A1D20A30C005426A6 /* leg_exercises.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_exercises.jpg; sourceTree = "<group>"; };
 		4DEEF60B1D20A30C005426A6 /* leg_extension.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_extension.jpg; sourceTree = "<group>"; };
-		4DEEF60C1D20A30C005426A6 /* leg_extension1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_extension1.jpeg; sourceTree = "<group>"; };
-		4DEEF60D1D20A30C005426A6 /* leg_extension2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_extension2.jpeg; sourceTree = "<group>"; };
+		4DEEF60C1D20A30C005426A6 /* leg_extension1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_extension1.jpg; sourceTree = "<group>"; };
+		4DEEF60D1D20A30C005426A6 /* leg_extension2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_extension2.jpg; sourceTree = "<group>"; };
 		4DEEF60E1D20A30C005426A6 /* leg_press.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_press.jpg; sourceTree = "<group>"; };
 		4DEEF60F1D20A30C005426A6 /* leg_press1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_press1.jpeg; sourceTree = "<group>"; };
 		4DEEF6101D20A30C005426A6 /* leg_press2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leg_press2.jpeg; sourceTree = "<group>"; };
@@ -1247,17 +1249,17 @@
 				4DEEF5211D20A30A005426A6 /* barbell_calf_raise1.jpg */,
 				4DEEF5221D20A30A005426A6 /* barbell_calf_raise2.jpg */,
 				4DEEF5231D20A30A005426A6 /* barbell_glute_bridge.jpg */,
-				4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpeg */,
+				4DEEF5241D20A30A005426A6 /* barbell_glute_bridge1.jpg */,
 				4DEEF5251D20A30A005426A6 /* barbell_glute_bridge2.jpg */,
 				4DEEF5261D20A30A005426A6 /* barbell_hip_thrust.jpg */,
 				4DEEF5271D20A30A005426A6 /* barbell_hip_thrust1.jpg */,
 				4DEEF5281D20A30A005426A6 /* barbell_hip_thrust2.jpg */,
-				4DEEF5291D20A30A005426A6 /* barbell_rollout.jpeg */,
-				4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpeg */,
-				4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpeg */,
-				4DEEF52C1D20A30A005426A6 /* barbell_squat.jpeg */,
-				4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpeg */,
-				4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpeg */,
+				4DEEF5291D20A30A005426A6 /* barbell_rollout.jpg */,
+				4DEEF52A1D20A30A005426A6 /* barbell_rollout1.jpg */,
+				4DEEF52B1D20A30A005426A6 /* barbell_rollout2.jpg */,
+				4DEEF52C1D20A30A005426A6 /* barbell_squat.jpg */,
+				4DEEF52D1D20A30A005426A6 /* barbell_squat1.jpg */,
+				4DEEF52E1D20A30A005426A6 /* barbell_squat2.jpg */,
 				4DEEF52F1D20A30A005426A6 /* Base.lproj */,
 				4DEEF5301D20A30A005426A6 /* bc.png */,
 				4DEEF5311D20A30A005426A6 /* beach_ready_abs.jpg */,
@@ -1479,8 +1481,8 @@
 				4DEEF6091D20A30C005426A6 /* leg_curls2.jpeg */,
 				4DEEF60A1D20A30C005426A6 /* leg_exercises.jpg */,
 				4DEEF60B1D20A30C005426A6 /* leg_extension.jpg */,
-				4DEEF60C1D20A30C005426A6 /* leg_extension1.jpeg */,
-				4DEEF60D1D20A30C005426A6 /* leg_extension2.jpeg */,
+				4DEEF60C1D20A30C005426A6 /* leg_extension1.jpg */,
+				4DEEF60D1D20A30C005426A6 /* leg_extension2.jpg */,
 				4DEEF60E1D20A30C005426A6 /* leg_press.jpg */,
 				4DEEF60F1D20A30C005426A6 /* leg_press1.jpeg */,
 				4DEEF6101D20A30C005426A6 /* leg_press2.jpeg */,
@@ -1758,6 +1760,7 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				4DFA03661D1755D300FA5BC7 /* SplashViewController.swift */,
+				4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */,
 				4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */,
 				4D75043A1D18B52700A20AC5 /* Workout_types_ViewController.swift */,
 				4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */,
@@ -1950,7 +1953,7 @@
 				4DEEF7021D20A310005426A6 /* a.png in Resources */,
 				4DEEF7271D20A310005426A6 /* arw.png in Resources */,
 				4DEEF8501D20A310005426A6 /* oblique_crossovers.jpeg in Resources */,
-				4DEEF73F1D20A310005426A6 /* barbell_rollout2.jpeg in Resources */,
+				4DEEF73F1D20A310005426A6 /* barbell_rollout2.jpg in Resources */,
 				4DEEF80E1D20A310005426A6 /* jump_squat2.jpg in Resources */,
 				4DEEF7DD1D20A310005426A6 /* full_body.jpg in Resources */,
 				4DEEF70E1D20A310005426A6 /* abductors_machine2.jpg in Resources */,
@@ -2071,8 +2074,8 @@
 				4DEEF85B1D20A310005426A6 /* pike_up.jpeg in Resources */,
 				4DEEF77F1D20A310005426A6 /* chinup.jpg in Resources */,
 				4DEEF81A1D20A310005426A6 /* lateral_raises2.jpg in Resources */,
-				4DEEF7381D20A310005426A6 /* barbell_glute_bridge1.jpeg in Resources */,
-				4DEEF73D1D20A310005426A6 /* barbell_rollout.jpeg in Resources */,
+				4DEEF7381D20A310005426A6 /* barbell_glute_bridge1.jpg in Resources */,
+				4DEEF73D1D20A310005426A6 /* barbell_rollout.jpg in Resources */,
 				4DEEF74C1D20A310005426A6 /* bench_press2.jpeg in Resources */,
 				4DEEF74F1D20A310005426A6 /* bent_over_lateral_raise2.jpg in Resources */,
 				4DEEF7491D20A310005426A6 /* behind_the_back_cable_curl2.jpg in Resources */,
@@ -2111,7 +2114,7 @@
 				4DEEF7651D20A310005426A6 /* bulgarian_split_squat2.jpg in Resources */,
 				4DEEF7FB1D20A310005426A6 /* incline_dumbbell_fly1.jpg in Resources */,
 				4DEEF8671D20A310005426A6 /* pushup1.jpeg in Resources */,
-				4DEEF73E1D20A310005426A6 /* barbell_rollout1.jpeg in Resources */,
+				4DEEF73E1D20A310005426A6 /* barbell_rollout1.jpg in Resources */,
 				4DEEF7821D20A310005426A6 /* chk_box.png in Resources */,
 				4DEEF89D1D20A310005426A6 /* side_plank.jpg in Resources */,
 				4DEEF7CF1D20A310005426A6 /* fit.png in Resources */,
@@ -2166,7 +2169,7 @@
 				4DEEF8C21D20A310005426A6 /* straight_arm_pulldown1.jpeg in Resources */,
 				4DEEF8661D20A310005426A6 /* pushup.jpeg in Resources */,
 				4DEEF9201D20A311005426A6 /* ab_wheel_rollout1.jpg in Resources */,
-				4DEEF7401D20A310005426A6 /* barbell_squat.jpeg in Resources */,
+				4DEEF7401D20A310005426A6 /* barbell_squat.jpg in Resources */,
 				4DEEF7DA1D20A310005426A6 /* front_squat1.jpg in Resources */,
 				4DEEF7F01D20A310005426A6 /* horizontal_cable_wood_chop1.jpg in Resources */,
 				4DEEF7951D20A310005426A6 /* decline_bench_press2.jpg in Resources */,
@@ -2212,7 +2215,7 @@
 				4DEEF8361D20A310005426A6 /* machine_fly2.jpg in Resources */,
 				4DEEF9051D20A310005426A6 /* walking_hip_bridge.jpg in Resources */,
 				4DEEF8D81D20A310005426A6 /* swiss_ball_plank_circle_or_stirring_the_pot.jpeg in Resources */,
-				4DEEF8211D20A310005426A6 /* leg_extension2.jpeg in Resources */,
+				4DEEF8211D20A310005426A6 /* leg_extension2.jpg in Resources */,
 				4DEEF7871D20A310005426A6 /* close_grip_pushup2.jpg in Resources */,
 				4DEEF8881D20A310005426A6 /* seated_calf_raise1.jpg in Resources */,
 				4DEEF7931D20A310005426A6 /* decline_bench_press.jpg in Resources */,
@@ -2220,7 +2223,7 @@
 				4DEEF7861D20A310005426A6 /* close_grip_pushup1.jpg in Resources */,
 				4DEEF8DC1D20A310005426A6 /* swiss_ball_rollout.jpg in Resources */,
 				4DEEF8751D20A310005426A6 /* romanian_deadlift2.jpeg in Resources */,
-				4DEEF7411D20A310005426A6 /* barbell_squat1.jpeg in Resources */,
+				4DEEF7411D20A310005426A6 /* barbell_squat1.jpg in Resources */,
 				4DEEF7541D20A310005426A6 /* bicycle_crunch1.jpg in Resources */,
 				4DEEF8C51D20A310005426A6 /* sumo_romanian_deadlift1.jpeg in Resources */,
 				4DEEF7B71D20A310005426A6 /* dumbbell_pushup_with_row2.jpeg in Resources */,
@@ -2357,7 +2360,7 @@
 				4DEEF8C91D20A310005426A6 /* supermans2.jpeg in Resources */,
 				4DEEF8981D20A310005426A6 /* shoulder_side_raise1.jpeg in Resources */,
 				4DEEF8E31D20A310005426A6 /* text_box.png in Resources */,
-				4DEEF7421D20A310005426A6 /* barbell_squat2.jpeg in Resources */,
+				4DEEF7421D20A310005426A6 /* barbell_squat2.jpg in Resources */,
 				4DEEF8031D20A310005426A6 /* incline_neutral_grip_bench_press.jpg in Resources */,
 				4DEEF7F51D20A310005426A6 /* Images.xcassets in Resources */,
 				4DEEF8F41D20A310005426A6 /* trx_triceps_extension.jpeg in Resources */,
@@ -2405,7 +2408,7 @@
 				4DEEF8F31D20A310005426A6 /* trx_single_leg_row2.jpeg in Resources */,
 				4DEEF74A1D20A310005426A6 /* bench_press.jpg in Resources */,
 				4DEEF8081D20A310005426A6 /* inverted_row1.jpg in Resources */,
-				4DEEF8201D20A310005426A6 /* leg_extension1.jpeg in Resources */,
+				4DEEF8201D20A310005426A6 /* leg_extension1.jpg in Resources */,
 				4DEEF8DB1D20A310005426A6 /* swiss_ball_plank_circle_or_stirring_the_pot3.jpeg in Resources */,
 				4DEEF7281D20A310005426A6 /* at_home_exercises.jpg in Resources */,
 				4DEEF76E1D20A310005426A6 /* cable_rotator_cuff_external_rotation2.jpg in Resources */,
@@ -2477,6 +2480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */,
+				4D4529C71D3C4FDA00F8428B /* ExerciseViewController.swift in Sources */,
 				4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */,
 				4DEEF92B1D20AC5B005426A6 /* Search_list_blue_ViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,

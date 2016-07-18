@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Wko_exercises_ViewController: UIViewController {
+class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var Calories_lbl: UILabel!
     @IBOutlet weak var exercise_table: UITableView!
@@ -21,6 +21,7 @@ class Wko_exercises_ViewController: UIViewController {
     var reps = [String]()
     var weights = [String]()
     var pesos = [Int]()
+    var tField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,8 +87,15 @@ class Wko_exercises_ViewController: UIViewController {
                         var i = 0
                         while i < self.numberofexercises{
                             if self.weights[i] == "Weight: 0"{
-                                self.weights[i] = "Weight: " + String(object!["weight" + String(i)] as! Int)
-                                self.pesos[i] = object!["weight" + String(i)] as! Int
+                                if object!["weight" + String(i)] != nil{
+                                    self.weights[i] = "Weight: " + String(object!["weight" + String(i)] as! Int)
+                                    self.pesos[i] = object!["weight" + String(i)] as! Int
+                                }
+                                else{
+                                    self.weights[i] = "Weight: 0"
+                                    self.pesos[i] = 0
+                                }
+                                
                             }
                             
                             i += 1
@@ -116,7 +124,7 @@ class Wko_exercises_ViewController: UIViewController {
     
     
     //number of rows on the table
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         return self.exercises.count
     }
@@ -133,11 +141,79 @@ class Wko_exercises_ViewController: UIViewController {
         mycell.reps_lbl.text = reps[indexPath.row]
         mycell.sets_lbl.text = sets[indexPath.row]
         mycell.weight_lbl.text = weights[indexPath.row]
-        mycell.done_btn.multipleSelectionEnabled = true
+        mycell.changeweight_btn.tag = indexPath.row
+        mycell.changeweight_btn.addTarget(self, action: #selector(Wko_exercises_ViewController.changeAction(_:)), forControlEvents: .TouchUpInside)
         return mycell
+    }
+    //change weight functions
+    
+    //button pressed
+    @IBAction func changeAction(sender: UIButton){
+        print(sender.tag)
+        let alert = UIAlertController(title: "Enter Weight for" + exercises[sender.tag], message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addTextFieldWithConfigurationHandler(configurationTextField)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:handleCancel))
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
+            //print("Done !!")
+            print("Item : \(self.tField.text)")
+            let user = PFUser.currentUser()!.username
+            let weightquery = PFQuery(className: "my_wko")
+            //weightquery.fromLocalDatastore()
+            weightquery.whereKey("name", equalTo: self.workout!);
+            weightquery.whereKey("user", equalTo: user!);
+            weightquery.getFirstObjectInBackgroundWithBlock({
+                (object:PFObject?, error:NSError?)  in
+                if object != nil {
+                        if self.tField.text != ""{
+                            object!["weight" + String(sender.tag)] = Int(self.tField.text!)
+                        }
+                    object?.saveInBackground()
+                }//end if object
+                else{
+                    let new_fav = PFObject(className: "my_wko")
+                    new_fav.setObject(user!, forKey: "user")
+                    new_fav.setObject(self.workout!, forKey: "name")
+                    if self.tField.text != ""{
+                        new_fav.setObject(Int(self.tField.text!)!, forKey: "weight" + String(sender.tag))
+                    }
+                    new_fav.pinInBackground()
+                    new_fav.saveInBackgroundWithBlock {
+                        (success: Bool?, error: NSError?) -> Void in
+                        if error == nil{
+                            //change buton
+                            
+                        }
+                    }
+                }//end if object == nil
+                
+                
+                
+            })//end query
+        }))//end alert
+        self.presentViewController(alert, animated: true, completion: {
+            print("completion block")
+        })
     }
     
     
+    //alert functions
+    
+    
+    func configurationTextField(textField: UITextField!)
+    {
+        //print("generating the TextField")
+        textField.placeholder = "Enter Weight"
+        textField.keyboardType = UIKeyboardType.NumberPad
+        tField = textField
+    }
+    
+    
+    func handleCancel(alertView: UIAlertAction!)
+    {
+        //print("Cancelled !!")
+    }
+
     //on click event
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -159,17 +235,7 @@ class Wko_exercises_ViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-   //chane weight button pressed
-    @IBAction func Change_btn(sender: AnyObject) {
-        //self.dismissViewControllerAnimated(true, completion: {});
-        let viewController: ChangeWeightViewController = self.storyboard?.instantiateViewControllerWithIdentifier("changeweight") as! ChangeWeightViewController
-        viewController.workout = workout
-        viewController.weights = pesos
-        viewController.exercises = exercises
-        self.presentViewController(viewController, animated: true, completion: nil)
-        
-    }
-    
+   
     
     @IBAction func favorite_btn(sender: AnyObject) {
         let user = PFUser.currentUser()!.username
