@@ -32,8 +32,6 @@
 		4DEEF7041D20A310005426A6 /* ab_runners1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F01D20A30A005426A6 /* ab_runners1.jpg */; };
 		4DEEF7051D20A310005426A6 /* ab_runners2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F11D20A30A005426A6 /* ab_runners2.jpg */; };
 		4DEEF7061D20A310005426A6 /* ab_wheel_rollout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F21D20A30A005426A6 /* ab_wheel_rollout.jpg */; };
-		4DEEF7071D20A310005426A6 /* ab_wheel_rollout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F31D20A30A005426A6 /* ab_wheel_rollout1.jpg */; };
-		4DEEF7081D20A310005426A6 /* ab_wheel_rollout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F41D20A30A005426A6 /* ab_wheel_rollout2.jpg */; };
 		4DEEF7091D20A310005426A6 /* abductor_side_leg_raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F51D20A30A005426A6 /* abductor_side_leg_raise.jpg */; };
 		4DEEF70A1D20A310005426A6 /* abductor_side_leg_raise1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F61D20A30A005426A6 /* abductor_side_leg_raise1.jpg */; };
 		4DEEF70B1D20A310005426A6 /* abductor_side_leg_raise2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF4F71D20A30A005426A6 /* abductor_side_leg_raise2.jpg */; };
@@ -270,7 +268,6 @@
 		4DEEF7F21D20A310005426A6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5DE1D20A30C005426A6 /* ic_launcher.png */; };
 		4DEEF7F31D20A310005426A6 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5DF1D20A30C005426A6 /* image1.png */; };
 		4DEEF7F41D20A310005426A6 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5E01D20A30C005426A6 /* image2.png */; };
-		4DEEF7F51D20A310005426A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5E11D20A30C005426A6 /* Images.xcassets */; };
 		4DEEF7F61D20A310005426A6 /* img_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5E21D20A30C005426A6 /* img_round.png */; };
 		4DEEF7F71D20A310005426A6 /* inch_worms.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5E31D20A30C005426A6 /* inch_worms.jpg */; };
 		4DEEF7F81D20A310005426A6 /* inch_worms1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF5E41D20A30C005426A6 /* inch_worms1.jpg */; };
@@ -559,13 +556,8 @@
 		4DEEF9131D20A310005426A6 /* wk1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF6FF1D20A30F005426A6 /* wk1.png */; };
 		4DEEF9141D20A310005426A6 /* wk2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF7001D20A30F005426A6 /* wk2.png */; };
 		4DEEF9151D20A310005426A6 /* wko.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF7011D20A30F005426A6 /* wko.png */; };
-		4DEEF91D1D20A311005426A6 /* ab_runners1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9161D20A311005426A6 /* ab_runners1.jpg */; };
-		4DEEF91E1D20A311005426A6 /* ab_runners2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9171D20A311005426A6 /* ab_runners2.jpg */; };
-		4DEEF91F1D20A311005426A6 /* ab_wheel_rollout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9181D20A311005426A6 /* ab_wheel_rollout.jpg */; };
 		4DEEF9201D20A311005426A6 /* ab_wheel_rollout1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9191D20A311005426A6 /* ab_wheel_rollout1.jpg */; };
 		4DEEF9211D20A311005426A6 /* ab_wheel_rollout2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF91A1D20A311005426A6 /* ab_wheel_rollout2.jpg */; };
-		4DEEF9221D20A311005426A6 /* abductor_side_leg_raise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF91B1D20A311005426A6 /* abductor_side_leg_raise.jpg */; };
-		4DEEF9231D20A311005426A6 /* abductor_side_leg_raise1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF91C1D20A311005426A6 /* abductor_side_leg_raise1.jpg */; };
 		4DEEF9251D20A42D005426A6 /* main_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9241D20A42D005426A6 /* main_bg.png */; };
 		4DEEF9271D20A5A9005426A6 /* abs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF9261D20A5A9005426A6 /* abs.jpg */; };
 		4DEEF92B1D20AC5B005426A6 /* Search_list_blue_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEF92A1D20AC5B005426A6 /* Search_list_blue_ViewController.swift */; };
@@ -1848,7 +1840,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Parse;
 				TargetAttributes = {
 					81BA81441A49DA1800E65899 = {
@@ -2073,7 +2065,6 @@
 				4DEEF78C1D20A310005426A6 /* crossover_squats1.jpg in Resources */,
 				4DEEF8A31D20A310005426A6 /* single_leg_raises.jpeg in Resources */,
 				4DEEF8AE1D20A310005426A6 /* squat_to_press2.jpg in Resources */,
-				4DEEF7081D20A310005426A6 /* ab_wheel_rollout2.jpg in Resources */,
 				4DEEF85B1D20A310005426A6 /* pike_up.jpeg in Resources */,
 				4DEEF77F1D20A310005426A6 /* chinup.jpg in Resources */,
 				4DEEF81A1D20A310005426A6 /* lateral_raises2.jpg in Resources */,
@@ -2087,7 +2078,6 @@
 				4DEEF8151D20A310005426A6 /* lat_pulldown.jpg in Resources */,
 				4DEEF71E1D20A310005426A6 /* arms_high_partial_situp1.jpg in Resources */,
 				4DEEF79C1D20A310005426A6 /* dip2.jpg in Resources */,
-				4DEEF9231D20A311005426A6 /* abductor_side_leg_raise1.jpg in Resources */,
 				4DEEF7781D20A310005426A6 /* chck_box.png in Resources */,
 				4DEEF7221D20A310005426A6 /* arnold_press1.jpg in Resources */,
 				4DEEF79B1D20A310005426A6 /* dip1.jpg in Resources */,
@@ -2235,7 +2225,6 @@
 				4DEEF89B1D20A310005426A6 /* side_plank_with_hip_drops1.jpeg in Resources */,
 				4DEEF8491D20A310005426A6 /* neutral_grip_triceps_extension.jpeg in Resources */,
 				4DEEF7731D20A310005426A6 /* calculate.png in Resources */,
-				4DEEF91F1D20A311005426A6 /* ab_wheel_rollout.jpg in Resources */,
 				4DEEF8861D20A310005426A6 /* seated_cable_row2.jpg in Resources */,
 				4DEEF8D91D20A310005426A6 /* swiss_ball_plank_circle_or_stirring_the_pot1.jpeg in Resources */,
 				4DEEF81E1D20A310005426A6 /* leg_exercises.jpg in Resources */,
@@ -2260,7 +2249,6 @@
 				4DEEF8DF1D20A310005426A6 /* swiss_ball_wall_squat.jpeg in Resources */,
 				4DEEF90C1D20A310005426A6 /* walking_single_leg_romanian_deadlift1.jpeg in Resources */,
 				4DEEF75F1D20A310005426A6 /* btn_delete.png in Resources */,
-				4DEEF91E1D20A311005426A6 /* ab_runners2.jpg in Resources */,
 				4DEEF8B61D20A310005426A6 /* standing_hip_abduction.jpg in Resources */,
 				4DEEF8E01D20A310005426A6 /* swiss_ball_wall_squat1.jpeg in Resources */,
 				4DEEF7F71D20A310005426A6 /* inch_worms.jpg in Resources */,
@@ -2301,7 +2289,6 @@
 				4DEEF8A81D20A310005426A6 /* single_leg_wobble_lunge_trx2.jpeg in Resources */,
 				4DEEF7F31D20A310005426A6 /* image1.png in Resources */,
 				4DEEF8961D20A310005426A6 /* shoulder_front_raise2.jpeg in Resources */,
-				4DEEF7071D20A310005426A6 /* ab_wheel_rollout1.jpg in Resources */,
 				4DEEF7911D20A310005426A6 /* deadlift1.jpg in Resources */,
 				4DEEF8611D20A310005426A6 /* pre_prog.png in Resources */,
 				4DEEF8CF1D20A310005426A6 /* swiss_ball_dumbbell_bench_press.jpg in Resources */,
@@ -2365,7 +2352,6 @@
 				4DEEF8E31D20A310005426A6 /* text_box.png in Resources */,
 				4DEEF7421D20A310005426A6 /* barbell_squat2.jpg in Resources */,
 				4DEEF8031D20A310005426A6 /* incline_neutral_grip_bench_press.jpg in Resources */,
-				4DEEF7F51D20A310005426A6 /* Images.xcassets in Resources */,
 				4DEEF8F41D20A310005426A6 /* trx_triceps_extension.jpeg in Resources */,
 				4DEEF8471D20A310005426A6 /* neutral_grip_triceps_extension_1.jpeg in Resources */,
 				4DEEF8271D20A310005426A6 /* leg_raise2.jpg in Resources */,
@@ -2389,7 +2375,6 @@
 				4DEEF8C11D20A310005426A6 /* straight_arm_pulldown.jpeg in Resources */,
 				4DEEF83E1D20A310005426A6 /* military_press2.jpg in Resources */,
 				4DEEF9061D20A310005426A6 /* walking_hip_bridge1.jpg in Resources */,
-				4DEEF91D1D20A311005426A6 /* ab_runners1.jpg in Resources */,
 				4DEEF7171D20A310005426A6 /* alternating_dumbbell_row1.jpg in Resources */,
 				4DEEF8461D20A310005426A6 /* neutral_grip_pulldown2.jpg in Resources */,
 				4DEEF70F1D20A310005426A6 /* adductors_machine.jpg in Resources */,
@@ -2421,7 +2406,6 @@
 				4DEEF7E61D20A310005426A6 /* hang_clean1.jpg in Resources */,
 				4DEEF8541D20A310005426A6 /* opposite_arm_leg_reach1.jpeg in Resources */,
 				4DEEF8551D20A310005426A6 /* opposite_arm_leg_reach2.jpeg in Resources */,
-				4DEEF9221D20A311005426A6 /* abductor_side_leg_raise.jpg in Resources */,
 				4DEEF80A1D20A310005426A6 /* jump_rope.jpeg in Resources */,
 				4DEEF8B91D20A310005426A6 /* standing_hip_adduction.jpeg in Resources */,
 			);
@@ -2542,6 +2526,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

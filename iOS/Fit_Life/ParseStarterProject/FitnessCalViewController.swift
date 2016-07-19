@@ -22,7 +22,7 @@ class FitnessCalViewController: UIViewController {
     @IBOutlet weak var lb: DLRadioButton!
     @IBOutlet weak var inch: DLRadioButton!
     @IBOutlet weak var result_txt: UITextView!
-    
+    @IBOutlet weak var calculate_btn: UIButton!
     var weightbmi = 0.0;
     var heightbmi = 0.0;
     var type = 1
@@ -36,6 +36,18 @@ class FitnessCalViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return false to ignore.
+        //dont forget to delegate the textfields on viewdidload
+        //and inherit the textfield thing for the class
+    {
+        if textField == self.top_txt{
+            self.bottom_txt.becomeFirstResponder()
+        }
+        else if textField == self.bottom_txt{
+            self.calculate_magic(calculate_btn)
+        }
+                return true
     }
     
     //kgorlb
@@ -120,7 +132,6 @@ class FitnessCalViewController: UIViewController {
             let weight = Double(bottom_txt.text!)
             let reps = Double(top_txt.text!)
             let max = weight! / (1.0278 - (0.0278 * reps!))
-            print((0.0278 * reps!))
             let six = Double(round((max * 0.83) * 100.0) / 100.0)
             let eight = Double(round((max * 0.78) * 100.0) / 100.0)
             let ten = Double(round((max * 0.75) * 100.0) / 100.0)
