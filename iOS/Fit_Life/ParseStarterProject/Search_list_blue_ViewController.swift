@@ -32,7 +32,6 @@ class Search_list_blue_ViewController: UIViewController {
         disp_tableView.tableHeaderView = searchController.searchBar
         
         
-        
         if thing == 1{//exercises
             let queryWorkoutTypes = PFQuery(className: "Exercises")
             //queryWorkoutTypes.fromLocalDatastore()
@@ -286,6 +285,7 @@ class Search_list_blue_ViewController: UIViewController {
             let viewController: ExerciseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("exercise_detail") as! ExerciseViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.exercise = filtered_stuff[indexPath.row]
+                self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.exercise = wko_Type[indexPath.row]
@@ -296,6 +296,7 @@ class Search_list_blue_ViewController: UIViewController {
         let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.program = filtered_stuff[indexPath.row]
+                self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.program = wko_Type[indexPath.row]
@@ -307,6 +308,7 @@ class Search_list_blue_ViewController: UIViewController {
             let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.workout = filtered_stuff[indexPath.row]
+                self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.workout = wko_Type[indexPath.row]
@@ -328,6 +330,9 @@ class Search_list_blue_ViewController: UIViewController {
     }
     //back button
     @IBAction func Back_b(sender: AnyObject) {
+        if searchController.active && searchController.searchBar.text != "" {
+            self.dismissViewControllerAnimated(true, completion: {});
+        }
         self.dismissViewControllerAnimated(true, completion: {});
         
     }
