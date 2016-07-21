@@ -23,6 +23,7 @@ class FitnessCalViewController: UIViewController {
     @IBOutlet weak var inch: DLRadioButton!
     @IBOutlet weak var result_txt: UITextView!
     @IBOutlet weak var calculate_btn: UIButton!
+    @IBOutlet weak var nav_bar: UINavigationBar!
     var weightbmi = 0.0;
     var heightbmi = 0.0;
     var type = 1
@@ -31,6 +32,8 @@ class FitnessCalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.nav_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.nav_bar)
     }
 
     override func didReceiveMemoryWarning() {

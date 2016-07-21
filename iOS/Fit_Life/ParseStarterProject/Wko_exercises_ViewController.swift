@@ -81,7 +81,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                 let weightquery = PFQuery(className: "my_wko")
                 //weightquery.fromLocalDatastore()
                 weightquery.whereKey("name", equalTo: self.workout!);
-                weightquery.whereKey("user", equalTo: user!);
+                //weightquery.whereKey("user", equalTo: user!);
                 weightquery.getFirstObjectInBackgroundWithBlock({
                     (object:PFObject?, error:NSError?)  in
                     if object != nil {
@@ -119,7 +119,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-            self.exercise_table.rowHeight = 70
+            self.exercise_table.rowHeight = 120
         }
         
     }//end viewdidload

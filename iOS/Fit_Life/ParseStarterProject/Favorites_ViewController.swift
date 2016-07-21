@@ -11,17 +11,18 @@ import Parse
 
 class Favorites_ViewController: UIViewController {
     var wkoorprog = 0
-    let user = PFUser.currentUser()!.username
+    //let user = PFUser.currentUser()!.username
     var workouts = [String]()
     @IBOutlet weak var wkos_Btn: UIButton!
     @IBOutlet weak var prog_btn: UIButton!
     @IBOutlet weak var disp_table: UITableView!
+    @IBOutlet weak var nav_bar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
-        queryWorkoutTypes.whereKey("user", equalTo: user!);
+        //queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -37,6 +38,14 @@ class Favorites_ViewController: UIViewController {
                 
             }//end else
         }//end first query
+        
+        self.nav_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.nav_bar)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.disp_table.rowHeight = 100
+        }
     }//end viewdidload
     
     override func didReceiveMemoryWarning() {
@@ -88,7 +97,7 @@ class Favorites_ViewController: UIViewController {
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
-        queryWorkoutTypes.whereKey("user", equalTo: user!);
+        //queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -116,7 +125,7 @@ class Favorites_ViewController: UIViewController {
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_prog")
         //queryWorkoutTypes.fromLocalDatastore()
-        queryWorkoutTypes.whereKey("user", equalTo: user!);
+        //queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
