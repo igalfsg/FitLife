@@ -14,12 +14,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var pass: UITextField!
 
     @IBOutlet weak var username: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         pass.delegate = self
         username.delegate = self
-        
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg_register.png")!)
     }
     
     @IBAction func login_pressed(sender: AnyObject) {

@@ -15,6 +15,9 @@ class Search_list_blue_ViewController: UIViewController {
     
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var disp_tableView: UITableView!
+    @IBOutlet weak var navigation_bar: UINavigationBar!
+    
+    
     let searchController = UISearchController(searchResultsController: nil)
     var type: String?
     var thing: Int?
@@ -229,6 +232,14 @@ class Search_list_blue_ViewController: UIViewController {
             
         }//end else if thing == 6
         */
+        
+        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.navigation_bar)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.disp_tableView.rowHeight = 70
+        }
         
     } //end view did load
 

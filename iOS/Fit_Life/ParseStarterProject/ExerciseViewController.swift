@@ -13,6 +13,7 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var image_play: UIImageView!
     @IBOutlet weak var explanation: UITextView!
     @IBOutlet weak var navbar: UINavigationBar!
+    @IBOutlet weak var navigation_bar: UINavigationBar!
 
     var exercise: String?
     var video_link = ""
@@ -53,6 +54,10 @@ class ExerciseViewController: UIViewController {
                 print(error)
             }//end else
         })//end query
+        
+        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.navigation_bar)
+        
     }
 
     override func didReceiveMemoryWarning() {

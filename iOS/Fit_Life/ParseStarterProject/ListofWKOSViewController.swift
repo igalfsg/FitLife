@@ -13,6 +13,9 @@ class ListofWKOSViewController: UIViewController {
 
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var workouts_table: UITableView!
+    @IBOutlet weak var navigation_bar: UINavigationBar!
+    
+    
     var program: String?
     var imgarr = ["day 1", "day 2", "day 3", "day 4", "day 5", "day 6", "day 7", "day 8", "day 9", "day 10", "day 11", "day 12", "day 13", "day 14"];
     var workouts = [String]()
@@ -50,6 +53,14 @@ class ListofWKOSViewController: UIViewController {
             
             
         })//end query
+        
+        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.navigation_bar)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.workouts_table.rowHeight = 70
+        }
 
     }//end viewdidload
 
@@ -126,6 +137,7 @@ class ListofWKOSViewController: UIViewController {
             
         })//end query
 
+        
     }
    
     

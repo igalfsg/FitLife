@@ -14,6 +14,7 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
     
     //dont forget to also drag the data source and the delegate of the table to the view controller
     @IBOutlet weak var workouts_tableview: UITableView!
+    @IBOutlet weak var navigation_bar: UINavigationBar!
     
     var wko_Type = [String]()
     var img_name = [String]()
@@ -61,6 +62,13 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
             }//end else
         }//end first query
         
+        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.navigation_bar)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.workouts_tableview.rowHeight = 220
+        }
         
     }//end view did load
 

@@ -14,6 +14,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var Calories_lbl: UILabel!
     @IBOutlet weak var exercise_table: UITableView!
     @IBOutlet weak var navbar: UINavigationBar!
+    
     var workout: String?
     var numberofexercises = 0
     var exercises = [String]()
@@ -112,6 +113,14 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             
             
         })//end query
+        
+        self.navbar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
+        self.view.addSubview(self.navbar)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.exercise_table.rowHeight = 70
+        }
         
     }//end viewdidload
     
