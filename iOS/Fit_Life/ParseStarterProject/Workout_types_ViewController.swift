@@ -14,7 +14,8 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
     
     //dont forget to also drag the data source and the delegate of the table to the view controller
     @IBOutlet weak var workouts_tableview: UITableView!
-    @IBOutlet weak var navigation_bar: UINavigationBar!
+    @IBOutlet weak var top_view: UIView!
+    @IBOutlet weak var top_view_phone: UIView!
     
     var wko_Type = [String]()
     var img_name = [String]()
@@ -61,9 +62,9 @@ class Workout_types_ViewController: UIViewController, UITableViewDelegate {
                 }//end second query
             }//end else
         }//end first query
-        
-        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.navigation_bar)
+
+        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
+        self.top_view_phone.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
