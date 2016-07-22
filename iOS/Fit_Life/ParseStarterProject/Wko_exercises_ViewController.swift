@@ -13,7 +13,9 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var Calories_lbl: UILabel!
     @IBOutlet weak var exercise_table: UITableView!
-    @IBOutlet weak var navbar: UINavigationBar!
+    @IBOutlet weak var title_view: UILabel!
+    @IBOutlet weak var top_view: UIView!
+
     
     var workout: String?
     var numberofexercises = 0
@@ -26,7 +28,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navbar.topItem!.title = workout //set title
+        title_view.text = workout //set title
         
         let queryWorkoutTypes = PFQuery(className: "Workouts")
         //queryWorkoutTypes.fromLocalDatastore()
@@ -114,8 +116,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             
         })//end query
         
-        self.navbar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.navbar)
+        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {

@@ -11,9 +11,9 @@ import Parse
 
 class ListofWKOSViewController: UIViewController {
 
-    @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var workouts_table: UITableView!
-    @IBOutlet weak var navigation_bar: UINavigationBar!
+    @IBOutlet weak var top_bar: UIView!
+    @IBOutlet weak var title_bar: UILabel!
     
     
     var program: String?
@@ -24,7 +24,7 @@ class ListofWKOSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("hi")
-        navbar.topItem!.title = program //set title 
+        self.title_bar.text = program //set title
         let queryWorkoutTypes = PFQuery(className: "Programs")
         //queryWorkoutTypes.fromLocalDatastore()
         queryWorkoutTypes.whereKey("name", equalTo: program!);
@@ -54,8 +54,7 @@ class ListofWKOSViewController: UIViewController {
             
         })//end query
         
-        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.navigation_bar)
+        self.top_bar.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {

@@ -12,11 +12,9 @@ import QuartzCore
 
 class Search_list_blue_ViewController: UIViewController {
 
-    
-    @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var disp_tableView: UITableView!
-    @IBOutlet weak var navigation_bar: UINavigationBar!
-    
+    @IBOutlet weak var title_table: UILabel!
+    @IBOutlet weak var top_view: UIView!
     
     let searchController = UISearchController(searchResultsController: nil)
     var type: String?
@@ -27,7 +25,7 @@ class Search_list_blue_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navbar.topItem!.title = type
+        title_table.text = type
         //search stuff
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -233,8 +231,7 @@ class Search_list_blue_ViewController: UIViewController {
         }//end else if thing == 6
         */
         
-        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.navigation_bar)
+        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
