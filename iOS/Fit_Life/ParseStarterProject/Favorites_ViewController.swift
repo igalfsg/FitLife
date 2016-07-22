@@ -16,10 +16,12 @@ class Favorites_ViewController: UIViewController {
     @IBOutlet weak var wkos_Btn: UIButton!
     @IBOutlet weak var prog_btn: UIButton!
     @IBOutlet weak var disp_table: UITableView!
-    @IBOutlet weak var nav_bar: UINavigationBar!
-    
+    @IBOutlet weak var top_view: UIView!
+    @IBOutlet weak var title_view: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title_view.text = "Favorites"
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
         //queryWorkoutTypes.whereKey("user", equalTo: user!);
@@ -39,8 +41,7 @@ class Favorites_ViewController: UIViewController {
             }//end else
         }//end first query
         
-        self.nav_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.nav_bar)
+        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
         let currentDevice : UIDevice = UIDevice.currentDevice()
         if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
