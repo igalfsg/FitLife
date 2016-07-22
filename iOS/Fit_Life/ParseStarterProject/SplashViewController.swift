@@ -26,14 +26,13 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         let currentUser = PFUser.currentUser()
         print(currentUser);
-        /*
         if currentUser != nil {
             self.performSegueWithIdentifier("go_main", sender: self)
             print("why im i here")
         }
         else{
             self.performSegueWithIdentifier("go_login", sender: self)
-        }*/
+        }
     }
     /*
     // MARK: - Navigation
