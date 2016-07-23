@@ -12,9 +12,9 @@ import Parse
 class ExerciseViewController: UIViewController {
     @IBOutlet weak var image_play: UIImageView!
     @IBOutlet weak var explanation: UITextView!
-    @IBOutlet weak var navbar: UINavigationBar!
-    @IBOutlet weak var navigation_bar: UINavigationBar!
-
+    @IBOutlet weak var top_bar: UIView!
+    @IBOutlet weak var top_title: UILabel!
+    
     var exercise: String?
     var video_link = ""
     var details = ""
@@ -23,7 +23,7 @@ class ExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navbar.topItem!.title = exercise
+        top_title.text = exercise
         let weightquery = PFQuery(className: "Exercises")
         //weightquery.fromLocalDatastore()
         weightquery.whereKey("name", equalTo: self.exercise!);
@@ -55,8 +55,7 @@ class ExerciseViewController: UIViewController {
             }//end else
         })//end query
         
-        self.navigation_bar.setBackgroundImage(UIImage(named: "header.png"), forBarMetrics: .Default)
-        self.view.addSubview(self.navigation_bar)
+        self.top_bar.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
     }
 
@@ -85,5 +84,7 @@ class ExerciseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

@@ -53,6 +53,9 @@ class ChangeWeightViewController: UIViewController {
         return mycell
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     @IBAction func save_pressed(sender: AnyObject) {
         let user = PFUser.currentUser()!.username
