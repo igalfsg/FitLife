@@ -975,10 +975,17 @@
                                     </stackView>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
                                         <rect key="frame" x="136" y="0.0" width="161" height="78"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
+=======
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
+                                        <rect key="frame" x="136" y="0.0" width="161" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
+>>>>>>> origin/master
 =======
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
                                         <rect key="frame" x="136" y="0.0" width="161" height="78"/>
@@ -1027,7 +1034,11 @@
                                             </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
+=======
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
+>>>>>>> origin/master
 =======
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
 >>>>>>> origin/master
@@ -1056,7 +1067,11 @@
                                             </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
+=======
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
+>>>>>>> origin/master
 =======
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
 >>>>>>> origin/master
@@ -1375,7 +1390,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wbz-pU-Lfu" id="3Qm-M2-1gC">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
 >>>>>>> origin/master
@@ -2029,6 +2048,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="223-9s-LM2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master
@@ -2045,6 +2067,7 @@
                                                 </imageView>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-h6-dUK">
                                                     <rect key="frame" x="0.0" y="87" width="320" height="36"/>
                                                     <subviews>
@@ -2052,11 +2075,16 @@
 =======
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> origin/master
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-h6-dUK">
                                                     <rect key="frame" x="0.0" y="87" width="320" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxn-gy-EzL">
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master
@@ -2162,7 +2190,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHK-G1-0DZ">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <rect key="frame" x="81" y="35" width="159" height="25"/>
+=======
+                                        <rect key="frame" x="81" y="35" width="158.5" height="25"/>
+>>>>>>> origin/master
 =======
                                         <rect key="frame" x="81" y="35" width="158.5" height="25"/>
 >>>>>>> origin/master
@@ -2274,7 +2306,11 @@
                                     </imageView>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
+>>>>>>> origin/master
 =======
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
 >>>>>>> origin/master
@@ -2310,7 +2346,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RbE-7j-oId" id="33p-vJ-ETP">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
 >>>>>>> origin/master
@@ -2524,7 +2564,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gA6-HO-XA2" id="e5y-dS-n2c">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
 >>>>>>> origin/master
@@ -2729,7 +2773,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQQ-Xp-EKq" id="iBv-2C-62n">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
 >>>>>>> origin/master
@@ -3165,8 +3213,14 @@
                                     </label>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
                                         <rect key="frame" x="-349" y="-93" width="760" height="232"/>
+=======
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
+                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
+                                        <state key="normal" title="Back"/>
+>>>>>>> origin/master
 =======
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
                                         <rect key="frame" x="8" y="8" width="46" height="30"/>
@@ -3330,7 +3384,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3CS-hG-yQQ" id="ea7-Ng-MlD">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
 >>>>>>> origin/master
@@ -3657,9 +3715,12 @@
                                         <exclude reference="fn0-iD-FJD"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <exclude reference="PV8-tT-gY1"/>
                                         <exclude reference="Vkd-d8-nR6"/>
                                         <exclude reference="eQN-5c-Pt3"/>
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 =======
@@ -3671,6 +3732,12 @@
                                         <exclude reference="ypB-XE-q5l"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                        <exclude reference="PV8-tT-gY1"/>
+                                        <exclude reference="Vkd-d8-nR6"/>
+                                        <exclude reference="eQN-5c-Pt3"/>
+>>>>>>> origin/master
 =======
                                         <exclude reference="PV8-tT-gY1"/>
                                         <exclude reference="Vkd-d8-nR6"/>
@@ -3692,9 +3759,12 @@
                                         <include reference="fn0-iD-FJD"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <include reference="PV8-tT-gY1"/>
                                         <include reference="Vkd-d8-nR6"/>
                                         <include reference="eQN-5c-Pt3"/>
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 =======
@@ -3706,6 +3776,12 @@
                                         <exclude reference="ypB-XE-q5l"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                                        <include reference="PV8-tT-gY1"/>
+                                        <include reference="Vkd-d8-nR6"/>
+                                        <include reference="eQN-5c-Pt3"/>
+>>>>>>> origin/master
 =======
                                         <include reference="PV8-tT-gY1"/>
                                         <include reference="Vkd-d8-nR6"/>
@@ -4027,7 +4103,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gN-86-RqX" id="lGO-lT-JMc">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+=======
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
+>>>>>>> origin/master
 =======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
 >>>>>>> origin/master
