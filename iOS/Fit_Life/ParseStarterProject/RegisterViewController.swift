@@ -19,6 +19,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var WeightTextField: UITextField!
     @IBOutlet weak var kgBtn: DLRadioButton!
     @IBOutlet weak var interest_button: DLRadioButton!
+    @IBOutlet weak var interest_view: UIStackView!
+    
     var sex = ""
     var peso = ""
     var interests = ""
@@ -33,8 +35,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         EmailTextField.delegate = self
         PasswordTextField.delegate = self
         BirthdateTextField.delegate = self
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
