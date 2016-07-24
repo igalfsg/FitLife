@@ -101,7 +101,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="5YK-fa-VFe">
-                                <rect key="frame" x="107" y="258" width="108" height="69"/>
+                                <rect key="frame" x="107" y="258" width="107" height="69"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INE-kT-h7J">
                                         <rect key="frame" x="35" y="0.0" width="38" height="30"/>
@@ -130,8 +130,8 @@
                                             <action selector="login_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duQ-P9-HjG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-BJ-iUr">
-                                        <rect key="frame" x="0.0" y="39" width="108" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-BJ-iUr">
+                                        <rect key="frame" x="0.0" y="39" width="107" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QqJ-BJ-iUr" secondAttribute="height" multiplier="107:30" id="AAB-nk-v2v"/>
                                             <constraint firstAttribute="width" secondItem="QqJ-BJ-iUr" secondAttribute="height" multiplier="107:30" id="Iak-Ng-UcE"/>
@@ -667,7 +667,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="swg-in-hln">
-                                <rect key="frame" x="10" y="64" width="285" height="267"/>
+                                <rect key="frame" x="10" y="64" width="285" height="283"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-m8-ll0">
                                         <rect key="frame" x="0.0" y="0.0" width="285" height="30"/>
@@ -701,19 +701,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
-                                        <rect key="frame" x="0.0" y="196" width="285" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-87-Hlj">
+                                        <rect key="frame" x="0.0" y="196" width="285" height="34"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
-                                                <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-PB-WKd">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="135" id="neU-LX-gkO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
-                                                <rect key="frame" x="135" y="0.0" width="74" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-07-Tc2" customClass="DLRadioButton">
+                                                <rect key="frame" x="135" y="0.0" width="68" height="34"/>
                                                 <state key="normal" title="Kg">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -722,8 +722,8 @@
                                                     <outletCollection property="otherButtons" destination="faT-Kc-tp6" id="1x5-rc-KiM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
-                                                <rect key="frame" x="209" y="0.0" width="76" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faT-Kc-tp6" customClass="DLRadioButton">
+                                                <rect key="frame" x="203" y="0.0" width="83" height="34"/>
                                                 <state key="normal" title="lbs">
                                                     <color key="titleColor" red="0.83921568629999999" green="0.35294117650000001" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -736,11 +736,11 @@
                                             <constraint firstAttribute="width" constant="285" id="Nhe-8j-C4K"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
-                                        <rect key="frame" x="0.0" y="245" width="180" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHK-T1-YN6">
+                                        <rect key="frame" x="0.0" y="249" width="180" height="34"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="han-MV-0t9" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="Oek-UA-z7Z"/>
                                                 </constraints>
@@ -752,8 +752,8 @@
                                                     <outletCollection property="otherButtons" destination="qPb-5l-hAm" id="RMp-1h-mBr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
-                                                <rect key="frame" x="75" y="0.0" width="105" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-5l-hAm" customClass="DLRadioButton">
+                                                <rect key="frame" x="75" y="0.0" width="105" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="TGk-fi-r1k"/>
                                                 </constraints>
@@ -869,13 +869,13 @@
                                 </variation>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="auS-9b-uJz">
-                                <rect key="frame" x="14" y="411" width="297" height="78"/>
+                                <rect key="frame" x="14" y="411" width="297" height="114"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="78"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-mQ-Bch">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="114"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTv-qw-UVE" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="D8f-fh-aZI"/>
                                                     <constraint firstAttribute="width" secondItem="rTv-qw-UVE" secondAttribute="height" multiplier="60:11" id="Gqn-Yh-HZT"/>
@@ -915,8 +915,8 @@
                                                     <outletCollection property="otherButtons" destination="QsP-8S-6Wn" id="MJK-aw-VGi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="28" width="120" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-8S-6Wn" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="40" width="120" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="xfi-Bi-N7s"/>
                                                 </constraints>
@@ -939,8 +939,8 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="nQl-uW-hJk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="56" width="120" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhg-bO-24r" customClass="DLRadioButton">
+                                                <rect key="frame" x="0.0" y="80" width="120" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="7p2-CU-pF9"/>
                                                 </constraints>
@@ -973,32 +973,11 @@
                                             <constraint firstItem="QsP-8S-6Wn" firstAttribute="leading" secondItem="YcU-mQ-Bch" secondAttribute="leading" id="qhe-HZ-thG"/>
                                         </constraints>
                                     </stackView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
-                                        <rect key="frame" x="136" y="0.0" width="161" height="78"/>
+                                        <rect key="frame" x="136" y="0.0" width="161" height="114"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
-=======
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
-                                        <rect key="frame" x="136" y="0.0" width="161" height="78"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
-                                        <rect key="frame" x="136" y="0.0" width="161" height="78"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-xy-Dw3">
-                                        <rect key="frame" x="136" y="0.0" width="161" height="78"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Th4-f9-Quf" customClass="DLRadioButton">
->>>>>>> origin/master
-                                                <rect key="frame" x="0.0" y="0.0" width="161" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Th4-f9-Quf" secondAttribute="height" multiplier="155:22" id="JV3-y3-Aot"/>
                                                     <constraint firstAttribute="width" secondItem="Th4-f9-Quf" secondAttribute="height" multiplier="155:22" id="sNj-UL-we9"/>
@@ -1032,20 +1011,8 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="80w-i8-xbi"/>
                                                 </connections>
                                             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAf-Xt-yw4" customClass="DLRadioButton">
->>>>>>> origin/master
-                                                <rect key="frame" x="0.0" y="28" width="161" height="22"/>
+                                                <rect key="frame" x="0.0" y="40" width="161" height="34"/>
                                                 <state key="normal" title="Group Training">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -1065,20 +1032,8 @@
                                                     <action selector="loginteretsts:" destination="IHk-wZ-uLI" eventType="touchUpInside" id="NRT-pt-MzY"/>
                                                 </connections>
                                             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
->>>>>>> origin/master
-=======
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-r2-F1K" customClass="DLRadioButton">
->>>>>>> origin/master
-                                                <rect key="frame" x="0.0" y="56" width="161" height="22"/>
+                                                <rect key="frame" x="0.0" y="80" width="161" height="34"/>
                                                 <state key="normal" title="Body Building">
                                                     <color key="titleColor" red="0.055055628269999997" green="0.055055628269999997" blue="0.055055628269999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -1388,19 +1343,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wbz-pU-Lfu" id="3Qm-M2-1gC">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNB-cW-oYq">
@@ -2035,25 +1978,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exercise_cell_type" rowHeight="123" id="r9c-ww-eLJ" customClass="extercise_type_cell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
-<<<<<<< HEAD
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="r9c-ww-eLJ" id="3To-V9-JIa">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="223-9s-LM2">
-=======
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r9c-ww-eLJ" id="3To-V9-JIa">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="122.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="223-9s-LM2">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="223-9s-LM2" secondAttribute="height" multiplier="0.5" id="1FF-t0-P7r"/>
@@ -2065,29 +1994,10 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-h6-dUK">
-                                                    <rect key="frame" x="0.0" y="87" width="320" height="36"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxn-gy-EzL">
-=======
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-h6-dUK">
                                                     <rect key="frame" x="0.0" y="87" width="320" height="36"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxn-gy-EzL">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
                                                             <rect key="frame" x="8" y="7" width="282" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="xxn-gy-EzL" secondAttribute="height" multiplier="94:7" id="kvp-gR-oDn"/>
@@ -2187,20 +2097,8 @@
                                             <constraint firstAttribute="width" secondItem="Pea-uW-nrR" secondAttribute="height" multiplier="34:31" id="T1F-yc-C9c"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHK-G1-0DZ">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHK-G1-0DZ">
                                         <rect key="frame" x="81" y="35" width="159" height="25"/>
-=======
-                                        <rect key="frame" x="81" y="35" width="158.5" height="25"/>
->>>>>>> origin/master
-=======
-                                        <rect key="frame" x="81" y="35" width="158.5" height="25"/>
->>>>>>> origin/master
-=======
-                                        <rect key="frame" x="81" y="35" width="158.5" height="25"/>
->>>>>>> origin/master
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QHK-G1-0DZ" secondAttribute="height" multiplier="193:31" id="7fy-ib-dgf"/>
                                         </constraints>
@@ -2304,19 +2202,7 @@
                                             <constraint firstAttribute="width" secondItem="Vrc-sV-gpW" secondAttribute="height" multiplier="34:31" id="pae-qF-qku"/>
                                         </constraints>
                                     </imageView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
-=======
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
->>>>>>> origin/master
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
->>>>>>> origin/master
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-A8-cmI">
->>>>>>> origin/master
                                         <rect key="frame" x="81" y="34" width="159" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UsY-A8-cmI" secondAttribute="height" multiplier="193:31" id="S7v-nu-AiK"/>
@@ -2344,19 +2230,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="129"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RbE-7j-oId" id="33p-vJ-ETP">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
->>>>>>> origin/master
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IS9-PC-6oe">
@@ -2562,19 +2436,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gA6-HO-XA2" id="e5y-dS-n2c">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
->>>>>>> origin/master
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qhI-Rz-mzR">
@@ -2771,19 +2633,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rQQ-Xp-EKq" id="iBv-2C-62n">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
->>>>>>> origin/master
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqG-at-MQd">
@@ -3211,26 +3061,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
                                         <rect key="frame" x="-349" y="-93" width="760" height="232"/>
-=======
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
-                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
-                                        <state key="normal" title="Back"/>
->>>>>>> origin/master
-=======
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
-                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
-                                        <state key="normal" title="Back"/>
->>>>>>> origin/master
-=======
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyT-di-LcP">
-                                        <rect key="frame" x="8" y="8" width="46" height="30"/>
-                                        <state key="normal" title="Back"/>
->>>>>>> origin/master
                                         <connections>
                                             <action selector="back_btn:" destination="9sF-Bp-EDf" eventType="touchUpInside" id="xFF-y9-KYz"/>
                                         </connections>
@@ -3382,19 +3214,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3CS-hG-yQQ" id="ea7-Ng-MlD">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="111.5"/>
->>>>>>> origin/master
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0g2-KE-pky">
@@ -3713,41 +3533,14 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="fn0-iD-FJD"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         <exclude reference="PV8-tT-gY1"/>
                                         <exclude reference="Vkd-d8-nR6"/>
                                         <exclude reference="eQN-5c-Pt3"/>
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
                                         <exclude reference="ONp-He-Eww"/>
                                         <exclude reference="asE-bj-oIk"/>
                                         <exclude reference="ers-M5-EXQ"/>
                                         <exclude reference="nOg-Aj-TEz"/>
                                         <exclude reference="ypB-XE-q5l"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                                        <exclude reference="PV8-tT-gY1"/>
-                                        <exclude reference="Vkd-d8-nR6"/>
-                                        <exclude reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
-=======
-                                        <exclude reference="PV8-tT-gY1"/>
-                                        <exclude reference="Vkd-d8-nR6"/>
-                                        <exclude reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
-=======
-                                        <exclude reference="PV8-tT-gY1"/>
-                                        <exclude reference="Vkd-d8-nR6"/>
-                                        <exclude reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -3757,41 +3550,14 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="fn0-iD-FJD"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         <include reference="PV8-tT-gY1"/>
                                         <include reference="Vkd-d8-nR6"/>
                                         <include reference="eQN-5c-Pt3"/>
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
                                         <include reference="ONp-He-Eww"/>
                                         <include reference="asE-bj-oIk"/>
                                         <exclude reference="ers-M5-EXQ"/>
                                         <exclude reference="nOg-Aj-TEz"/>
                                         <exclude reference="ypB-XE-q5l"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                                        <include reference="PV8-tT-gY1"/>
-                                        <include reference="Vkd-d8-nR6"/>
-                                        <include reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
-=======
-                                        <include reference="PV8-tT-gY1"/>
-                                        <include reference="Vkd-d8-nR6"/>
-                                        <include reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
-=======
-                                        <include reference="PV8-tT-gY1"/>
-                                        <include reference="Vkd-d8-nR6"/>
-                                        <include reference="eQN-5c-Pt3"/>
->>>>>>> origin/master
                                     </mask>
                                 </variation>
                             </view>
@@ -4101,19 +3867,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9gN-86-RqX" id="lGO-lT-JMc">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
-=======
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
->>>>>>> origin/master
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mKV-en-Lz0">
