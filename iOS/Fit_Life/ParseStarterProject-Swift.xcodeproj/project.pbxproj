@@ -288,7 +288,6 @@
 		4D7928651D3DB07E0018D4E8 /* incline_neutral_grip_bench_press.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D79264C1D3DB07A0018D4E8 /* incline_neutral_grip_bench_press.jpg */; };
 		4D7928661D3DB07E0018D4E8 /* incline_neutral_grip_bench_press1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D79264D1D3DB07A0018D4E8 /* incline_neutral_grip_bench_press1.jpg */; };
 		4D7928671D3DB07E0018D4E8 /* incline_neutral_grip_bench_press2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D79264E1D3DB07A0018D4E8 /* incline_neutral_grip_bench_press2.jpg */; };
-		4D7928681D3DB07E0018D4E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D79264F1D3DB07A0018D4E8 /* Info.plist */; };
 		4D7928691D3DB07E0018D4E8 /* interst.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7926501D3DB07A0018D4E8 /* interst.png */; };
 		4D79286A1D3DB07E0018D4E8 /* inverted_row.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D7926511D3DB07A0018D4E8 /* inverted_row.jpg */; };
 		4D79286B1D3DB07E0018D4E8 /* inverted_row1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D7926521D3DB07A0018D4E8 /* inverted_row1.jpg */; };
@@ -577,6 +576,23 @@
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		AFDEBB9CC87C2DE74F276F4A /* Pods_ParseStarterProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7896C3A182D86219E8D1CD /* Pods_ParseStarterProject_Swift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7606EE201D456AF20043F3D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7606EE1B1D456AF20043F3D9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFFFE4D449A5B7D221CA9E6D7362AD1B;
+			remoteInfo = DLRadioButton;
+		};
+		7606EE221D456AF20043F3D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7606EE1B1D456AF20043F3D9 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1819B755D97E1CE92F9EFDB22ECABC40;
+			remoteInfo = "Pods-ParseStarterProject-Swift";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		48145B864FCA780C954B7374 /* Pods-ParseStarterProject-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseStarterProject-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseStarterProject-Swift/Pods-ParseStarterProject-Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1140,6 +1156,7 @@
 		4DEEF5E11D20A30C005426A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4DEEF92A1D20AC5B005426A6 /* Search_list_blue_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search_list_blue_ViewController.swift; sourceTree = "<group>"; };
 		4DFA03661D1755D300FA5BC7 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7606EE1B1D456AF20043F3D9 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1175,6 +1192,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7606EE1C1D456AF20043F3D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7606EE211D456AF20043F3D9 /* DLRadioButton.framework */,
+				7606EE231D456AF20043F3D9 /* Pods_ParseStarterProject_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1726,6 +1752,7 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				7606EE1B1D456AF20043F3D9 /* Pods.xcodeproj */,
 				81BA81471A49DA1800E65899 /* ParseStarterProject */,
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
@@ -1854,12 +1881,35 @@
 			mainGroup = 81BA813C1A49DA1800E65899;
 			productRefGroup = 81BA81461A49DA1800E65899 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7606EE1C1D456AF20043F3D9 /* Products */;
+					ProjectRef = 7606EE1B1D456AF20043F3D9 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				81BA81441A49DA1800E65899 /* ParseStarterProject-Swift */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7606EE211D456AF20043F3D9 /* DLRadioButton.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DLRadioButton.framework;
+			remoteRef = 7606EE201D456AF20043F3D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7606EE231D456AF20043F3D9 /* Pods_ParseStarterProject_Swift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_ParseStarterProject_Swift.framework;
+			remoteRef = 7606EE221D456AF20043F3D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		81BA81431A49DA1800E65899 /* Resources */ = {
@@ -1984,7 +2034,6 @@
 				4D7928131D3DB07E0018D4E8 /* dumbbell_overhead_squat.jpg in Resources */,
 				4D7927BC1D3DB07E0018D4E8 /* btn_add_more.png in Resources */,
 				4D7929061D3DB07E0018D4E8 /* single_leg_glute_bridge2.jpg in Resources */,
-				4D7928681D3DB07E0018D4E8 /* Info.plist in Resources */,
 				4D79280A1D3DB07E0018D4E8 /* dumbbell_kickback.jpg in Resources */,
 				4D7928781D3DB07E0018D4E8 /* lat_pulldown.jpg in Resources */,
 				4D7928FA1D3DB07E0018D4E8 /* shoulder_front_raise2.jpg in Resources */,
