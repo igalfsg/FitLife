@@ -71,8 +71,7 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     //number of rows on the table
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
-        
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return self.workouts.count
     }
     
