@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ListofWKOSViewController: UIViewController {
+class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var workouts_table: UITableView!
     @IBOutlet weak var top_bar: UIView!
@@ -45,6 +45,8 @@ class ListofWKOSViewController: UIViewController {
                 self.workouts.append(object!["wk11"] as! String)
                 self.workouts.append(object!["wk12"] as! String)
                 self.workouts.append(object!["wk13"] as! String)
+                self.workouts_table.delegate = self
+                self.workouts_table.dataSource = self
                 self.workouts_table.reloadData()
             }//end if error
             else{
