@@ -147,7 +147,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
         if UIImage(named: self.exercises[indexPath.row].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil) + ".jpg") == nil{
             mycell.pic.image = UIImage(named:"logo_icon.png")
         }
-        
+        print(weights[indexPath.row])
         mycell.reps_lbl.text = reps[indexPath.row]
         mycell.sets_lbl.text = sets[indexPath.row]
         mycell.weight_lbl.text = weights[indexPath.row]
