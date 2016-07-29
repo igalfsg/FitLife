@@ -27,8 +27,8 @@ class SplashViewController: UIViewController {
         let currentUser = PFUser.currentUser()
         print(currentUser);
         if currentUser != nil {
-             //self.performSegueWithIdentifier("go_main", sender: self)
-             self.performSegueWithIdentifier("go_login", sender: self)
+             self.performSegueWithIdentifier("go_main", sender: self)
+             //self.performSegueWithIdentifier("go_login", sender: self)
         }
         else{
             self.performSegueWithIdentifier("go_login", sender: self)
