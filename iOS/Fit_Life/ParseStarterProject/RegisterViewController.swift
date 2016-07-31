@@ -167,7 +167,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 (succeeded: Bool, error: NSError?) -> Void in
                 if error == nil {
                     // Hooray! Let them use the app now.
-                     self.performSegueWithIdentifier("register_success", sender: self)
+                    let viewController: Program_types_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Program_type") as! Program_types_ViewController
+                    viewController.tabdisp = 0
+                    self.navigationController?.pushViewController(viewController, animated: true)
                     
                 } else {
                     // Show the errorString somewhere and let the user try again.
@@ -191,7 +193,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     func isVaildbday(testStr:String) -> Bool {
         // print("validate calendar: \(testStr)")
-        let emailRegEx = "[0-9]{2}/{1}[0-9]{2}/{1}[0-9]{4}"
+        let emailRegEx = "[0-9]{1,2}/{1}[0-9]{1,2}/{1}[0-9]{4}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(testStr)

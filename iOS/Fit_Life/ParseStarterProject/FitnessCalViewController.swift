@@ -28,10 +28,16 @@ class FitnessCalViewController: UIViewController {
     var weightbmi = 0.0;
     var heightbmi = 0.0;
     var type = 1
+    @IBOutlet weak var myTabBar: UITabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
+        
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
         // Do any additional setup after loading the view.
         self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
     }
@@ -180,6 +186,34 @@ class FitnessCalViewController: UIViewController {
         }
 
     }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

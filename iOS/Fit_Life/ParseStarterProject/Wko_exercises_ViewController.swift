@@ -15,6 +15,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var exercise_table: UITableView!
     @IBOutlet weak var title_view: UILabel!
     @IBOutlet weak var top_view: UIView!
+    @IBOutlet weak var myTabBar: UITabBar!
 
     
     var workout: String?
@@ -25,11 +26,30 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     var weights = [String]()
     var pesos = [Int]()
     var tField: UITextField!
-    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         title_view.text = workout //set title
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         
+        
+        loadtable ()
+        //UIBS
+        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
+        
+        let currentDevice : UIDevice = UIDevice.currentDevice()
+        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
+            self.exercise_table.rowHeight = 120
+        }
+        
+    }//end viewdidload
+    func loadtable (){
         let queryWorkoutTypes = PFQuery(className: "Workouts")
         //queryWorkoutTypes.fromLocalDatastore()
         queryWorkoutTypes.whereKey("name", equalTo: workout!);
@@ -83,7 +103,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                 let weightquery = PFQuery(className: "my_wko")
                 //weightquery.fromLocalDatastore()
                 weightquery.whereKey("name", equalTo: self.workout!);
-                //weightquery.whereKey("user", equalTo: user!);
+                weightquery.whereKey("user", equalTo: user!);
                 weightquery.getFirstObjectInBackgroundWithBlock({
                     (object:PFObject?, error:NSError?)  in
                     if object != nil {
@@ -106,7 +126,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                         self.exercise_table.reloadData()
                     }//end if object
                 })//end query
-
+                
                 self.exercise_table.reloadData()
             }//end if error
             else{
@@ -115,16 +135,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             
             
         })//end query
-        
-        self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
-        
-        let currentDevice : UIDevice = UIDevice.currentDevice()
-        if currentDevice.userInterfaceIdiom == UIUserInterfaceIdiom.Pad {
-            self.exercise_table.rowHeight = 120
-        }
-        
-    }//end viewdidload
-    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -147,7 +158,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
         if UIImage(named: self.exercises[indexPath.row].lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.LiteralSearch, range: nil) + ".jpg") == nil{
             mycell.pic.image = UIImage(named:"logo_icon.png")
         }
-        print(weights[indexPath.row])
+        //print(weights[indexPath.row])
         mycell.reps_lbl.text = reps[indexPath.row]
         mycell.sets_lbl.text = sets[indexPath.row]
         mycell.weight_lbl.text = weights[indexPath.row]
@@ -159,14 +170,14 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     
     //button pressed
     @IBAction func changeAction(sender: UIButton){
-        print(sender.tag)
+        //print(sender.tag)
         let alert = UIAlertController(title: "Enter Weight for" + exercises[sender.tag], message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addTextFieldWithConfigurationHandler(configurationTextField)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:handleCancel))
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
             //print("Done !!")
-            print("Item : \(self.tField.text)")
+            //print("Item : \(self.tField.text)")
             let user = PFUser.currentUser()!.username
             let weightquery = PFQuery(className: "my_wko")
             //weightquery.fromLocalDatastore()
@@ -179,6 +190,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                             object!["weight" + String(sender.tag)] = Int(self.tField.text!)
                         }
                     object?.saveInBackground()
+                    object?.pinInBackground()
                 }//end if object
                 else{
                     let new_fav = PFObject(className: "my_wko")
@@ -198,11 +210,11 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                 }//end if object == nil
                 
                 
-                
+                self.loadtable ()
             })//end query
         }))//end alert
         self.presentViewController(alert, animated: true, completion: {
-            print("completion block")
+            //print("completion block")
         })
     }
     
@@ -226,13 +238,10 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
 
     //on click event
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        /*
         //open storyboard
-        let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
-        viewController.workout = workouts[indexPath.row]
-        self.presentViewController(viewController, animated: true, completion: nil)
-        */
+        let viewController: ExerciseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("exercise_detail") as! ExerciseViewController
+        viewController.exercise = exercises[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -245,7 +254,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     
     //back button
     @IBAction func back_Btn(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
    
@@ -283,6 +292,33 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             
             
         })//end query
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        //print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        
     }
     /*
     // MARK: - Navigation

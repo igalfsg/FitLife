@@ -14,15 +14,24 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var explanation: UITextView!
     @IBOutlet weak var top_bar: UIView!
     @IBOutlet weak var top_title: UILabel!
+    @IBOutlet weak var myTabBar: UITabBar!
     
     var exercise: String?
     var video_link = ""
     var details = ""
     var steps = 0
     var imagesListArray = [UIImage]()
-    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         top_title.text = exercise
         let weightquery = PFQuery(className: "Exercises")
         //weightquery.fromLocalDatastore()
@@ -72,7 +81,7 @@ class ExerciseViewController: UIViewController {
     
     //back
     @IBAction func back_btn(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     /*
@@ -84,6 +93,32 @@ class ExerciseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        
+    }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

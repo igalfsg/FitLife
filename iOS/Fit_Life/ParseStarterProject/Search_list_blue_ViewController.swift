@@ -15,6 +15,7 @@ class Search_list_blue_ViewController: UIViewController {
     @IBOutlet weak var disp_tableView: UITableView!
     @IBOutlet weak var title_table: UILabel!
     @IBOutlet weak var top_view: UIView!
+    @IBOutlet weak var myTabBar: UITabBar!
     
     let searchController = UISearchController(searchResultsController: nil)
     var type: String?
@@ -25,6 +26,11 @@ class Search_list_blue_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         title_table.text = type
         //search stuff
         searchController.searchResultsUpdater = self
@@ -293,41 +299,43 @@ class Search_list_blue_ViewController: UIViewController {
             let viewController: ExerciseViewController = self.storyboard?.instantiateViewControllerWithIdentifier("exercise_detail") as! ExerciseViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.exercise = filtered_stuff[indexPath.row]
-                self.dismissViewControllerAnimated(true, completion: {});
+                //self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.exercise = wko_Type[indexPath.row]
             }
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         else if thing == 2 {//programs
         let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.program = filtered_stuff[indexPath.row]
-                self.dismissViewControllerAnimated(true, completion: {});
+                //self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.program = wko_Type[indexPath.row]
             }
-        self.presentViewController(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         else if thing == 3 {//wkos
             //open storyboard
             let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
             if searchController.active && searchController.searchBar.text != "" {
                 viewController.workout = filtered_stuff[indexPath.row]
-                self.dismissViewControllerAnimated(true, completion: {});
+                //self.dismissViewControllerAnimated(true, completion: {});
             }
             else{
                 viewController.workout = wko_Type[indexPath.row]
             }
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         
         
         
     }
-
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     //search
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         filtered_stuff = wko_Type.filter { candy in
@@ -338,12 +346,37 @@ class Search_list_blue_ViewController: UIViewController {
     }
     //back button
     @IBAction func Back_b(sender: AnyObject) {
-        if searchController.active && searchController.searchBar.text != "" {
-            self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
         }
-        self.dismissViewControllerAnimated(true, completion: {});
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
         
     }
+    
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

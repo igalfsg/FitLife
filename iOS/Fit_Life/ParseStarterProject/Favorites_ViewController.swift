@@ -11,20 +11,28 @@ import Parse
 
 class Favorites_ViewController: UIViewController {
     var wkoorprog = 0
-    //let user = PFUser.currentUser()!.username
+    let user = PFUser.currentUser()!.username
     var workouts = [String]()
     @IBOutlet weak var wkos_Btn: UIButton!
     @IBOutlet weak var prog_btn: UIButton!
     @IBOutlet weak var disp_table: UITableView!
     @IBOutlet weak var top_view: UIView!
     @IBOutlet weak var title_view: UILabel!
-
+    @IBOutlet weak var myTabBar: UITabBar!
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         self.title_view.text = "Favorites"
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
-        //queryWorkoutTypes.whereKey("user", equalTo: user!);
+        queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -76,13 +84,13 @@ class Favorites_ViewController: UIViewController {
             //open storyboard
             let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
             viewController.workout = workouts[indexPath.row]
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         else if wkoorprog == 1 {//programs
             //open storyboard
             let viewController: ListofWKOSViewController = self.storyboard?.instantiateViewControllerWithIdentifier("list_of_wko") as! ListofWKOSViewController
             viewController.program = workouts[indexPath.row]
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         
         
@@ -98,7 +106,7 @@ class Favorites_ViewController: UIViewController {
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
-        //queryWorkoutTypes.whereKey("user", equalTo: user!);
+        queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -126,7 +134,7 @@ class Favorites_ViewController: UIViewController {
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_prog")
         //queryWorkoutTypes.fromLocalDatastore()
-        //queryWorkoutTypes.whereKey("user", equalTo: user!);
+        queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.orderByAscending("name")
         queryWorkoutTypes.findObjectsInBackgroundWithBlock{
             (objects: [PFObject]?, error: NSError?) -> Void in
@@ -144,6 +152,34 @@ class Favorites_ViewController: UIViewController {
         }//end first query
         wkoorprog = 1
     }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

@@ -14,16 +14,9 @@
 		4D40AEB01D3872B5003F7297 /* listofWKOSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */; };
 		4D40AEB21D3872C8003F7297 /* WKO_exerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */; };
 		4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */; };
-		4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */; };
 		4D4529C71D3C4FDA00F8428B /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */; };
 		4D4529C91D3C65BC00F8428B /* FitnessCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4529C81D3C65BC00F8428B /* FitnessCalViewController.swift */; };
 		4D49E9011D1380FC009BD5F9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */; };
-		4D5013EB1D4AE92D0005F64D /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013E61D4AE92D0005F64D /* calculator.png */; };
-		4D5013EC1D4AE92D0005F64D /* exercise_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013E71D4AE92D0005F64D /* exercise_icon.png */; };
-		4D5013ED1D4AE92D0005F64D /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013E81D4AE92D0005F64D /* favorite.png */; };
-		4D5013EE1D4AE92D0005F64D /* program_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013E91D4AE92D0005F64D /* program_icon.png */; };
-		4D5013EF1D4AE92D0005F64D /* workout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013EA1D4AE92D0005F64D /* workout_icon.png */; };
-		4D5013F31D4AEBF10005F64D /* exercise_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D5013F21D4AEBF10005F64D /* exercise_screenshot.png */; };
 		4D718C1C1D21E56F00929D99 /* Display_tableview_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */; };
 		4D718C1E1D21F8F200929D99 /* extercise_type_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1D1D21F8F200929D99 /* extercise_type_cell.swift */; };
 		4D718C201D21F99200929D99 /* Exercise_Type_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */; };
@@ -567,6 +560,26 @@
 		4D7929771D3DB07E0018D4E8 /* wk1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D79275E1D3DB07D0018D4E8 /* wk1.png */; };
 		4D7929781D3DB07E0018D4E8 /* wk2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D79275F1D3DB07E0018D4E8 /* wk2.png */; };
 		4D7929791D3DB07E0018D4E8 /* wko.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7927601D3DB07E0018D4E8 /* wko.png */; };
+		4DBE766F1D4D49D5008E7233 /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE766A1D4D49D5008E7233 /* calculator.png */; };
+		4DBE76701D4D49D5008E7233 /* exercise_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE766B1D4D49D5008E7233 /* exercise_icon.png */; };
+		4DBE76711D4D49D5008E7233 /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE766C1D4D49D5008E7233 /* favorite.png */; };
+		4DBE76721D4D49D5008E7233 /* program_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE766D1D4D49D5008E7233 /* program_icon.png */; };
+		4DBE76731D4D49D5008E7233 /* workout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE766E1D4D49D5008E7233 /* workout_icon.png */; };
+		4DBE76771D4E78A4008E7233 /* days15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76761D4E78A4008E7233 /* days15.jpg */; };
+		4DBE76861D4E7925008E7233 /* days1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76781D4E7925008E7233 /* days1.jpg */; };
+		4DBE76871D4E7925008E7233 /* days2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76791D4E7925008E7233 /* days2.jpg */; };
+		4DBE76881D4E7925008E7233 /* days3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767A1D4E7925008E7233 /* days3.jpg */; };
+		4DBE76891D4E7925008E7233 /* days4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767B1D4E7925008E7233 /* days4.jpg */; };
+		4DBE768A1D4E7925008E7233 /* days5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767C1D4E7925008E7233 /* days5.jpg */; };
+		4DBE768B1D4E7925008E7233 /* days6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767D1D4E7925008E7233 /* days6.jpg */; };
+		4DBE768C1D4E7925008E7233 /* days7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767E1D4E7925008E7233 /* days7.jpg */; };
+		4DBE768D1D4E7925008E7233 /* days8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE767F1D4E7925008E7233 /* days8.jpg */; };
+		4DBE768E1D4E7925008E7233 /* days9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76801D4E7925008E7233 /* days9.jpg */; };
+		4DBE768F1D4E7925008E7233 /* days10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76811D4E7925008E7233 /* days10.jpg */; };
+		4DBE76901D4E7925008E7233 /* days11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76821D4E7925008E7233 /* days11.jpg */; };
+		4DBE76911D4E7925008E7233 /* days12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76831D4E7925008E7233 /* days12.jpg */; };
+		4DBE76921D4E7925008E7233 /* days13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76841D4E7925008E7233 /* days13.jpg */; };
+		4DBE76931D4E7925008E7233 /* days14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DBE76851D4E7925008E7233 /* days14.jpg */; };
 		4DEEF7431D20A310005426A6 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4DEEF52F1D20A30A005426A6 /* Base.lproj */; };
 		4DEEF92B1D20AC5B005426A6 /* Search_list_blue_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEEF92A1D20AC5B005426A6 /* Search_list_blue_ViewController.swift */; };
 		4DFA03671D1755D300FA5BC7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFA03661D1755D300FA5BC7 /* SplashViewController.swift */; };
@@ -609,16 +622,9 @@
 		4D40AEAF1D3872B5003F7297 /* listofWKOSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listofWKOSTableViewCell.swift; sourceTree = "<group>"; };
 		4D40AEB11D3872C8003F7297 /* WKO_exerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKO_exerciseTableViewCell.swift; sourceTree = "<group>"; };
 		4D4529C21D3BF42600F8428B /* changeWeightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeWeightTableViewCell.swift; sourceTree = "<group>"; };
-		4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeWeightViewController.swift; sourceTree = "<group>"; };
 		4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		4D4529C81D3C65BC00F8428B /* FitnessCalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCalViewController.swift; sourceTree = "<group>"; };
 		4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		4D5013E61D4AE92D0005F64D /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
-		4D5013E71D4AE92D0005F64D /* exercise_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercise_icon.png; sourceTree = "<group>"; };
-		4D5013E81D4AE92D0005F64D /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
-		4D5013E91D4AE92D0005F64D /* program_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = program_icon.png; sourceTree = "<group>"; };
-		4D5013EA1D4AE92D0005F64D /* workout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_icon.png; sourceTree = "<group>"; };
-		4D5013F21D4AEBF10005F64D /* exercise_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercise_screenshot.png; sourceTree = "<group>"; };
 		4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Display_tableview_cell.swift; sourceTree = "<group>"; };
 		4D718C1D1D21F8F200929D99 /* extercise_type_cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extercise_type_cell.swift; sourceTree = "<group>"; };
 		4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise_Type_ViewController.swift; sourceTree = "<group>"; };
@@ -1163,6 +1169,26 @@
 		4D79275E1D3DB07D0018D4E8 /* wk1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wk1.png; sourceTree = "<group>"; };
 		4D79275F1D3DB07E0018D4E8 /* wk2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wk2.png; sourceTree = "<group>"; };
 		4D7927601D3DB07E0018D4E8 /* wko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wko.png; sourceTree = "<group>"; };
+		4DBE766A1D4D49D5008E7233 /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
+		4DBE766B1D4D49D5008E7233 /* exercise_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercise_icon.png; sourceTree = "<group>"; };
+		4DBE766C1D4D49D5008E7233 /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		4DBE766D1D4D49D5008E7233 /* program_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = program_icon.png; sourceTree = "<group>"; };
+		4DBE766E1D4D49D5008E7233 /* workout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_icon.png; sourceTree = "<group>"; };
+		4DBE76761D4E78A4008E7233 /* days15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days15.jpg; sourceTree = "<group>"; };
+		4DBE76781D4E7925008E7233 /* days1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days1.jpg; sourceTree = "<group>"; };
+		4DBE76791D4E7925008E7233 /* days2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days2.jpg; sourceTree = "<group>"; };
+		4DBE767A1D4E7925008E7233 /* days3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days3.jpg; sourceTree = "<group>"; };
+		4DBE767B1D4E7925008E7233 /* days4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days4.jpg; sourceTree = "<group>"; };
+		4DBE767C1D4E7925008E7233 /* days5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days5.jpg; sourceTree = "<group>"; };
+		4DBE767D1D4E7925008E7233 /* days6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days6.jpg; sourceTree = "<group>"; };
+		4DBE767E1D4E7925008E7233 /* days7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days7.jpg; sourceTree = "<group>"; };
+		4DBE767F1D4E7925008E7233 /* days8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days8.jpg; sourceTree = "<group>"; };
+		4DBE76801D4E7925008E7233 /* days9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days9.jpg; sourceTree = "<group>"; };
+		4DBE76811D4E7925008E7233 /* days10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days10.jpg; sourceTree = "<group>"; };
+		4DBE76821D4E7925008E7233 /* days11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days11.jpg; sourceTree = "<group>"; };
+		4DBE76831D4E7925008E7233 /* days12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days12.jpg; sourceTree = "<group>"; };
+		4DBE76841D4E7925008E7233 /* days13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days13.jpg; sourceTree = "<group>"; };
+		4DBE76851D4E7925008E7233 /* days14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = days14.jpg; sourceTree = "<group>"; };
 		4DC42D591D136B7B00AED4DD /* ParseStarterProject-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DEEF52F1D20A30A005426A6 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		4DEEF5E11D20A30C005426A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1217,14 +1243,28 @@
 			isa = PBXGroup;
 			children = (
 				4D7925481D3DB0780018D4E8 /* a.png */,
-				4D5013E61D4AE92D0005F64D /* calculator.png */,
-				4D5013F21D4AEBF10005F64D /* exercise_screenshot.png */,
-				4D5013E71D4AE92D0005F64D /* exercise_icon.png */,
-				4D5013E81D4AE92D0005F64D /* favorite.png */,
-				4D5013E91D4AE92D0005F64D /* program_icon.png */,
-				4D5013EA1D4AE92D0005F64D /* workout_icon.png */,
 				4D7925491D3DB0780018D4E8 /* ab_runners.jpg */,
 				4D79254A1D3DB0780018D4E8 /* ab_runners1.jpg */,
+				4DBE766A1D4D49D5008E7233 /* calculator.png */,
+				4DBE766B1D4D49D5008E7233 /* exercise_icon.png */,
+				4DBE766C1D4D49D5008E7233 /* favorite.png */,
+				4DBE76781D4E7925008E7233 /* days1.jpg */,
+				4DBE76791D4E7925008E7233 /* days2.jpg */,
+				4DBE767A1D4E7925008E7233 /* days3.jpg */,
+				4DBE767B1D4E7925008E7233 /* days4.jpg */,
+				4DBE767C1D4E7925008E7233 /* days5.jpg */,
+				4DBE767D1D4E7925008E7233 /* days6.jpg */,
+				4DBE767E1D4E7925008E7233 /* days7.jpg */,
+				4DBE767F1D4E7925008E7233 /* days8.jpg */,
+				4DBE76801D4E7925008E7233 /* days9.jpg */,
+				4DBE76811D4E7925008E7233 /* days10.jpg */,
+				4DBE76821D4E7925008E7233 /* days11.jpg */,
+				4DBE76831D4E7925008E7233 /* days12.jpg */,
+				4DBE76841D4E7925008E7233 /* days13.jpg */,
+				4DBE76851D4E7925008E7233 /* days14.jpg */,
+				4DBE76761D4E78A4008E7233 /* days15.jpg */,
+				4DBE766D1D4D49D5008E7233 /* program_icon.png */,
+				4DBE766E1D4D49D5008E7233 /* workout_icon.png */,
 				4D79254B1D3DB0780018D4E8 /* ab_runners2.jpg */,
 				4D79254C1D3DB0780018D4E8 /* ab_wheel_rollout.jpg */,
 				4D79254D1D3DB0780018D4E8 /* ab_wheel_rollout1.jpg */,
@@ -1790,21 +1830,20 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				4D75043A1D18B52700A20AC5 /* Workout_types_ViewController.swift */,
+				4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */,
 				4DC42D591D136B7B00AED4DD /* ParseStarterProject-Swift-Bridging-Header.h */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
+				4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */,
 				4DFA03661D1755D300FA5BC7 /* SplashViewController.swift */,
 				4D4529C61D3C4FDA00F8428B /* ExerciseViewController.swift */,
-				4D49E9001D1380FC009BD5F9 /* RegisterViewController.swift */,
-				4D75043A1D18B52700A20AC5 /* Workout_types_ViewController.swift */,
-				4D718C1F1D21F99200929D99 /* Exercise_Type_ViewController.swift */,
 				4D4529C81D3C65BC00F8428B /* FitnessCalViewController.swift */,
 				4D718C211D21FC8700929D99 /* Program_types_ViewController.swift */,
 				4DEEF92A1D20AC5B005426A6 /* Search_list_blue_ViewController.swift */,
 				4D40AEA91D38638F003F7297 /* Favorites_ViewController.swift */,
 				4D40AEAB1D38714B003F7297 /* Wko_exercises_ViewController.swift */,
 				4D40AEAD1D387288003F7297 /* ListofWKOSViewController.swift */,
-				4D4529C41D3BF46A00F8428B /* ChangeWeightViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 				4D75043C1D18C07C00A20AC5 /* TypeTableViewCell.swift */,
 				4D718C1B1D21E56F00929D99 /* Display_tableview_cell.swift */,
@@ -1941,7 +1980,9 @@
 				4D7927801D3DB07E0018D4E8 /* arms.jpg in Resources */,
 				4D7928301D3DB07E0018D4E8 /* fit_k1_.png in Resources */,
 				4D79292F1D3DB07E0018D4E8 /* swimming1.jpg in Resources */,
+				4DBE768B1D4E7925008E7233 /* days6.jpg in Resources */,
 				4D7928E41D3DB07E0018D4E8 /* russian_twist2.jpg in Resources */,
+				4DBE76771D4E78A4008E7233 /* days15.jpg in Resources */,
 				4D7927901D3DB07E0018D4E8 /* back_extension1.jpg in Resources */,
 				4D7928821D3DB07E0018D4E8 /* leg_extension.jpg in Resources */,
 				4D79282D1D3DB07E0018D4E8 /* famous.jpg in Resources */,
@@ -1949,6 +1990,7 @@
 				4D7927B11D3DB07E0018D4E8 /* bg_dark.png in Resources */,
 				4D79293D1D3DB07E0018D4E8 /* swiss_ball_plank_circle_or_stirring_the_pot1.jpg in Resources */,
 				4D7929691D3DB07E0018D4E8 /* walking_hip_bridge.jpg in Resources */,
+				4DBE768A1D4E7925008E7233 /* days5.jpg in Resources */,
 				4D79278E1D3DB07E0018D4E8 /* back_extension_swiss_ball2.jpg in Resources */,
 				4D7928CF1D3DB07E0018D4E8 /* real.png in Resources */,
 				4D7928AD1D3DB07E0018D4E8 /* neutral_grip_triceps_extension.jpg in Resources */,
@@ -2053,6 +2095,7 @@
 				4D7927BC1D3DB07E0018D4E8 /* btn_add_more.png in Resources */,
 				4D7929061D3DB07E0018D4E8 /* single_leg_glute_bridge2.jpg in Resources */,
 				4D79280A1D3DB07E0018D4E8 /* dumbbell_kickback.jpg in Resources */,
+				4DBE768E1D4E7925008E7233 /* days9.jpg in Resources */,
 				4D7928781D3DB07E0018D4E8 /* lat_pulldown.jpg in Resources */,
 				4D7928FA1D3DB07E0018D4E8 /* shoulder_front_raise2.jpg in Resources */,
 				4D7928181D3DB07E0018D4E8 /* dumbbell_pushup_with_row2.jpg in Resources */,
@@ -2076,7 +2119,7 @@
 				4D7927691D3DB07E0018D4E8 /* abductor_side_leg_raise1.jpg in Resources */,
 				4D79287E1D3DB07E0018D4E8 /* leg_curls.jpg in Resources */,
 				4D7928E21D3DB07E0018D4E8 /* russian_twist.jpg in Resources */,
-				4D5013EC1D4AE92D0005F64D /* exercise_icon.png in Resources */,
+				4DBE76701D4D49D5008E7233 /* exercise_icon.png in Resources */,
 				4D7927BA1D3DB07E0018D4E8 /* box_squat1.jpg in Resources */,
 				4D7929541D3DB07E0018D4E8 /* trx_chest_press2.jpg in Resources */,
 				4D7927FF1D3DB07E0018D4E8 /* dips1.jpg in Resources */,
@@ -2122,8 +2165,9 @@
 				4D79284C1D3DB07E0018D4E8 /* high_knees.jpg in Resources */,
 				4D7928D11D3DB07E0018D4E8 /* rest.jpg in Resources */,
 				4D7927DE1D3DB07E0018D4E8 /* chest_supported_row2.jpg in Resources */,
+				4DBE76871D4E7925008E7233 /* days2.jpg in Resources */,
 				4D79285A1D3DB07E0018D4E8 /* inch_worms1.jpg in Resources */,
-				4D5013ED1D4AE92D0005F64D /* favorite.png in Resources */,
+				4DBE76711D4D49D5008E7233 /* favorite.png in Resources */,
 				4D79282B1D3DB07E0018D4E8 /* ez_bar_preacher_curl1.jpg in Resources */,
 				4D7928971D3DB07E0018D4E8 /* machine_fly.jpg in Resources */,
 				4D7929701D3DB07E0018D4E8 /* walking_single_leg_romanian_deadlift1.jpg in Resources */,
@@ -2132,6 +2176,7 @@
 				4D79289D1D3DB07E0018D4E8 /* medicine_ball_russian_twist1.jpg in Resources */,
 				4D7929791D3DB07E0018D4E8 /* wko.png in Resources */,
 				4D7929071D3DB07E0018D4E8 /* single_leg_raises.jpg in Resources */,
+				4DBE768F1D4E7925008E7233 /* days10.jpg in Resources */,
 				4D79287D1D3DB07E0018D4E8 /* lateral_raises2.jpg in Resources */,
 				4D7928F01D3DB07E0018D4E8 /* seated_curl2.jpg in Resources */,
 				4D7928D51D3DB07E0018D4E8 /* reverse_lunge1.jpg in Resources */,
@@ -2144,7 +2189,7 @@
 				4D7928BA1D3DB07E0018D4E8 /* outdoor.png in Resources */,
 				4D79290F1D3DB07E0018D4E8 /* sprinter2.jpg in Resources */,
 				4D7928F41D3DB07E0018D4E8 /* seated_knee_tuck.jpg in Resources */,
-				4D5013EE1D4AE92D0005F64D /* program_icon.png in Resources */,
+				4DBE76721D4D49D5008E7233 /* program_icon.png in Resources */,
 				4D7929411D3DB07E0018D4E8 /* swiss_ball_rollout1.jpg in Resources */,
 				4D7928CE1D3DB07E0018D4E8 /* rd.png in Resources */,
 				4D7928011D3DB07E0018D4E8 /* display.png in Resources */,
@@ -2170,7 +2215,9 @@
 				4D7928411D3DB07E0018D4E8 /* half_kneeling_cable_chop.jpg in Resources */,
 				4D7929041D3DB07E0018D4E8 /* single_leg_glute_bridge.jpg in Resources */,
 				4D79281B1D3DB07E0018D4E8 /* dumbbell_romanian_deadlift1.jpg in Resources */,
+				4DBE768D1D4E7925008E7233 /* days8.jpg in Resources */,
 				4D79292C1D3DB07E0018D4E8 /* supermans1.jpg in Resources */,
+				4DBE76931D4E7925008E7233 /* days14.jpg in Resources */,
 				4D7929051D3DB07E0018D4E8 /* single_leg_glute_bridge1.jpg in Resources */,
 				4D79283E1D3DB07E0018D4E8 /* full_body_exercises.jpg in Resources */,
 				4D7927F11D3DB07E0018D4E8 /* deadlift.jpg in Resources */,
@@ -2218,6 +2265,7 @@
 				4D7929091D3DB07E0018D4E8 /* single_leg_raises2.jpg in Resources */,
 				4D7928141D3DB07E0018D4E8 /* dumbbell_overhead_squat1.jpg in Resources */,
 				4D7929481D3DB07E0018D4E8 /* tick.png in Resources */,
+				4DBE76891D4E7925008E7233 /* days4.jpg in Resources */,
 				4D7928C81D3DB07E0018D4E8 /* pull_up1.jpg in Resources */,
 				4D7927B31D3DB07E0018D4E8 /* bicycle_crunch.jpg in Resources */,
 				4D7927BB1D3DB07E0018D4E8 /* box_white.png in Resources */,
@@ -2282,6 +2330,7 @@
 				4D7928051D3DB07E0018D4E8 /* dumbbell_bench_press1.jpg in Resources */,
 				4D79296C1D3DB07E0018D4E8 /* walking_lunge.jpg in Resources */,
 				4D7929351D3DB07E0018D4E8 /* swiss_ball_dumbbell_bench_press2.jpg in Resources */,
+				4DBE76921D4E7925008E7233 /* days13.jpg in Resources */,
 				4D7928A41D3DB07E0018D4E8 /* my_work.png in Resources */,
 				4D7929551D3DB07E0018D4E8 /* trx_single_leg_row.jpg in Resources */,
 				4D79294E1D3DB07E0018D4E8 /* trx_biceps_curl2.jpg in Resources */,
@@ -2292,7 +2341,7 @@
 				4D7927841D3DB07E0018D4E8 /* arnold_press3.jpg in Resources */,
 				4D7929651D3DB07E0018D4E8 /* v_up2.jpg in Resources */,
 				4D7928521D3DB07E0018D4E8 /* horizontal_cable_wood_chop1.jpg in Resources */,
-				4D5013EF1D4AE92D0005F64D /* workout_icon.png in Resources */,
+				4DBE76731D4D49D5008E7233 /* workout_icon.png in Resources */,
 				4D79284F1D3DB07E0018D4E8 /* high_performance.jpg in Resources */,
 				4D7928AC1D3DB07E0018D4E8 /* neutral_grip_triceps_extension_2.jpg in Resources */,
 				4D7928BE1D3DB07E0018D4E8 /* password.png in Resources */,
@@ -2308,6 +2357,7 @@
 				4D7927B81D3DB07E0018D4E8 /* box_squat_2.jpg in Resources */,
 				4D79286C1D3DB07E0018D4E8 /* inverted_row2.jpg in Resources */,
 				4D7928841D3DB07E0018D4E8 /* leg_extension2.jpg in Resources */,
+				4DBE76881D4E7925008E7233 /* days3.jpg in Resources */,
 				4D7927D51D3DB07E0018D4E8 /* calf_raises_on_leg_press1.jpg in Resources */,
 				4D7928F91D3DB07E0018D4E8 /* shoulder_front_raise1.jpg in Resources */,
 				4D79279A1D3DB07E0018D4E8 /* barbell_hip_thrust.jpg in Resources */,
@@ -2317,6 +2367,7 @@
 				4D79284D1D3DB07E0018D4E8 /* high_knees1.jpg in Resources */,
 				4D7927C61D3DB07E0018D4E8 /* burpees.jpg in Resources */,
 				4D7928651D3DB07E0018D4E8 /* incline_neutral_grip_bench_press.jpg in Resources */,
+				4DBE76901D4E7925008E7233 /* days11.jpg in Resources */,
 				4D7927621D3DB07E0018D4E8 /* ab_runners.jpg in Resources */,
 				4D7928381D3DB07E0018D4E8 /* front_squat_to_press1.jpg in Resources */,
 				4D7927F71D3DB07E0018D4E8 /* details.png in Resources */,
@@ -2349,6 +2400,7 @@
 				4D7929631D3DB07E0018D4E8 /* v_up.jpg in Resources */,
 				4D7927851D3DB07E0018D4E8 /* aroww.png in Resources */,
 				4D79288A1D3DB07E0018D4E8 /* leg_raise2.jpg in Resources */,
+				4DBE76911D4E7925008E7233 /* days12.jpg in Resources */,
 				4D7928001D3DB07E0018D4E8 /* dips2.jpg in Resources */,
 				4D7927921D3DB07E0018D4E8 /* background_blk.png in Resources */,
 				4D79276A1D3DB07E0018D4E8 /* abductor_side_leg_raise2.jpg in Resources */,
@@ -2376,12 +2428,13 @@
 				4D7927951D3DB07E0018D4E8 /* barbell_calf_raise1.jpg in Resources */,
 				4D7927F91D3DB07E0018D4E8 /* diamond_pushup1.jpg in Resources */,
 				4D7927E51D3DB07E0018D4E8 /* close_grip_pushup.jpg in Resources */,
+				4DBE768C1D4E7925008E7233 /* days7.jpg in Resources */,
 				4D7928351D3DB07E0018D4E8 /* flutter_kick1.jpg in Resources */,
 				4D7928A91D3DB07E0018D4E8 /* neutral_grip_pulldown1.jpg in Resources */,
 				4D7929211D3DB07E0018D4E8 /* star_plank1.jpg in Resources */,
 				4D7928031D3DB07E0018D4E8 /* drop_down.png in Resources */,
 				4D7928CD1D3DB07E0018D4E8 /* rd_of.png in Resources */,
-				4D5013EB1D4AE92D0005F64D /* calculator.png in Resources */,
+				4DBE766F1D4D49D5008E7233 /* calculator.png in Resources */,
 				4D79294A1D3DB07E0018D4E8 /* trap_raise1.jpg in Resources */,
 				4D7927B61D3DB07E0018D4E8 /* body_building.jpg in Resources */,
 				4D7929161D3DB07E0018D4E8 /* squat2.jpg in Resources */,
@@ -2392,7 +2445,6 @@
 				4D7928071D3DB07E0018D4E8 /* dumbbell_fly.jpg in Resources */,
 				4D79290C1D3DB07E0018D4E8 /* single_leg_wobble_lunge_trx2.jpg in Resources */,
 				4D79285B1D3DB07E0018D4E8 /* inch_worms2.jpg in Resources */,
-				4D5013F31D4AEBF10005F64D /* exercise_screenshot.png in Resources */,
 				4D79289B1D3DB07E0018D4E8 /* main_bg.png in Resources */,
 				4D7929571D3DB07E0018D4E8 /* trx_single_leg_row2.jpg in Resources */,
 				4D7928731D3DB07E0018D4E8 /* jumping_jack.jpg in Resources */,
@@ -2454,6 +2506,7 @@
 				4D7929431D3DB07E0018D4E8 /* swiss_ball_wall_squat.jpg in Resources */,
 				4D7927F51D3DB07E0018D4E8 /* decline_bench_press1.jpg in Resources */,
 				4D7928F31D3DB07E0018D4E8 /* seated_incline_dumbbell_curl2.jpg in Resources */,
+				4DBE76861D4E7925008E7233 /* days1.jpg in Resources */,
 				4D79277D1D3DB07E0018D4E8 /* arms_high_partial_situp.jpg in Resources */,
 				4D7927791D3DB07E0018D4E8 /* aquaman.jpg in Resources */,
 				4D79283F1D3DB07E0018D4E8 /* full_body.jpg in Resources */,
@@ -2537,7 +2590,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D4529C51D3BF46A00F8428B /* ChangeWeightViewController.swift in Sources */,
 				4D4529C71D3C4FDA00F8428B /* ExerciseViewController.swift in Sources */,
 				4D4529C91D3C65BC00F8428B /* FitnessCalViewController.swift in Sources */,
 				4D4529C31D3BF42600F8428B /* changeWeightTableViewCell.swift in Sources */,

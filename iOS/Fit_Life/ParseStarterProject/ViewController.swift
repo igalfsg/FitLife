@@ -20,6 +20,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         pass.delegate = self
         username.delegate = self
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg_register.png")!)
     }
     
@@ -41,7 +43,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
             PFUser.logInWithUsernameInBackground(usern, password: password, block: {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil{
-                    self.performSegueWithIdentifier("login_success", sender: self)
+                    
+                    let viewController: Program_types_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Program_type") as! Program_types_ViewController
+                    
+                    viewController.tabdisp = 0
+                    self.navigationController?.pushViewController(viewController, animated: true)
+ //                   self.presentViewController(viewController, animated: true, completion: nil)
+
                 }
                 else{
                     

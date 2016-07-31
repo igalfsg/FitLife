@@ -14,15 +14,23 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var workouts_table: UITableView!
     @IBOutlet weak var top_bar: UIView!
     @IBOutlet weak var title_bar: UILabel!
+    @IBOutlet weak var myTabBar: UITabBar!
     
     
     var program: String?
-    var imgarr = ["day 1", "day 2", "day 3", "day 4", "day 5", "day 6", "day 7", "day 8", "day 9", "day 10", "day 11", "day 12", "day 13", "day 14"];
+    var imgarr = ["days1", "days2", "days3", "days4", "days5", "days6", "days7", "days8", "days9", "days10", "days11", "days12", "days13", "days14"];
     var workouts = [String]()
-    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
+            myTabBar.selectedItem = myTabBar.items![globalnav]
+        }
+        //hide dumbbar
+        self.navigationController?.navigationBarHidden = true
         //print("hi")
         self.title_bar.text = program //set title
         let queryWorkoutTypes = PFQuery(className: "Programs")
@@ -50,11 +58,41 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
                 self.workouts_table.reloadData()
             }//end if error
             else{
-                
+                let queryWorkoutTypes = PFQuery(className: "Programs")
+                //queryWorkoutTypes.fromLocalDatastore()
+                queryWorkoutTypes.whereKey("name", equalTo: self.program!);
+                queryWorkoutTypes.getFirstObjectInBackgroundWithBlock({
+                    (object:PFObject?, error:NSError?)  in
+                    if error == nil {
+                        self.workouts.append(object!["wk0"] as! String)
+                        self.workouts.append(object!["wk1"] as! String)
+                        self.workouts.append(object!["wk2"] as! String)
+                        self.workouts.append(object!["wk3"] as! String)
+                        self.workouts.append(object!["wk4"] as! String)
+                        self.workouts.append(object!["wk5"] as! String)
+                        self.workouts.append(object!["wk6"] as! String)
+                        self.workouts.append(object!["wk7"] as! String)
+                        self.workouts.append(object!["wk8"] as! String)
+                        self.workouts.append(object!["wk9"] as! String)
+                        self.workouts.append(object!["wk10"] as! String)
+                        self.workouts.append(object!["wk11"] as! String)
+                        self.workouts.append(object!["wk12"] as! String)
+                        self.workouts.append(object!["wk13"] as! String)
+                        self.workouts_table.delegate = self
+                        self.workouts_table.dataSource = self
+                        self.workouts_table.reloadData()
+                    }//end if error
+                    else{
+                        
+                    }//end else
+                    
+                    
+                })//end second query
+
             }//end else
             
             
-        })//end query
+        })//end first query
         
         self.top_bar.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
         
@@ -79,7 +117,7 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let mycell =  self.workouts_table.dequeueReusableCellWithIdentifier("wkos_list", forIndexPath: indexPath) as! listofWKOSTableViewCell
         mycell.name_lbl.text = workouts[indexPath.row]
-        mycell.pic.image = UIImage(named: "day1.jpg") //imgarr[indexPath.row] + ".jpg")
+        mycell.pic.image = UIImage(named: imgarr[indexPath.row] + ".jpg")
         return mycell
     }
     
@@ -91,13 +129,13 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
         //open storyboard
         let viewController: Wko_exercises_ViewController = self.storyboard?.instantiateViewControllerWithIdentifier("wko_exercise_list") as! Wko_exercises_ViewController
         viewController.workout = workouts[indexPath.row]
-        self.presentViewController(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     
     //back button
     @IBAction func back_btn(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {});
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     
@@ -144,6 +182,33 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
         return true
     }
     
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        //This method will be called when user changes tab.
+        //print(item.tag)
+        print(item.title)
+        if item.title == "Exercises"{
+            globalnav = 0
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Fitness Calculator" {
+            globalnav = 1
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Favorites" {
+            globalnav = 2
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Programs" {
+            globalnav = 3
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        else if item.title == "Workouts" {
+            globalnav = 4
+            self.navigationController?.popToRootViewControllerAnimated(false)
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

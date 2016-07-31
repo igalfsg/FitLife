@@ -16,7 +16,7 @@ class Exercise_Type_ViewController: UIViewController {
     @IBOutlet weak var Exercise_tableView: UITableView!
     @IBOutlet weak var top_view: UIView!
 
-    
+    var tabdisp: Int?
     var wko_Type = [String]()
     var img_name = [String]()
     
