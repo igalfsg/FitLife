@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpE-rN-eqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1041"/>
+            <point key="canvasLocation" x="836" y="1065"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="H1R-hh-3xV">
@@ -1301,7 +1301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDV-Pn-xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="1046"/>
+            <point key="canvasLocation" x="1240" y="1057"/>
         </scene>
         <!--Fitness Cal View Controller-->
         <scene sceneID="tKO-9M-7Je">
@@ -1919,6 +1919,40 @@
             </objects>
             <point key="canvasLocation" x="1667" y="368"/>
         </scene>
+        <!--Video View Controller-->
+        <scene sceneID="hLy-1l-dOb">
+            <objects>
+                <viewController storyboardIdentifier="video_magic" id="L0i-8n-iSA" customClass="VideoViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tCu-4o-qkM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kaf-cp-hoM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GmB-hN-1oY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RP8-OG-0ZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RP8-OG-0ZZ" secondAttribute="trailing" constant="-20" id="D2V-qF-2sC"/>
+                            <constraint firstItem="RP8-OG-0ZZ" firstAttribute="leading" secondItem="GmB-hN-1oY" secondAttribute="leadingMargin" constant="-20" id="Iym-KW-Le9"/>
+                            <constraint firstItem="RP8-OG-0ZZ" firstAttribute="top" secondItem="GmB-hN-1oY" secondAttribute="topMargin" id="M5j-4R-Flu"/>
+                            <constraint firstItem="Kaf-cp-hoM" firstAttribute="top" secondItem="RP8-OG-0ZZ" secondAttribute="bottom" id="V9P-8e-zLN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="videoView" destination="RP8-OG-0ZZ" id="8Vv-Ux-TO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXY-Hn-byl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="1740"/>
+        </scene>
         <!--ListofWKOS View Controller-->
         <scene sceneID="RqD-lB-ei4">
             <objects>
@@ -2154,7 +2188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcq-Ty-Xv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1543" y="1740"/>
+            <point key="canvasLocation" x="939" y="1740"/>
         </scene>
         <!--Wko exercises View Controller-->
         <scene sceneID="Cav-h8-V20">
@@ -2462,7 +2496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6n-pv-LNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="1740"/>
+            <point key="canvasLocation" x="1667" y="1740"/>
         </scene>
         <!--Exercise View Controller-->
         <scene sceneID="5bT-uV-f88">
@@ -2676,7 +2710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ot-Lc-tuc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="1789"/>
+            <point key="canvasLocation" x="143" y="1740"/>
         </scene>
         <!--Search list blue View Controller-->
         <scene sceneID="CXi-O8-arB">
@@ -3013,7 +3047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWN-Ca-zr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="1756"/>
+            <point key="canvasLocation" x="1305" y="1740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QaY-ke-HaY">
@@ -3047,7 +3081,7 @@
         <image name="workout_icon.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KMg-a7-xOo"/>
+        <segue reference="eXD-AI-N6J"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.32402596862447575" blue="0.25919835532175473" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -26,8 +26,8 @@ class SplashViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        let currentUser = PFUser.currentUser()
-        //print(currentUser);
+        let currentUser = PFUser.currentUser()?.username
+        print(currentUser);
         bg_image.image = nil
         if currentUser != nil {
             if globalnav == 0 {//exercises

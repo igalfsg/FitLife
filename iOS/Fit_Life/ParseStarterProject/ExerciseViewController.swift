@@ -75,7 +75,10 @@ class ExerciseViewController: UIViewController {
     
     //video
     @IBAction func play_btn(sender: AnyObject) {
-        
+        let viewController: VideoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("video_magic") as! VideoViewController
+        viewController.video_link = video_link
+        self.navigationController?.pushViewController(viewController, animated: true)
+
     }
     
     
