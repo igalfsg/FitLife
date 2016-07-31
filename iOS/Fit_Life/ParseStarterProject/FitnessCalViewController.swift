@@ -22,11 +22,12 @@ class FitnessCalViewController: UIViewController {
     @IBOutlet weak var lb: DLRadioButton!
     @IBOutlet weak var inch: DLRadioButton!
     @IBOutlet weak var result_txt: UITextView!
+    @IBOutlet weak var title_txt: UILabel!
     @IBOutlet weak var calculate_btn: UIButton!
     @IBOutlet weak var top_view: UIView!
 
-    var weightbmi = 0.0;
-    var heightbmi = 0.0;
+    var weightbmi = 1.0;
+    var heightbmi = 1.0;
     var type = 1
     @IBOutlet weak var myTabBar: UITabBar!
     
@@ -81,8 +82,21 @@ class FitnessCalViewController: UIViewController {
         }
         
     }
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 
     @IBAction func hr_btn_press(sender: AnyObject) {
+        title_txt.text = "Heart Rate"
+        HR_btn.backgroundColor = UIColorFromRGB(0xFD9459)//selected
+        BMI_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
+        rep_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
         kg.hidden = true
         lb.hidden = true
         cm.hidden = true
@@ -97,6 +111,10 @@ class FitnessCalViewController: UIViewController {
     }
     
     @IBAction func bmi_pressed(sender: AnyObject) {
+        title_txt.text = "BMI"
+        HR_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
+        BMI_btn.backgroundColor = UIColorFromRGB(0xFD9459)//selected
+        rep_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
         kg.hidden = false
         lb.hidden = false
         cm.hidden = false
@@ -111,6 +129,10 @@ class FitnessCalViewController: UIViewController {
     }
 
     @IBAction func rep_pressed(sender: AnyObject) {
+        title_txt.text = "1 Rep Max"
+        HR_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
+        BMI_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
+        rep_btn.backgroundColor = UIColorFromRGB(0xFD9459)//selected
         kg.hidden = true
         lb.hidden = true
         cm.hidden = true
@@ -147,7 +169,7 @@ class FitnessCalViewController: UIViewController {
             let twelve = Double(round((max * 0.70) * 100.0) / 100.0)
             let fifteen = Double(round((max * 0.67) * 100.0) / 100.0)
             
-            result_txt.text = "1 Rep:  " + String(Double(round(max * 100.0) / 100.0)) +
+            result_txt.text = " 1 Rep:  " + String(Double(round(max * 100.0) / 100.0)) +
             "\n 6 Reps: " + String(six) +
             "\n 8 Reps: " + String(eight) +
             "\n 10 Reps:" + String(ten) +
@@ -180,9 +202,9 @@ class FitnessCalViewController: UIViewController {
             let zone3_min = Int(0.79 * Double(220 - age! - resthr!)) + resthr!
             let zone3_max = Int(0.90 * Double(220 - age! - resthr!)) + resthr!
             
-            result_txt.text = "Health \t\t\t up to: " + String(zone1) + " bpm\n" +
+            result_txt.text = "Health \t\t\t\t up to: " + String(zone1) + " bpm\n" +
             "Weight Loss: \t\t from: " + String(zone2_min) + " to " + String(zone2_max) + " bpm\n" +
-            "Cardio improvement: \t\t from: " + String(zone3_min) + " to " + String(zone3_max) + " bpm\n"
+            "Cardio improvement: \t from: " + String(zone3_min) + " to " + String(zone3_max) + " bpm"
         }
 
     }

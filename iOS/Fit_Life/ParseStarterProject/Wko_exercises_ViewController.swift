@@ -277,7 +277,10 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                     (success: Bool?, error: NSError?) -> Void in
                     if error == nil{
                         //change buton
-                        
+                        let alertController = UIAlertController(title: "Added " + self.workout! + " to Favorites", message: "", preferredStyle: .Alert)
+                        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                        alertController.addAction(OKAction)
+                        self.presentViewController(alertController, animated: true) { }
                     }
                 }
             }//end if object == nil
@@ -287,7 +290,10 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
                 object?.deleteInBackground()
                 object?.unpinInBackground()
                 //change button
-                
+                let alertController = UIAlertController(title: "Removed " + self.workout! + " from Favorites", message: "", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) { }
             }//end else
             
             

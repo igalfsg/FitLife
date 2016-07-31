@@ -19,9 +19,7 @@ class Favorites_ViewController: UIViewController {
     @IBOutlet weak var top_view: UIView!
     @IBOutlet weak var title_view: UILabel!
     @IBOutlet weak var myTabBar: UITabBar!
-    override func viewDidAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = true
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
@@ -47,6 +45,12 @@ class Favorites_ViewController: UIViewController {
             else{
                 
             }//end else
+            if self.workouts.count  == 0 {
+                let alertController = UIAlertController(title: "Oops!", message: "No Favorite workouts were found please go to programs add workouts to your favorites", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) { }
+            }
         }//end first query
         
         self.top_view.backgroundColor = UIColor(patternImage: UIImage(named: "header.png")!)
@@ -56,7 +60,67 @@ class Favorites_ViewController: UIViewController {
             self.disp_table.rowHeight = 100
         }
     }//end viewdidload
-    
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+        reloadtable()
+    }
+    func reloadtable(){
+        if wkoorprog == 0 {//wko
+            workouts = [String]()
+            let queryWorkoutTypes = PFQuery(className: "my_wko")
+            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.whereKey("user", equalTo: user!);
+            queryWorkoutTypes.orderByAscending("name")
+            queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    for object in objects!{
+                        
+                        self.workouts.append(object["name"] as! String)
+                        
+                    }
+                    self.disp_table.reloadData()
+                }
+                else{
+                    
+                }//end else
+                if self.workouts.count  == 0 {
+                    let alertController = UIAlertController(title: "Oops!", message: "No Favorite workouts were found please go to programs add workouts to your favorites", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true) { }
+                }
+            }//end first query
+
+        }
+        else if wkoorprog == 1 {//programs
+            workouts = [String]()
+            let queryWorkoutTypes = PFQuery(className: "my_prog")
+            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.whereKey("user", equalTo: user!);
+            queryWorkoutTypes.orderByAscending("name")
+            queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                (objects: [PFObject]?, error: NSError?) -> Void in
+                if error == nil {
+                    for object in objects!{
+                        
+                        self.workouts.append(object["name"] as! String)
+                        
+                    }
+                    self.disp_table.reloadData()
+                }
+                else{
+                    
+                }//end else
+                if self.workouts.count  == 0 {
+                    let alertController = UIAlertController(title: "Oops!", message: "No Favorite Programs were found please go to programs add programs to your favorites", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true) { }
+                }
+            }//end first query
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -96,13 +160,20 @@ class Favorites_ViewController: UIViewController {
         
     }
 
-    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     
     //buttons
     @IBAction func Wokouts_btn(sender: AnyObject) {
     //workouts btn pressed
-        wkos_Btn.backgroundColor = UIColor.magentaColor()
-        prog_btn.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+        prog_btn.backgroundColor = UIColorFromRGB(0xD65A0B)//not selected
+        wkos_Btn.backgroundColor = UIColorFromRGB(0xFD9459)//selected
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_wko")
         //queryWorkoutTypes.fromLocalDatastore()
@@ -121,6 +192,12 @@ class Favorites_ViewController: UIViewController {
             else{
                 
             }//end else
+            if self.workouts.count  == 0 {
+                let alertController = UIAlertController(title: "Oops!", message: "No Favorite workouts were found please go to programs add workouts to your favorites", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) { }
+            }
         }//end first query
         wkoorprog = 0
     }
@@ -129,8 +206,9 @@ class Favorites_ViewController: UIViewController {
     
     @IBAction func Proframs_btn(sender: AnyObject) {
         //programs btn pressed
-        prog_btn.backgroundColor = UIColor.magentaColor()
-        wkos_Btn.backgroundColor = UIColor(red: 0.4, green: 1.0, blue: 0.2, alpha: 0.5)
+        
+        wkos_Btn.backgroundColor =  UIColorFromRGB(0xD65A0B)//not selected
+        prog_btn.backgroundColor = UIColorFromRGB(0xFD9459)//selected
         workouts = [String]()
         let queryWorkoutTypes = PFQuery(className: "my_prog")
         //queryWorkoutTypes.fromLocalDatastore()
@@ -149,6 +227,12 @@ class Favorites_ViewController: UIViewController {
             else{
                 
             }//end else
+            if self.workouts.count  == 0 {
+                let alertController = UIAlertController(title: "Oops!", message: "No Favorite Programs were found please go to programs add programs to your favorites", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) { }
+            }
         }//end first query
         wkoorprog = 1
     }

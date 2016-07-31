@@ -29,6 +29,9 @@ class Program_types_ViewController: UIViewController {
         if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
             myTabBar.selectedItem = myTabBar.items![globalnav]
         }
+        
+        
+        
         //hide dumbbar
         self.navigationController?.navigationBarHidden = true
         if tabdisp == 0 {
