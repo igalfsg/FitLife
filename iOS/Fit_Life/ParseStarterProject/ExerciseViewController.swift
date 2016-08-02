@@ -34,7 +34,7 @@ class ExerciseViewController: UIViewController {
         self.navigationController?.navigationBarHidden = true
         top_title.text = exercise
         let weightquery = PFQuery(className: "Exercises")
-        //weightquery.fromLocalDatastore()
+        weightquery.fromLocalDatastore()
         weightquery.whereKey("name", equalTo: self.exercise!);
         weightquery.getFirstObjectInBackgroundWithBlock({
             (object:PFObject?, error:NSError?)  in

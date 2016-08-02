@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D371F8D1D4E96A200CA6EB4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D371F8C1D4E96A200CA6EB4 /* VideoViewController.swift */; };
+		4D39009F1D50AE50006BD633 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D39009E1D50AE50006BD633 /* Default-568h@2x.png */; };
 		4D40AEA81D386372003F7297 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEA71D386372003F7297 /* FavoritesCell.swift */; };
 		4D40AEAA1D38638F003F7297 /* Favorites_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEA91D38638F003F7297 /* Favorites_ViewController.swift */; };
 		4D40AEAC1D38714B003F7297 /* Wko_exercises_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D40AEAB1D38714B003F7297 /* Wko_exercises_ViewController.swift */; };
@@ -617,6 +618,7 @@
 /* Begin PBXFileReference section */
 		48145B864FCA780C954B7374 /* Pods-ParseStarterProject-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseStarterProject-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseStarterProject-Swift/Pods-ParseStarterProject-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		4D371F8C1D4E96A200CA6EB4 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		4D39009E1D50AE50006BD633 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4D40AEA71D386372003F7297 /* FavoritesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		4D40AEA91D38638F003F7297 /* Favorites_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites_ViewController.swift; sourceTree = "<group>"; };
 		4D40AEAB1D38714B003F7297 /* Wko_exercises_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wko_exercises_ViewController.swift; sourceTree = "<group>"; };
@@ -1510,6 +1512,7 @@
 				4D79263B1D3DB0790018D4E8 /* ic_launcher.png */,
 				4D79263C1D3DB0790018D4E8 /* image1.png */,
 				4D79263D1D3DB0790018D4E8 /* image2.png */,
+				4D39009E1D50AE50006BD633 /* Default-568h@2x.png */,
 				4D79263E1D3DB07A0018D4E8 /* Images.xcassets */,
 				4D79263F1D3DB07A0018D4E8 /* img_round.png */,
 				4D7926401D3DB07A0018D4E8 /* inch_worms.jpg */,
@@ -1927,6 +1930,7 @@
 				TargetAttributes = {
 					81BA81441A49DA1800E65899 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = HVPRU6Y9WE;
 					};
 				};
 			};
@@ -2149,6 +2153,7 @@
 				4D7927F61D3DB07E0018D4E8 /* decline_bench_press2.jpg in Resources */,
 				4D7927B91D3DB07E0018D4E8 /* box_squat.jpg in Resources */,
 				4D7928ED1D3DB07E0018D4E8 /* seated_calf_raise2.jpg in Resources */,
+				4D39009F1D50AE50006BD633 /* Default-568h@2x.png in Resources */,
 				4D7928FF1D3DB07E0018D4E8 /* side_plank_with_hip_drops1.jpg in Resources */,
 				4D7928EC1D3DB07E0018D4E8 /* seated_calf_raise1.jpg in Resources */,
 				4D7928201D3DB07E0018D4E8 /* eccentric_chinup.jpg in Resources */,
@@ -2720,6 +2725,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2729,8 +2736,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flegmann.Fitlife;
 				PRODUCT_NAME = "ParseStarterProject-Swift";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2741,6 +2750,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2750,7 +2761,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flegmann.Fitlife;
 				PRODUCT_NAME = "ParseStarterProject-Swift";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseStarterProject/ParseStarterProject-Swift-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -34,7 +34,7 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
         //print("hi")
         self.title_bar.text = program //set title
         let queryWorkoutTypes = PFQuery(className: "Programs")
-        //queryWorkoutTypes.fromLocalDatastore()
+        queryWorkoutTypes.fromLocalDatastore()
         queryWorkoutTypes.whereKey("name", equalTo: program!);
         queryWorkoutTypes.getFirstObjectInBackgroundWithBlock({
             (object:PFObject?, error:NSError?)  in
@@ -145,7 +145,7 @@ class ListofWKOSViewController: UIViewController, UITableViewDelegate, UITableVi
         let user = PFUser.currentUser()!.username
         
         let queryWorkoutTypes = PFQuery(className: "my_prog")
-        //queryWorkoutTypes.fromLocalDatastore()
+        queryWorkoutTypes.fromLocalDatastore()
         queryWorkoutTypes.whereKey("name", equalTo: program!);
         queryWorkoutTypes.whereKey("user", equalTo: user!);
         queryWorkoutTypes.getFirstObjectInBackgroundWithBlock({

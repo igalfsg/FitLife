@@ -37,7 +37,7 @@ class Program_types_ViewController: UIViewController {
         if tabdisp == 0 {
             // get workout types from local data store
             let queryWorkoutTypes = PFQuery(className: "Wk_Types")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: 1);
             queryWorkoutTypes.orderByAscending("name")
             queryWorkoutTypes.findObjectsInBackgroundWithBlock{
@@ -78,7 +78,7 @@ class Program_types_ViewController: UIViewController {
         else if tabdisp == 1{//programs
             // get workout types from local data store
             let queryWorkoutTypes = PFQuery(className: "Wk_Types")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: 2);
             queryWorkoutTypes.orderByAscending("name")
             queryWorkoutTypes.findObjectsInBackgroundWithBlock{
@@ -119,7 +119,7 @@ class Program_types_ViewController: UIViewController {
         else if tabdisp == 2 {
             // get workout types from local data store
             let queryWorkoutTypes = PFQuery(className: "Wk_Types")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: 3);
             queryWorkoutTypes.orderByAscending("name")
             queryWorkoutTypes.findObjectsInBackgroundWithBlock{

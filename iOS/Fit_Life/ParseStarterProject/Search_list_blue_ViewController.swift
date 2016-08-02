@@ -41,7 +41,7 @@ class Search_list_blue_ViewController: UIViewController {
         
         if thing == 1{//exercises
             let queryWorkoutTypes = PFQuery(className: "Exercises")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             if type == "All Exercises"{
                 queryWorkoutTypes.whereKeyExists("img_name")
                 queryWorkoutTypes.whereKey("img_name", notEqualTo: "")
@@ -99,7 +99,7 @@ class Search_list_blue_ViewController: UIViewController {
         }
         else if thing == 2{//programs
             let queryWorkoutTypes = PFQuery(className: "Programs")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: type!);
             queryWorkoutTypes.orderByAscending("name")
             queryWorkoutTypes.findObjectsInBackgroundWithBlock{
@@ -125,53 +125,53 @@ class Search_list_blue_ViewController: UIViewController {
                                 self.wko_Type.append(object["name"] as! String)
                                 
                             }
-                            self.disp_tableView.reloadData()
-                        }
+                            let queryWorkoutTypes1 = PFQuery(className: "Programs")
+                            queryWorkoutTypes1.fromLocalDatastore()
+                            queryWorkoutTypes1.whereKey("extra", equalTo: self.type!);
+                            queryWorkoutTypes1.orderByAscending("name")
+                            queryWorkoutTypes1.findObjectsInBackgroundWithBlock{
+                                (objects: [PFObject]?, error: NSError?) -> Void in
+                                if error == nil {
+                                    for object in objects!{
+                                        
+                                        self.wko_Type.append(object["name"] as! String)
+                                        
+                                    }
+                                    self.disp_tableView.reloadData()
+                                }
+                                else{
+                                    let queryWorkoutTypes = PFQuery(className: "Programs")
+                                    //queryWorkoutTypes.fromLocalDatastore()
+                                    queryWorkoutTypes.whereKey("extra", equalTo: self.type!);
+                                    queryWorkoutTypes.orderByAscending("name")
+                                    queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                                        (objects: [PFObject]?, error: NSError?) -> Void in
+                                        if error == nil {
+                                            for object in objects!{
+                                                
+                                                self.wko_Type.append(object["name"] as! String)
+                                                
+                                            }
+                                            self.disp_tableView.reloadData()
+                                        }
+                                        else{
+                                            
+                                        }//end else
+                                    }//end second query
+                                }//end else
+                            }//end first query
+                        }//end if
                         else{
                             
                         }//end else
                     }//end second query
                 }//end else
             }//end first query
-            let queryWorkoutTypes1 = PFQuery(className: "Programs")
-            //queryWorkoutTypes.fromLocalDatastore()
-            queryWorkoutTypes1.whereKey("extra", equalTo: type!);
-            queryWorkoutTypes1.orderByAscending("name")
-            queryWorkoutTypes1.findObjectsInBackgroundWithBlock{
-                (objects: [PFObject]?, error: NSError?) -> Void in
-                if error == nil {
-                    for object in objects!{
-                        
-                        self.wko_Type.append(object["name"] as! String)
-                        
-                    }
-                    self.disp_tableView.reloadData()
-                }
-                else{
-                    let queryWorkoutTypes = PFQuery(className: "Programs")
-                    //queryWorkoutTypes.fromLocalDatastore()
-                    queryWorkoutTypes.whereKey("extra", equalTo: self.type!);
-                    queryWorkoutTypes.orderByAscending("name")
-                    queryWorkoutTypes.findObjectsInBackgroundWithBlock{
-                        (objects: [PFObject]?, error: NSError?) -> Void in
-                        if error == nil {
-                            for object in objects!{
-                                
-                                self.wko_Type.append(object["name"] as! String)
-                                
-                            }
-                            self.disp_tableView.reloadData()
-                        }
-                        else{
-                            
-                        }//end else
-                    }//end second query
-                }//end else
-            }//end first query
+            
         }//end if
         else if thing == 3{//wkos
             let queryWorkoutTypes = PFQuery(className: "Workouts")
-            //queryWorkoutTypes.fromLocalDatastore()
+            queryWorkoutTypes.fromLocalDatastore()
             queryWorkoutTypes.whereKey("type", equalTo: type!);
             queryWorkoutTypes.orderByAscending("name")
             queryWorkoutTypes.findObjectsInBackgroundWithBlock{

@@ -10,13 +10,13 @@ import UIKit
 import Parse
 
 class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var Calories_lbl: UILabel!
     @IBOutlet weak var exercise_table: UITableView!
     @IBOutlet weak var title_view: UILabel!
     @IBOutlet weak var top_view: UIView!
     @IBOutlet weak var myTabBar: UITabBar!
-
+    
     
     var workout: String?
     var numberofexercises = 0
@@ -136,7 +136,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             
         })//end query
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -186,9 +186,9 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
             weightquery.getFirstObjectInBackgroundWithBlock({
                 (object:PFObject?, error:NSError?)  in
                 if object != nil {
-                        if self.tField.text != ""{
-                            object!["weight" + String(sender.tag)] = Int(self.tField.text!)
-                        }
+                    if self.tField.text != ""{
+                        object!["weight" + String(sender.tag)] = Int(self.tField.text!)
+                    }
                     object?.saveInBackground()
                     object?.pinInBackground()
                 }//end if object
@@ -235,7 +235,7 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     {
         //print("Cancelled !!")
     }
-
+    
     //on click event
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //open storyboard
@@ -250,14 +250,14 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
     
     //butons
     
-
+    
     
     //back button
     @IBAction func back_Btn(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-   
+    
     
     @IBAction func favorite_btn(sender: AnyObject) {
         let user = PFUser.currentUser()!.username
@@ -327,13 +327,13 @@ class Wko_exercises_ViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
