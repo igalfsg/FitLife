@@ -63,6 +63,8 @@ class SplashViewController: UIViewController {
             
         }
         else{
+            updateparse()
+            globalnav = 0
             self.performSegueWithIdentifier("go_login", sender: self)
         }
     }
@@ -78,86 +80,85 @@ class SplashViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 PFObject.pinAllInBackground(objects)
-            }
-            else{
-            }//end else
-        }//end first query
-        //WK_Types
-        let queryWorkoutTypes1 = PFQuery(className: "Wk_Types")
-        queryWorkoutTypes1.orderByAscending("name")
-        queryWorkoutTypes1.findObjectsInBackgroundWithBlock{
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                PFObject.pinAllInBackground(objects)
-            }
-            else{
-            }//end else
-        }//end first query
-        //programs
-        let queryWorkoutTypes2 = PFQuery(className: "Programs")
-        queryWorkoutTypes2.orderByAscending("name")
-        queryWorkoutTypes2.findObjectsInBackgroundWithBlock{
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                PFObject.pinAllInBackground(objects)
-            }
-            else{
-                
-            }//end else
-        }//end first query
-        //exercises
-        let queryWorkoutTypes3 = PFQuery(className: "Exercises")
-        queryWorkoutTypes3.limit = 1000
-        queryWorkoutTypes3.orderByAscending("name")
-        queryWorkoutTypes3.findObjectsInBackgroundWithBlock{
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                PFObject.pinAllInBackground(objects)
-            }
-            else{
-                let queryWorkoutTypes = PFQuery(className: "Exercises")
-                queryWorkoutTypes.fromLocalDatastore()
-                queryWorkoutTypes.limit = 1000
-                queryWorkoutTypes.orderByAscending("name")
-                queryWorkoutTypes.findObjectsInBackgroundWithBlock{
+                //WK_Types
+                let queryWorkoutTypes1 = PFQuery(className: "Wk_Types")
+                queryWorkoutTypes1.orderByAscending("name")
+                queryWorkoutTypes1.findObjectsInBackgroundWithBlock{
                     (objects: [PFObject]?, error: NSError?) -> Void in
                     if error == nil {
-                        
+                        PFObject.pinAllInBackground(objects)
+                        //programs
+                        let queryWorkoutTypes2 = PFQuery(className: "Programs")
+                        queryWorkoutTypes2.orderByAscending("name")
+                        queryWorkoutTypes2.findObjectsInBackgroundWithBlock{
+                            (objects: [PFObject]?, error: NSError?) -> Void in
+                            if error == nil {
+                                PFObject.pinAllInBackground(objects)
+                                //exercises
+                                let queryWorkoutTypes3 = PFQuery(className: "Exercises")
+                                queryWorkoutTypes3.limit = 1000
+                                queryWorkoutTypes3.orderByAscending("name")
+                                queryWorkoutTypes3.findObjectsInBackgroundWithBlock{
+                                    (objects: [PFObject]?, error: NSError?) -> Void in
+                                    if error == nil {
+                                        PFObject.pinAllInBackground(objects)
+                                        if (PFUser.currentUser()?.username != nil){
+                                            //my_programs
+                                            let queryWorkoutTypes4 = PFQuery(className: "my_prog")
+                                            queryWorkoutTypes4.whereKey("user", equalTo: user!);
+                                            queryWorkoutTypes4.orderByAscending("name")
+                                            queryWorkoutTypes4.findObjectsInBackgroundWithBlock{
+                                                (objects: [PFObject]?, error: NSError?) -> Void in
+                                                if error == nil {
+                                                    PFObject.pinAllInBackground(objects)
+                                                    //my_workouts
+                                                    let queryWorkoutTypes5 = PFQuery(className: "my_wko")
+                                                    queryWorkoutTypes5.whereKey("user", equalTo: user!);
+                                                    queryWorkoutTypes5.orderByAscending("name")
+                                                    queryWorkoutTypes5.findObjectsInBackgroundWithBlock{
+                                                        (objects: [PFObject]?, error: NSError?) -> Void in
+                                                        if error == nil {
+                                                            PFObject.pinAllInBackground(objects)
+                                                        }
+                                                        else{
+                                                            
+                                                        }//end else
+                                                    }//end first query
+                                                }
+                                                else{
+                                                }//end else
+                                            }//end first query
+                                        }//end if user
+                                        
+                                    }
+                                    else{
+                                        
+                                    }//end else
+                                }//end first query
+                            }
+                            else{
+                                
+                            }//end else
+                        }//end first query
                     }
                     else{
-                        let alertController = UIAlertController(title: "Oops!", message: "We can't contact the server at this time and no saved exercises were found please make sure you have an internet connection and try again. you can still use the app but some features might be unavailable", preferredStyle: .Alert)
-                        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
-                        alertController.addAction(OKAction)
-                        self.presentViewController(alertController, animated: true) { }
                     }//end else
                 }//end first query
-            }//end else
-        }//end first query
-        //my_programs
-        let queryWorkoutTypes4 = PFQuery(className: "my_prog")
-        queryWorkoutTypes4.whereKey("user", equalTo: user!);
-        queryWorkoutTypes4.orderByAscending("name")
-        queryWorkoutTypes4.findObjectsInBackgroundWithBlock{
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                PFObject.pinAllInBackground(objects)
             }
             else{
+                let alertController = UIAlertController(title: "Oops!", message: "We can't contact the server at this time and no saved exercises were found please make sure you have an internet connection and try again. you can still use the app but some features might be unavailable", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true) { }
             }//end else
         }//end first query
-        //my_workouts
-        let queryWorkoutTypes5 = PFQuery(className: "my_wko")
-        queryWorkoutTypes5.whereKey("user", equalTo: user!);
-        queryWorkoutTypes5.orderByAscending("name")
-        queryWorkoutTypes5.findObjectsInBackgroundWithBlock{
-            (objects: [PFObject]?, error: NSError?) -> Void in
-            if error == nil {
-                PFObject.pinAllInBackground(objects)
-            }
-            else{
-                
-            }//end else
-        }//end first query
+        
+        
+        
+        
+        
+        
+
     }
     /*
      // MARK: - Navigation

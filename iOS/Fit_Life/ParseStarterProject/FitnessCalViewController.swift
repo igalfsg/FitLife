@@ -34,6 +34,7 @@ class FitnessCalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //hide dumbbar
+        self.hideKeyboardWhenTappedAround()
         self.navigationController?.navigationBarHidden = true
         
         if myTabBar.items != nil && myTabBar.items!.count >= globalnav{
@@ -65,9 +66,11 @@ class FitnessCalViewController: UIViewController {
         
         if radioButton.selectedButton()!.titleLabel!.text! == "kg"{
             weightbmi = 1.0
+            view.endEditing(true)
         }
         else{
             weightbmi = 0.453592
+            view.endEditing(true)
         }
     }
     
@@ -76,9 +79,11 @@ class FitnessCalViewController: UIViewController {
         
         if radioButton.selectedButton()!.titleLabel!.text! == "cm"{
             heightbmi = 1.0
+            view.endEditing(true)
         }
         else{
             heightbmi = 2.54
+            view.endEditing(true)
         }
         
     }

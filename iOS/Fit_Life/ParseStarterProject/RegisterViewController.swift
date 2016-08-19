@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
         self.interest_button.multipleSelectionEnabled = true;
         
@@ -35,6 +35,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         EmailTextField.delegate = self
         PasswordTextField.delegate = self
         BirthdateTextField.delegate = self
+        /*
+        let errorAlert = UIAlertController (title: "Welcome to the Fit Life Family!", message: "Only username and password are req", preferredStyle: UIAlertControllerStyle.Alert)
+        errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
+        self.presentViewController(errorAlert, animated: true, completion: nil);
+         */
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,9 +64,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if (radioButton.multipleSelectionEnabled) {
             for button in radioButton.selectedButtons() {
                 print(String(format: "%@ q selected. 2\n", button.titleLabel!.text!));
+                view.endEditing(true)
             }
         } else {
             peso = radioButton.selectedButton()!.titleLabel!.text!
+            view.endEditing(true)
         }
     }
     
@@ -71,9 +78,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         if (radioButton.multipleSelectionEnabled) {
             for button in radioButton.selectedButtons() {
                 print(String(format: "%@ q selected. 2\n", button.titleLabel!.text!));
+                view.endEditing(true)
             }
         } else {
             sex = radioButton.selectedButton()!.titleLabel!.text!
+            view.endEditing(true)
         }
     }
     
@@ -127,6 +136,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
             self.presentViewController(errorAlert, animated: true, completion: nil);
         }
+            /*
         else if(email.isEmpty || !isValidEmail(email) ){
             let errorAlert = UIAlertController (title: "Oops!", message: "Please enter a valid email", preferredStyle: UIAlertControllerStyle.Alert)
             errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
@@ -141,22 +151,28 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             let errorAlert = UIAlertController (title: "Oops!", message: "Please enter your weight", preferredStyle: UIAlertControllerStyle.Alert)
             errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
             self.presentViewController(errorAlert, animated: true, completion: nil);
-        }
-        else if(peso.isEmpty ){
+        }*/
+        else if((!weight.isEmpty) && peso.isEmpty ){
             let errorAlert = UIAlertController (title: "Oops!", message: "Please Select the weight units", preferredStyle: UIAlertControllerStyle.Alert)
             errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
             self.presentViewController(errorAlert, animated: true, completion: nil);
-        }
+        }/*
         else if(sex.isEmpty ){
             let errorAlert = UIAlertController (title: "Oops!", message: "Please Select your gender", preferredStyle: UIAlertControllerStyle.Alert)
             errorAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: nil));
             self.presentViewController(errorAlert, animated: true, completion: nil);
-        }
+        }*/
         else{
             let user = PFUser()
             user.username = username
             user.password = password
-            user.email = email
+            if(email.isEmpty){
+                user.email = username + "@fitlife.com"
+            }
+            else{
+                user.email = email
+            }
+            
             user["birthday"] = bday
             user["weight"] = weight
             //stuff from buttons
@@ -202,4 +218,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
